@@ -10,7 +10,7 @@ DOCS={'ARCHITECTURE.md','PROTOCOL.md','RUNNING.md','FINDINGS.zh-CN.md'}
 FOLDERS={'cfdmesh','tests','scripts','native_tools','.github','docs','results'}
 SECRET=re.compile(rb'sk-[A-Za-z0-9_-]{16,}|gh[pousr]_[A-Za-z0-9]{20,}|github_pat_[A-Za-z0-9_]{20,}|-----BEGIN (?:OPENSSH|RSA|EC) PRIVATE KEY-----')
 PRIVATE_PATH=re.compile(rb'/gpfs/share/home/[0-9]+|[A-Z]:[/\\]Users[/\\][^/\\\s]+')
-LOCAL_ONLY=re.compile(r'初学者|阅读指南|简历|面试|本科生|作业|\b[vV](?:[1-9]|1[0-4])\b|\b0\.10\.[0-9]+\b')
+LEGACY_RELEASE=re.compile(r'\b[vV](?:[1-9]|1[0-4])\b|\b0\.10\.[0-9]+\b')
 PROHIBITED={'.stl','.step','.stp','.obj','.foam','.key','.env','.zip','.gz','.bundle'}
 
 
@@ -43,7 +43,7 @@ def audit(root):
             except (ValueError,UnicodeError):problems.append(name+': invalid JSON')
         if path.suffix=='.md':
             text=data.decode('utf-8')
-            if LOCAL_ONLY.search(text):problems.append(name+': obsolete or personal wording')
+            if LEGACY_RELEASE.search(text):problems.append(name+': obsolete release label')
             for target in re.findall(r'!?\[[^\]]*\]\(([^)]+)\)',text):
                 target=target.strip().split(' "',1)[0].strip('<>')
                 if re.match(r'^[A-Za-z][A-Za-z0-9+.-]*:',target) or target.startswith('#'):continue

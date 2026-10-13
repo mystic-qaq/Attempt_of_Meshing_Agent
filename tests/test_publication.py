@@ -28,6 +28,8 @@ class Publication(unittest.TestCase):
             with self.assertRaisesRegex(ValueError,'obsolete document'):audit(root)
             old.unlink();(root/'README.md').write_text('[missing](docs/missing.md)\n',encoding='utf-8')
             with self.assertRaisesRegex(ValueError,'broken local link'):audit(root)
+            (root/'README.md').write_text('DrivAer v12\n',encoding='utf-8')
+            with self.assertRaisesRegex(ValueError,'obsolete release label'):audit(root)
 
     def test_changed_evidence_and_hidden_stages_are_rejected(self):
         with tempfile.TemporaryDirectory() as temporary:
