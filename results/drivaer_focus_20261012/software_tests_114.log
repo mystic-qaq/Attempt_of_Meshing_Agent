@@ -1,9 +1,0 @@
-........................................................................................usage: cfdmesh [-h] {agent,serve-advisor,selfcheck,solver-smoke} ...
-cfdmesh: error: selfcheck requires the source checkout with tests; run unittest from the repository
-..................................................
-----------------------------------------------------------------------
-Ran 138 tests in 2.814s
-
-OK
-Audited publication files: 11
-Audited publication files: 11

@@ -7,7 +7,7 @@ from cfdmesh.drivaer import clear_gain
 
 
 def write_report(root,out,allow_running=False):
-    protocol=read_json(root/'protocol.json');runs=[];lines=['# DrivAer 0.10 原生对照结果','',
+    protocol=read_json(root/'protocol.json');runs=[];lines=['# DrivAer 原生对照结果','',
         '自由空气单相网格研究；完整几何保留，首层物理高度固定。研究资格与工业 CFD 精度分开。','',
         '|案例 / 路线|状态|原生阶段|有效模型试验|合格研究候选|所选 ≥5 层面积|单元数|新增 API 费用上界|',
         '|---|---|---:|---:|---:|---:|---:|---:|']

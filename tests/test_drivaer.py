@@ -47,7 +47,7 @@ class DrivAerStageTest(unittest.TestCase):
             candidate=apply_actions(spec,[act],geom,2_000_000,spatial_evidence=[target])
             self.assertTrue(certify(candidate,geom,2_000_000)['ok'])
             raw=dict(kind='local_refine',min=target['min'],max=target['max'],level=act['level'],why='unmeasured box',evidence=['geometry'])
-            with self.assertRaisesRegex(ValueError,'surface\+2'):apply_actions(spec,[raw],geom,2_000_000)
+            with self.assertRaisesRegex(ValueError,r'surface\+2'):apply_actions(spec,[raw],geom,2_000_000)
             raw['compiled_measured_target']=target['id']
             with self.assertRaisesRegex(ValueError,'compiler'):apply_actions(spec,[raw],geom,2_000_000)
             huge=dict(target,min=[-.6]*3,max=[.6]*3)

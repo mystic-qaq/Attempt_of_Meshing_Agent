@@ -5,7 +5,14 @@ evidence/
 *.zip
 runs/
 *.key
-.env
+.env*
+*.pem
+*.stl
+*.obj
+*.foam
+*.vtu
+*.vtp
+*.vtk
 *.tar.gz
 geometry/
 *.stp

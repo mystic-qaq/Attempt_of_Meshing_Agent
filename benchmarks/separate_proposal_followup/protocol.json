@@ -1,8 +1,0 @@
-{
-  "online_benchmark": false,
-  "purpose": "online follow-up of a separately validated archived model proposal",
-  "source_mesh_attempts_before": 3,
-  "max_new_attempts": 2,
-  "core_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
-  "cap_includes_archived_v6_online_portfolio_and_fixed_validation": true
-}

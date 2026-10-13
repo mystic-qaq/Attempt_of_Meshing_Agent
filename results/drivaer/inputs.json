@@ -1,0 +1,38 @@
+{
+  "checked": "2026-10-12",
+  "dataset": "neashton/drivaerml",
+  "author_reference": "Ashton et al., DrivAerML, arXiv:2408.11969",
+  "inputs": [
+    {
+      "run": 1,
+      "source_page": "https://huggingface.co/datasets/neashton/drivaerml/blob/main/run_1/drivaer_1.stl",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "bytes": 142385186,
+      "hf_git_blob": "832330b94adfbff7f8f0496274f423c106fed615",
+      "license": "CC-BY-SA-4.0",
+      "geometry_bundled": false,
+      "verification": "Dataset LFS SHA256 matched the source bytes used for this study."
+    },
+    {
+      "run": 318,
+      "source_page": "https://huggingface.co/datasets/neashton/drivaerml/blob/main/run_318/drivaer_318.stl",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "bytes": 142290729,
+      "hf_git_blob": "d67bba94829cb7419fef045eac97ad9d0a0ea3c7",
+      "license": "CC-BY-SA-4.0",
+      "geometry_bundled": false,
+      "verification": "Dataset LFS SHA256 matched the source bytes used for this study."
+    },
+    {
+      "run": 410,
+      "source_page": "https://huggingface.co/datasets/neashton/drivaerml/blob/main/run_410/drivaer_410.stl",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "bytes": 142416616,
+      "hf_git_blob": "3094ba7f1c0c602c4a4c9152e361f213c1b0cc80",
+      "license": "CC-BY-SA-4.0",
+      "geometry_bundled": false,
+      "verification": "Dataset LFS SHA256 matched the source bytes used for this study."
+    }
+  ],
+  "raw_dataset_files_bundled": false
+}

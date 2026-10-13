@@ -11,6 +11,8 @@ if __name__ == '__main__':
     args=parser.parse_args();root=Path(args.experiment);protocol=read_json(root/'protocol.json')
     if protocol['code_sha256']!=code_hash():raise ValueError('implementation changed after protocol freeze')
     entry=next(c for c in protocol['cases'] if c['id']==args.case)
+    if entry.get('initial_spec_sha256') and sha256(entry['initial_spec'])!=entry['initial_spec_sha256']:
+        raise ValueError('frozen initial specification changed')
     validator=protocol.get('independent_validator')
     if validator and sha256(validator['executable'])!=validator['executable_sha256']:raise ValueError('frozen independent geometry validator changed')
     if protocol.get('experience_store') and sha256(protocol['experience_store'])!=protocol['experience_store_sha256']:

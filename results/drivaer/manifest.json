@@ -1,0 +1,42 @@
+{
+  "files": [
+    {
+      "path": "evidence.json",
+      "sha256": "3ea970eddb9e2f140313b8bab7881276636063017abd0981037589196504b1f4",
+      "bytes": 84933
+    },
+    {
+      "path": "figures/program_318_round0_cuts.png",
+      "sha256": "ce068a2d181ec545231df181f168b572f1c15fd68e5de271a38f3fcc86a0f3d7",
+      "bytes": 760098
+    },
+    {
+      "path": "figures/program_318_round0_layers.png",
+      "sha256": "e6be7adb9f3eb9153cce0d682ffa146809b51ea60b634b0e435ca41843adf5d5",
+      "bytes": 1330946
+    },
+    {
+      "path": "figures/program_410_round0_cuts.png",
+      "sha256": "f4d8df23256c334d4e32e120cacb4b70d1561374efdd9dd3352b88b0ea3f0fad",
+      "bytes": 795869
+    },
+    {
+      "path": "figures/program_410_round0_layers.png",
+      "sha256": "bd865ebcf7abb061595cd7ce51efc357a899c71420cc814e881f4b63ca156201",
+      "bytes": 1255585
+    },
+    {
+      "path": "inputs.json",
+      "sha256": "178db99ef0caf92cc9680f25734f26e873117adbc4a447bc11df39c2b1989da5",
+      "bytes": 1614
+    },
+    {
+      "path": "REPORT.zh-CN.md",
+      "sha256": "c9f165177dbfbbcbbb60d1ee78f1e500fc3c9499c19d6f215b43a5606aa294a9",
+      "bytes": 3813
+    }
+  ],
+  "measurement_collection": "byte-identical to the previously published complete evidence; paths renamed without changing measurements",
+  "original_records": "source, implementation, protocol and episode hashes remain in evidence.json",
+  "raw_native_artifacts_bundled": false
+}

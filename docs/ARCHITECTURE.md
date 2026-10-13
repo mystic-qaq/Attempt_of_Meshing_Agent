@@ -1,53 +1,44 @@
 # Implementation
 
-The Python module and CLI are named `cfdmesh`. OpenFOAM v2412 is the native backend; the model service selects structured interventions rather than generating the final mesh itself.
+The DrivAer research entry point is [run_drivaer](../cfdmesh/drivaer.py). It operates on a frozen source and scenario, executes bounded native trials, and keeps diagnosis, decisions and acceptance separate.
 
 ## Data flow
 
 ```mermaid
 flowchart TD
-    Input[Geometry + flow/scenario contract] --> Plan[Automatic initial specification]
-    Plan --> Native[Native full or staged execution]
-    Native --> Measure[Independent measurements]
-    Measure --> State[Current evidence + measured history]
-    State --> Decision[DeepSeek Flash or deterministic feedback]
-    Decision --> Preview[Action normalization + parameter/resource preview]
-    Preview --> Native
-    Measure --> Archive[Accepted stage anchors / feasible candidate archive]
-    Archive --> Plan
+    G["DrivAer source and frozen flow conditions"] --> P["Automatic parameter seed"]
+    P --> N["Native full generation or separate stages"]
+    N --> E["Quality, topology, fidelity, layers and cost"]
+    E --> D["DeepSeek Flash or fixed feedback"]
+    D --> V["Validate and preview parameter changes"]
+    V --> N
+    E --> A["Feasible candidate archive"]
+    A --> P
 ```
 
-The generic runner is in `agent.py`; focused staged/full DrivAer experiments are in `drivaer.py`. Failed proposals, fallback actions and native executions carry separate attribution.
+## Responsibilities
 
-## Modules
-
-|Area|Files and responsibility|
+|Component|Responsibility|
 |---|---|
-|Geometry and scene|`geometry.py`, `scenario.py`: immutable source auditing, sampled geometry and compiled flow conditions|
-|Specification|`case_builder.py`: typed mesh parameters and native dictionaries|
-|Planning|`planning.py`, `mechanisms.py`, `targets.py`: action application, numeric/physical screens and measured target resolution|
-|Model interface|`scientific_advisor.py`, `scientific_tools.py`: query/preview/commit dialogue, receipts and reservations|
-|Execution|`runner.py`, `stages.py`: native subprocesses, stage registration and hash-protected mesh copies|
-|Measurement|`verify.py`, `boundary.py`, `layer_design.py`: quality, topology, polygon geometry and actual layer-area statistics|
-|History|`candidates.py`, `cross_case.py`, `decision_checkpoint.py`: measured candidates, source-separated facts and visible decision checkpoints|
-|Resource planning|`resource_model.py`: same-source measured cost calibration; an estimate rather than a guaranteed bound|
+|`geometry`, `surface_contract`|Unchanged source identity, coordinate conditioning and input audits|
+|`planning`, `case_builder`, `scenario`|Automatic specification, typed parameters and flow-resolution hypotheses|
+|`runner`, `stages`|OpenFOAM execution, limits, independent stage copies and source-hash checks|
+|`verify`, `boundary`, `layer_design`|Native quality, boundary observation, actual layer area and thickness diagnostics|
+|`scientific_tools`, `plan_validation`, `mechanisms`|Measured queries, parameter semantics and intervention previews|
+|`scientific_advisor`, `budget_scope`|Model dialogue, commitment and same-source cost accounting|
+|`drivaer`, `candidates`|Research eligibility, trial history and feasible archive|
+|`cross_case`|Measured facts from disjoint source groups; no promoted successful policy|
 
-## Protected stages and feedback
+## Decisions and measurements
 
-An accepted snap can be reused for a layer-only trial through an independent file copy. Changes affecting snap invalidate that anchor. Full-mode trials rebuild from the current executable specification.
+The model can inspect geometry, quality clusters, local sizes and sampled gaps, consult parameter semantics, and preview an intervention. Actions adjust refinement, snapping, layer controls and transition settings. It does not generate arbitrary executable code or alter acceptance thresholds.
 
-After failure, a new plan starts from the best feasible full candidate, a safe snap anchor, or the common initial parameters. In the final DrivAer study no feasible candidate existed, so new proposals returned to the initial parameters while retaining diagnostic history.
+A preview checks syntax, bounds, supported mechanisms, spatial references, cost estimates and repeated or ineffective actions. It cannot predict that OpenFOAM will produce a valid mesh. A successful model commitment remains a proposal until native execution and independent checks supply the result.
 
-## Acceptance and observations
+Model proposals, normalized actions, fixed recipes, software fallbacks and actual native stages have separate records. Protected snap anchors require accepted evidence and matching specification/source hashes. Layer construction uses independent mesh-file copies; changes to snap construction invalidate the anchor. Failed high-coverage meshes never enter the feasible archive.
 
-Quality, boundary topology, geometry fidelity, scene coverage and actual cell counts determine research eligibility. Coverage ranks eligible candidates; it does not override quality failures. Older production-layer thresholds remain separate from the focused research comparison.
+## Evidence boundary
 
-The boundary observer has representation limits for warped or projected self-crossing polygons. Missing fidelity evidence is recorded as unavailable. Actual layer thickness is distinct from requested layers and from flow-derived y+.
+`agent_run.json` and per-stage records in a live experiment contain executable specifications and detailed measurements. The checked-in [evidence](../results/drivaer/evidence.json) is a compact collection from completed records: it preserves metrics, rejection reasons, timings, usage ceilings and original-record hashes. It omits source geometry, complete volume meshes, provider private reasoning and environment-specific paths.
 
-## Model state and cost
-
-Tool responses contain measured values and stated uncertainty. Parameter validity and mechanism checks do not predict native success. Model internal reasoning is not part of the published evidence.
-
-Budget reservations and documented usage share the original source group across experiment directories. Cross-case memory records facts; it does not automatically train weights or promote a successful policy.
-
-See [DrivAer protocol](DRIVAER_FOCUS.zh-CN.md), [experiment index](EXPERIMENTS.md) and [failure analysis](DRIVAER_POSTMORTEM.zh-CN.md) for execution evidence and limitations.
+[The evidence manifest](../results/drivaer/manifest.json) hashes the published measurement collection, inputs and figures. Software checks and the repository audit verify implementation contracts and publication integrity. They do not validate native automotive performance.

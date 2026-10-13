@@ -20,6 +20,8 @@ if __name__=='__main__':
     if root.exists():raise FileExistsError('baseline output must be fresh')
     if protocol['code_sha256']!=code_hash():raise ValueError('frozen implementation changed')
     entry=next(c for c in protocol['cases'] if c['id']==a.case)
+    if entry.get('initial_spec_sha256') and sha256(entry['initial_spec'])!=entry['initial_spec_sha256']:
+        raise ValueError('frozen initial specification changed')
     if sha256(entry['source'])!=entry['source_sha256']:raise ValueError('frozen source changed')
     root.mkdir();start=time.monotonic();geom=prepare(entry['source'],root/'input',centre_geometry=True)
     spec=MeshSpec.from_dict(read_json(entry['initial_spec']))
