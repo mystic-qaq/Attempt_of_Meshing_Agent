@@ -17,8 +17,8 @@
     },
     {
       "path": "pyproject.toml",
-      "sha256": "e1faffce0378c3e01547242bd35a7e3cd71886d18787c6abec83506dc41ac79d",
-      "bytes": 660
+      "sha256": "bec77e555e42cac1dc332e3d2f105042f0c15f0ea6105e6cfe18327bb6900b9d",
+      "bytes": 678
     },
     {
       "path": ".gitignore",
@@ -32,8 +32,8 @@
     },
     {
       "path": "requirements-v4.txt",
-      "sha256": "9986d60cf96bc137163665be11a917a3e504f4aa98994637755f76fc4f9e64f5",
-      "bytes": 209
+      "sha256": "08f31ccef2ec3ce33889e0ed52b5ff8f5d872199f0b7509e74615045f06feac5",
+      "bytes": 225
     },
     {
       "path": "README.zh-CN.md",
@@ -302,8 +302,8 @@
     },
     {
       "path": "docs/CODE_PROVENANCE.json",
-      "sha256": "65413e3fd4c7ee5c1ad71ac814e0f73f099c47b43d6b3c11c48bea13b8e4c70c",
-      "bytes": 1223
+      "sha256": "8d485b5a188ebb2f722fc3a3df0f95ca8b38d9f15084438fd9bc0f9951166ec6",
+      "bytes": 1305
     },
     {
       "path": "docs/COST_ACCOUNTING.zh-CN.md",
@@ -377,8 +377,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "sha256": "b5ff6b6f9b9e1ea831394ac02acfef237aa210b6b4f2e7ae05c9ceec4ac7e688",
-      "bytes": 822
+      "sha256": "f4d3a0b47c4a35909d304b54501b3bec0b43ce37bce2e132a7a75263c39ba60f",
+      "bytes": 901
     },
     {
       "path": "assets/feedback_trajectory.png",
@@ -2487,7 +2487,7 @@
     },
     {
       "path": "results/publication_20261013/package_build.log",
-      "sha256": "a29209ace6e3ec75e6decd70174a3fe922aada0dae8ea8c5caab68ada3c42366",
+      "sha256": "3440707cf23ee9e6b0690133867988770d61a40e436d786e9ce2eda68aac472a",
       "bytes": 949
     },
     {

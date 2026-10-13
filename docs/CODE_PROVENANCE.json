@@ -8,7 +8,8 @@
     "LF-normalized source text",
     "evidence environment paths and private metadata sanitized",
     "publication exporter extended to include the focused study",
-    "actor lock message wording; execution constraints unchanged"
+    "actor lock message wording; execution constraints unchanged",
+    "NetworkX runtime dependency explicitly declared for winding normalization"
   ],
   "historical_experiment_hashes": "Retained as recorded; published snapshot does not retrospectively change native results.",
   "native_experiments_repeated_for_publication": false,
@@ -22,6 +23,6 @@
   "package_build": {
     "result": "passed",
     "wheel": "attempt_of_meshing_agent-0.10.14-py3-none-any.whl",
-    "sha256": "344e8dd85fb3385a7f92a641fd2abde1de4005367b64c693b98327ab5fafda33"
+    "sha256": "793d2383bd99fecc391e2d46fc8a341fd01a5c2fbcdd9afee4f33388fbcd30ae"
   }
 }

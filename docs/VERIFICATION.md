@@ -10,4 +10,4 @@ The publication snapshot was checked on 2026-10-13:
 
 [Software output](../results/publication_20261013/software_checks.log), [package build](../results/publication_20261013/package_build.log), and [source provenance](CODE_PROVENANCE.json).
 
-These are publication and software checks. No new native meshing, CFD solve, model inference or training was performed. GitHub workflow runs are separate from this recorded verification.
+These are publication and software checks. No new native meshing, CFD solve, model inference or training was performed. [GitHub workflow runs](https://github.com/mystic-qaq/Attempt_of_Meshing_Agent/actions) are separate from this recorded verification.
