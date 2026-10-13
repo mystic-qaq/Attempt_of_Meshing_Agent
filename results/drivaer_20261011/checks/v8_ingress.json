@@ -1,0 +1,92 @@
+{
+  "purpose": "new geometry ingress audit, zero mesh attempts and zero API calls",
+  "code_sha256": "41665867029794ddfe6d9200368fe1a9a5d803abb78b2fd293a52cad03cef02e",
+  "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+  "source_unchanged": true,
+  "geometry": {
+    "source": "<PROJECT>/work_drivaer_20261011/geometry/source.stl",
+    "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+    "canonical_sha256": "b365fa028f7b255814e3ee4eda3c5945d5c2f15f25a496ac76fcae615f5bd607",
+    "scale_to_metres": 1.0,
+    "coordinate_frame": "bbox-centred origin, source axes, physical metres; flow +X, vertical +Z",
+    "rigid_origin_conditioning": {
+      "enabled": true,
+      "original_scaled_bbox": [
+        [
+          -0.765196,
+          -1.01025,
+          -0.319641
+        ],
+        [
+          3.93848,
+          1.01025,
+          1.19511
+        ]
+      ],
+      "source_origin_metres": [
+        1.586642,
+        0.0,
+        0.4377344999999999
+      ],
+      "source_to_agent_translation_metres": [
+        -1.586642,
+        -0.0,
+        -0.4377344999999999
+      ],
+      "inverse_coordinate_max_error_metres": 4.440892098500626e-16,
+      "shape_repair": false
+    },
+    "semantic_parts_used": false,
+    "triangles": 753234,
+    "vertices": 376531,
+    "coherent_single_shell_orientation_reversed": false,
+    "single_shell_winding_normalised": false,
+    "canonical_precision": "ASCII float64",
+    "binary_roundtrip_max_coordinate_error_metres": 1.1920166009815603e-07,
+    "watertight": true,
+    "winding_consistent": true,
+    "area": 36.09737765195054,
+    "volume": 6.849660048041318,
+    "bbox": [
+      [
+        -2.351838,
+        -1.01025,
+        -0.7573755
+      ],
+      [
+        2.351838,
+        1.01025,
+        0.7573755
+      ]
+    ],
+    "extents": [
+      4.703676,
+      2.0205,
+      1.514751
+    ],
+    "diagonal": 5.338675749188838,
+    "feature_half_size": {
+      "p1": 0.002645069603450209,
+      "p5": 0.011721063190930183,
+      "p10": 0.02193304460636073,
+      "p25": 0.06119434397588175,
+      "p50": 0.39550042035892913,
+      "p90": 0.8624225366046787
+    },
+    "measurement": "bidirectional triangle-BVH normal rays",
+    "sample_seed": 0,
+    "samples": 4096,
+    "inward_ray_coverage": 1.0,
+    "finite_fluid_gap_fraction": 0.30859375,
+    "self_intersection": "unavailable_until_native_surfaceCheck",
+    "source_mutated": false,
+    "seconds": 12.946084624156356
+  },
+  "native": {
+    "accepted": true,
+    "reasons": [],
+    "closed": true,
+    "self_intersection_free": true,
+    "self_intersection_locations": null
+  }
+}

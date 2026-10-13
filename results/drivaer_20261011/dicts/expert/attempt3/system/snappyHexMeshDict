@@ -1,0 +1,1056 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+FoamFile
+{
+    version         2;
+    format          ascii;
+    class           dictionary;
+    object          snappyHexMeshDict;
+}
+
+castellatedMesh true;
+
+snap            true;
+
+addLayers       true;
+
+geometry
+{
+    body.stl
+    {
+        type            triSurfaceMesh;
+        name            body;
+    }
+    feature_0
+    {
+        type            searchableBox;
+        min             ( 2.02941 -0.711144 -0.512781 );
+        max             ( 2.1896 -0.567228 -0.254831 );
+    }
+    feature_1
+    {
+        type            searchableBox;
+        min             ( -1.70037 -0.71705 -0.548264 );
+        max             ( -1.57612 -0.552322 -0.225442 );
+    }
+    feature_2
+    {
+        type            searchableBox;
+        min             ( -1.06728 0.199109 -0.573834 );
+        max             ( -0.79161 0.344807 -0.414219 );
+    }
+    feature_3
+    {
+        type            searchableBox;
+        min             ( 1.1741 -0.27672 -0.451262 );
+        max             ( 1.43507 -0.159589 -0.222722 );
+    }
+    feature_4
+    {
+        type            searchableBox;
+        min             ( 0.798583 -0.085563 -0.483259 );
+        max             ( 0.98452 0.0276525 -0.313022 );
+    }
+    feature_5
+    {
+        type            searchableBox;
+        min             ( -0.670095 0.014676 -0.536325 );
+        max             ( -0.497767 0.145704 -0.373931 );
+    }
+    preflight_6
+    {
+        type            searchableBox;
+        min             ( -1.48354 0.793772 -0.00354081 );
+        max             ( -1.41163 0.889847 0.0591899 );
+    }
+    preflight_7
+    {
+        type            searchableBox;
+        min             ( 0.271422 0.00655399 -0.521547 );
+        max             ( 0.349391 0.054156 -0.462993 );
+    }
+    preflight_8
+    {
+        type            searchableBox;
+        min             ( 0.404395 0.00573788 -0.491984 );
+        max             ( 0.470724 0.0677407 -0.436433 );
+    }
+    preflight_9
+    {
+        type            searchableBox;
+        min             ( 1.32166 -0.785702 -0.534807 );
+        max             ( 1.39116 -0.721641 -0.484316 );
+    }
+    preflight_10
+    {
+        type            searchableBox;
+        min             ( -1.57415 0.707088 -0.342442 );
+        max             ( -1.50991 0.755571 -0.278702 );
+    }
+    preflight_11
+    {
+        type            searchableBox;
+        min             ( 1.92679 -0.354499 -0.369456 );
+        max             ( 2.01606 -0.316671 -0.317678 );
+    }
+    preflight_12
+    {
+        type            searchableBox;
+        min             ( -0.508133 0.0628833 -0.476889 );
+        max             ( -0.426916 0.108209 -0.424591 );
+    }
+    preflight_13
+    {
+        type            searchableBox;
+        min             ( -1.49 -0.852566 -0.493622 );
+        max             ( -1.44747 -0.814703 -0.422814 );
+    }
+    preflight_14
+    {
+        type            searchableBox;
+        min             ( -1.59424 0.624297 -0.261857 );
+        max             ( -1.53266 0.686745 -0.202499 );
+    }
+    preflight_15
+    {
+        type            searchableBox;
+        min             ( 1.45024 -0.75862 -0.415149 );
+        max             ( 1.50471 -0.710158 -0.347148 );
+    }
+    preflight_16
+    {
+        type            searchableBox;
+        min             ( -1.51475 -0.610829 -0.526991 );
+        max             ( -1.46218 -0.553344 -0.46924 );
+    }
+    preflight_17
+    {
+        type            searchableBox;
+        min             ( -1.37055 0.835059 -0.0976786 );
+        max             ( -1.30496 0.877136 -0.0447144 );
+    }
+    preflight_18
+    {
+        type            searchableBox;
+        min             ( 1.35484 0.710116 -0.587161 );
+        max             ( 1.41984 0.758613 -0.525519 );
+    }
+    preflight_19
+    {
+        type            searchableBox;
+        min             ( 1.9757 -0.710969 -0.33161 );
+        max             ( 2.03343 -0.66686 -0.252671 );
+    }
+    preflight_20
+    {
+        type            searchableBox;
+        min             ( -0.651721 0.0501856 -0.476215 );
+        max             ( -0.605658 0.110304 -0.411189 );
+    }
+    preflight_21
+    {
+        type            searchableBox;
+        min             ( -1.78923 -0.878887 -0.0267413 );
+        max             ( -1.73132 -0.829256 0.0333877 );
+    }
+    preflight_22
+    {
+        type            searchableBox;
+        min             ( -0.590403 0.978269 0.291693 );
+        max             ( -0.537217 1.02698 0.358913 );
+    }
+    preflight_23
+    {
+        type            searchableBox;
+        min             ( -0.6897 -0.113829 -0.489639 );
+        max             ( -0.644581 -0.0587661 -0.431997 );
+    }
+    preflight_24
+    {
+        type            searchableBox;
+        min             ( 1.02954 0.82845 -0.279023 );
+        max             ( 1.07188 0.867888 -0.228899 );
+    }
+    preflight_25
+    {
+        type            searchableBox;
+        min             ( 1.9202 -0.333207 -0.41928 );
+        max             ( 1.96032 -0.294197 -0.357294 );
+    }
+    preflight_26
+    {
+        type            searchableBox;
+        min             ( -1.66652 -0.698676 -0.487502 );
+        max             ( -1.62677 -0.661927 -0.449146 );
+    }
+    preflight_27
+    {
+        type            searchableBox;
+        min             ( -1.01246 -0.197926 -0.346632 );
+        max             ( -0.945255 -0.159997 -0.300726 );
+    }
+    preflight_28
+    {
+        type            searchableBox;
+        min             ( 1.39828 0.710251 -0.346503 );
+        max             ( 1.45324 0.758732 -0.285988 );
+    }
+    preflight_29
+    {
+        type            searchableBox;
+        min             ( 1.74167 -0.855138 -0.359113 );
+        max             ( 1.78199 -0.813473 -0.318705 );
+    }
+    preflight_30
+    {
+        type            searchableBox;
+        min             ( -1.44701 -0.854593 -0.477614 );
+        max             ( -1.39201 -0.817442 -0.426994 );
+    }
+    preflight_31
+    {
+        type            searchableBox;
+        min             ( -0.459172 -0.0951025 -0.436133 );
+        max             ( -0.418708 -0.0516706 -0.377332 );
+    }
+    preflight_32
+    {
+        type            searchableBox;
+        min             ( 0.0762282 -0.0585999 -0.500408 );
+        max             ( 0.13718 -0.0180077 -0.462203 );
+    }
+    preflight_33
+    {
+        type            searchableBox;
+        min             ( -0.289193 -0.057407 -0.39954 );
+        max             ( -0.248199 -0.0193981 -0.355189 );
+    }
+    preflight_34
+    {
+        type            searchableBox;
+        min             ( -1.74731 0.787916 0.0405267 );
+        max             ( -1.70396 0.838049 0.0875994 );
+    }
+    preflight_35
+    {
+        type            searchableBox;
+        min             ( -0.626752 -0.0664148 -0.334082 );
+        max             ( -0.58977 -0.00157904 -0.283149 );
+    }
+    preflight_36
+    {
+        type            searchableBox;
+        min             ( 1.63522 0.826236 -0.144468 );
+        max             ( 1.67377 0.880986 -0.102643 );
+    }
+    preflight_37
+    {
+        type            searchableBox;
+        min             ( -1.86085 -0.877475 -0.0837214 );
+        max             ( -1.80531 -0.834452 -0.0179473 );
+    }
+    preflight_38
+    {
+        type            searchableBox;
+        min             ( 1.23279 -0.74708 -0.468472 );
+        max             ( 1.29532 -0.710298 -0.416879 );
+    }
+    preflight_39
+    {
+        type            searchableBox;
+        min             ( -1.62382 -0.759041 -0.377664 );
+        max             ( -1.57217 -0.707005 -0.337816 );
+    }
+    preflight_40
+    {
+        type            searchableBox;
+        min             ( 1.18495 0.846075 -0.119744 );
+        max             ( 1.23327 0.891952 -0.0754565 );
+    }
+    preflight_41
+    {
+        type            searchableBox;
+        min             ( -0.616314 -0.136363 -0.434149 );
+        max             ( -0.54679 -0.0879514 -0.389478 );
+    }
+    preflight_42
+    {
+        type            searchableBox;
+        min             ( -1.54224 0.770789 -0.389832 );
+        max             ( -1.50394 0.815475 -0.34069 );
+    }
+    preflight_43
+    {
+        type            searchableBox;
+        min             ( -1.70075 0.53601 -0.497769 );
+        max             ( -1.65841 0.591263 -0.458227 );
+    }
+    preflight_44
+    {
+        type            searchableBox;
+        min             ( -1.73742 0.779447 -0.173323 );
+        max             ( -1.68518 0.816424 -0.134555 );
+    }
+    preflight_45
+    {
+        type            searchableBox;
+        min             ( -0.299851 0.705818 -0.540467 );
+        max             ( -0.245887 0.742947 -0.5022 );
+    }
+    preflight_46
+    {
+        type            searchableBox;
+        min             ( 0.256661 -0.0331344 -0.485696 );
+        max             ( 0.316323 0.017192 -0.435837 );
+    }
+    preflight_47
+    {
+        type            searchableBox;
+        min             ( -1.66749 -0.781199 -0.484689 );
+        max             ( -1.62905 -0.729853 -0.419943 );
+    }
+    preflight_48
+    {
+        type            searchableBox;
+        min             ( 1.35459 0.846915 -0.0698843 );
+        max             ( 1.40188 0.887342 -0.0327481 );
+    }
+    preflight_49
+    {
+        type            searchableBox;
+        min             ( -0.366519 -0.0189587 -0.310033 );
+        max             ( -0.305351 0.0242537 -0.27288 );
+    }
+    preflight_50
+    {
+        type            searchableBox;
+        min             ( 2.19594 -0.505809 -0.377382 );
+        max             ( 2.24215 -0.467227 -0.339151 );
+    }
+    preflight_51
+    {
+        type            searchableBox;
+        min             ( -0.709935 -0.0229679 -0.48594 );
+        max             ( -0.660546 0.0341308 -0.448058 );
+    }
+    preflight_52
+    {
+        type            searchableBox;
+        min             ( 1.65829 -0.349407 -0.536439 );
+        max             ( 1.71163 -0.292981 -0.48835 );
+    }
+    preflight_53
+    {
+        type            searchableBox;
+        min             ( -0.889859 0.0337813 -0.287433 );
+        max             ( -0.845511 0.0719574 -0.228515 );
+    }
+    preflight_54
+    {
+        type            searchableBox;
+        min             ( -1.55931 -0.823041 -0.360961 );
+        max             ( -1.51438 -0.781455 -0.312186 );
+    }
+    preflight_55
+    {
+        type            searchableBox;
+        min             ( 1.18261 -0.863098 -0.348828 );
+        max             ( 1.22161 -0.825244 -0.307742 );
+    }
+    preflight_56
+    {
+        type            searchableBox;
+        min             ( 1.42966 -0.758498 -0.565689 );
+        max             ( 1.47644 -0.71001 -0.52817 );
+    }
+    preflight_57
+    {
+        type            searchableBox;
+        min             ( -1.83299 0.840758 -0.0921023 );
+        max             ( -1.78395 0.879589 -0.0217902 );
+    }
+    preflight_58
+    {
+        type            searchableBox;
+        min             ( -0.0916494 -0.0332282 -0.546357 );
+        max             ( -0.0311849 0.0132301 -0.498454 );
+    }
+    preflight_59
+    {
+        type            searchableBox;
+        min             ( 1.52973 -0.449393 -0.369595 );
+        max             ( 1.56866 -0.408005 -0.325831 );
+    }
+    preflight_60
+    {
+        type            searchableBox;
+        min             ( -1.62188 0.63555 -0.517496 );
+        max             ( -1.58104 0.672305 -0.463975 );
+    }
+    preflight_61
+    {
+        type            searchableBox;
+        min             ( 2.23799 -0.529697 -0.385513 );
+        max             ( 2.28654 -0.461665 -0.345728 );
+    }
+    preflight_62
+    {
+        type            searchableBox;
+        min             ( 1.58689 0.818501 -0.0718132 );
+        max             ( 1.62627 0.864334 -0.00284851 );
+    }
+    preflight_63
+    {
+        type            searchableBox;
+        min             ( 1.63657 -0.876034 -0.176324 );
+        max             ( 1.6764 -0.838002 -0.136594 );
+    }
+    preflight_64
+    {
+        type            searchableBox;
+        min             ( 1.2784 0.777819 -0.518589 );
+        max             ( 1.33584 0.825609 -0.47107 );
+    }
+    preflight_65
+    {
+        type            searchableBox;
+        min             ( -0.490065 0.0916836 -0.442285 );
+        max             ( -0.428134 0.141141 -0.395872 );
+    }
+    preflight_66
+    {
+        type            searchableBox;
+        min             ( 1.76633 0.733926 -0.511175 );
+        max             ( 1.80714 0.789685 -0.474043 );
+    }
+    preflight_67
+    {
+        type            searchableBox;
+        min             ( 1.29023 0.722055 -0.397357 );
+        max             ( 1.33007 0.758818 -0.335661 );
+    }
+    preflight_68
+    {
+        type            searchableBox;
+        min             ( -1.89766 0.698287 -0.571102 );
+        max             ( -1.8548 0.74739 -0.510076 );
+    }
+    preflight_69
+    {
+        type            searchableBox;
+        min             ( 1.40642 -0.832571 -0.55296 );
+        max             ( 1.44455 -0.782575 -0.51297 );
+    }
+    flow_near_wake
+    {
+        type            searchableBox;
+        min             ( 2.35184 -1.41435 -1.06033 );
+        max             ( 7.05551 1.41435 1.06033 );
+    }
+    flow_far_wake
+    {
+        type            searchableBox;
+        min             ( 7.05551 -1.81845 -1.36328 );
+        max             ( 16.4629 1.81845 1.36328 );
+    }
+    expert_skew_0
+    {
+        type            searchableBox;
+        min             ( -1.67741 -0.79623 -0.543684 );
+        max             ( -1.54422 -0.722711 -0.433983 );
+    }
+    expert_skew_1
+    {
+        type            searchableBox;
+        min             ( -0.875283 0.0733183 -0.460014 );
+        max             ( -0.801788 0.146813 -0.386519 );
+    }
+    expert_skew_2
+    {
+        type            searchableBox;
+        min             ( -0.806323 -0.116312 -0.50882 );
+        max             ( -0.732828 -0.0428169 -0.435326 );
+    }
+    expert_skew_3
+    {
+        type            searchableBox;
+        min             ( -0.682349 -0.122908 -0.50611 );
+        max             ( -0.608854 -0.0494132 -0.432615 );
+    }
+    expert_skew_4
+    {
+        type            searchableBox;
+        min             ( -1.68583 0.826884 -0.0452364 );
+        max             ( -1.61234 0.900379 0.0282586 );
+    }
+    expert_skew_5
+    {
+        type            searchableBox;
+        min             ( -1.6854 -0.900513 -0.0456303 );
+        max             ( -1.61191 -0.827018 0.0278646 );
+    }
+    expert_skew_6
+    {
+        type            searchableBox;
+        min             ( 2.2225 -0.468171 -0.450046 );
+        max             ( 2.296 -0.394676 -0.376551 );
+    }
+    expert_skew_7
+    {
+        type            searchableBox;
+        min             ( 1.06172 -0.262806 -0.520979 );
+        max             ( 1.13521 -0.189311 -0.447484 );
+    }
+    expert_pinch_0
+    {
+        type            searchableBox;
+        min             ( 0.442943 -0.124693 -0.491285 );
+        max             ( 0.512943 -0.0546931 -0.421285 );
+    }
+    expert_pinch_1
+    {
+        type            searchableBox;
+        min             ( -0.742761 0.0532313 -0.505978 );
+        max             ( -0.672761 0.123231 -0.435978 );
+    }
+    expert_tet_margin
+    {
+        type            searchableBox;
+        min             ( 1.75046 0.796553 -0.391838 );
+        max             ( 1.78721 0.833301 -0.35509 );
+    }
+}
+
+castellatedMeshControls
+{
+    maxLocalCells   12000000;
+    maxGlobalCells  12000000;
+    minRefinementCells 10;
+    maxLoadUnbalance 0.1;
+    nCellsBetweenLevels 4;
+    resolveFeatureAngle 30;
+    features        ( { file "body.eMesh" ; level 6 ; } );
+    refinementSurfaces
+    {
+        body
+        {
+            level           ( 6 6 );
+            patchInfo
+            {
+                type            wall;
+                inGroups        ( bodyGroup );
+            }
+        }
+    }
+    refinementRegions
+    {
+        feature_0
+        {
+            mode            inside;
+            levels          ( ( 1 7 ) );
+        }
+        feature_1
+        {
+            mode            inside;
+            levels          ( ( 1 7 ) );
+        }
+        feature_2
+        {
+            mode            inside;
+            levels          ( ( 1 7 ) );
+        }
+        feature_3
+        {
+            mode            inside;
+            levels          ( ( 1 7 ) );
+        }
+        feature_4
+        {
+            mode            inside;
+            levels          ( ( 1 7 ) );
+        }
+        feature_5
+        {
+            mode            inside;
+            levels          ( ( 1 7 ) );
+        }
+        preflight_6
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_7
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_8
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_9
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_10
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_11
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_12
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_13
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_14
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_15
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_16
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_17
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_18
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_19
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_20
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_21
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_22
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_23
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_24
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_25
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_26
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_27
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_28
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_29
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_30
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_31
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_32
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_33
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_34
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_35
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_36
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_37
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_38
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_39
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_40
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_41
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_42
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_43
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_44
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_45
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_46
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_47
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_48
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_49
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_50
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_51
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_52
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_53
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_54
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_55
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_56
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_57
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_58
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_59
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_60
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_61
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_62
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_63
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_64
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_65
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_66
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_67
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_68
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        preflight_69
+        {
+            mode            inside;
+            levels          ( ( 1 6 ) );
+        }
+        flow_near_wake
+        {
+            mode            inside;
+            levels          ( ( 1 2 ) );
+        }
+        flow_far_wake
+        {
+            mode            inside;
+            levels          ( ( 1 1 ) );
+        }
+        expert_skew_0
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_1
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_2
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_3
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_4
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_5
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_6
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_skew_7
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_pinch_0
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_pinch_1
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        expert_tet_margin
+        {
+            mode            inside;
+            levels          ( ( 1 8 ) );
+        }
+        body
+        {
+            mode            distance;
+            levels          ( ( 0.0367475 6 ) ( 0.14699 5 ) );
+        }
+    }
+    locationInMesh  ( -5.02118 -3.67959 -3.42671 );
+    allowFreeStandingZoneFaces false;
+}
+
+snapControls
+{
+    nSmoothPatch    5;
+    tolerance       1.5;
+    nSolveIter      80;
+    nRelaxIter      10;
+    nFeatureSnapIter 20;
+    implicitFeatureSnap false;
+    explicitFeatureSnap true;
+    multiRegionFeatureSnap false;
+    nFaceSplitInterval 10;
+    avoidDiagonal   true;
+}
+
+addLayersControls
+{
+    relativeSizes   false;
+    layers
+    {
+        "(body).*"
+        {
+            nSurfaceLayers  6;
+        }
+    }
+    expansionRatio  1.1;
+    firstLayerThickness 0.00129484;
+    minThickness    0.000129484;
+    nGrow           0;
+    featureAngle    130;
+    mergePatchFacesAngle 10;
+    slipFeatureAngle 70;
+    nRelaxIter      5;
+    nSmoothSurfaceNormals 3;
+    nSmoothNormals  5;
+    nSmoothThickness 20;
+    maxFaceThicknessRatio 0.5;
+    maxThicknessToMedialRatio 0.3;
+    minMedialAxisAngle 90;
+    nBufferCellsNoExtrude 0;
+    nLayerIter      60;
+    nOuterIter      1;
+    meshShrinker    displacementMotionSolver;
+    solver          displacementLaplacian;
+    displacementLaplacianCoeffs
+    {
+        diffusivity     quadratic inverseDistance 1 ( body );
+    }
+    additionalReporting true;
+    layerTerminationAngle -180;
+    detectExtrusionIsland true;
+}
+
+meshQualityControls
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 4;
+    maxInternalSkewness 4;
+    maxConcave      60;
+    minVol          1e-13;
+    minTetQuality   1e-12;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  0.001;
+    minFaceWeight   0.05;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    minEdgeLength   -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+debugFlags      ( );
+
+writeFlags      ( scalarLevels layerSets layerFields );
+
+mergeTolerance  1e-06;
+
+
+// ************************************************************************* //

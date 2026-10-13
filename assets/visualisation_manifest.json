@@ -1,0 +1,113 @@
+{
+  "source": "native constant/polyMesh and 0/nSurfaceLayers, no fabricated flow field",
+  "records": [
+    {
+      "case": "ahmed_public_25",
+      "role": "One-shot",
+      "attempt": 1,
+      "native_cells": 275605,
+      "cut_plane": "Y=0, XZ projection",
+      "layer_coverage": 0.4920036255031145,
+      "rejected": false,
+      "native_mesh_sha256": {
+        "points": "d8e8d34559564de1173546263db83bb252bbedbc86f65155dd3f2f4291a0aef5",
+        "faces": "e692ed116849645bbbff9ce90899b94bf5463e1c377e519fd8c9d8c0bf591d96",
+        "owner": "81a400f9626aaaf0353c9a99974488b183c272a0d3309188074d7e626450f9b1",
+        "neighbour": "f42d4ab1815e20aec79a4de0e2b46b573754cf5111f070a61dca645aac016da6",
+        "boundary": "5b59c0bb54ad1ff690df60289dcda0666b8a0e343c4b8abc878cf6356976d780"
+      },
+      "readonly_mesh_hashes_unchanged": true,
+      "slice_limitations": "VTK may omit un-contourable non-manifold cells in rejected meshes; the slice is not an exhaustive bad-cell diagnostic"
+    },
+    {
+      "case": "ahmed_public_25",
+      "role": "Selected diagnostic candidate",
+      "attempt": 1,
+      "native_cells": 275605,
+      "cut_plane": "Y=0, XZ projection",
+      "layer_coverage": 0.4920036255031145,
+      "rejected": false,
+      "native_mesh_sha256": {
+        "points": "d8e8d34559564de1173546263db83bb252bbedbc86f65155dd3f2f4291a0aef5",
+        "faces": "e692ed116849645bbbff9ce90899b94bf5463e1c377e519fd8c9d8c0bf591d96",
+        "owner": "81a400f9626aaaf0353c9a99974488b183c272a0d3309188074d7e626450f9b1",
+        "neighbour": "f42d4ab1815e20aec79a4de0e2b46b573754cf5111f070a61dca645aac016da6",
+        "boundary": "5b59c0bb54ad1ff690df60289dcda0666b8a0e343c4b8abc878cf6356976d780"
+      },
+      "readonly_mesh_hashes_unchanged": true,
+      "slice_limitations": "VTK may omit un-contourable non-manifold cells in rejected meshes; the slice is not an exhaustive bad-cell diagnostic"
+    },
+    {
+      "case": "finite_wing",
+      "role": "One-shot",
+      "attempt": 1,
+      "native_cells": 1237731,
+      "cut_plane": "Y=0, XZ projection",
+      "layer_coverage": 0.6740662092845968,
+      "rejected": true,
+      "native_mesh_sha256": {
+        "points": "33b83f19afa79fc1fd65a79961dd72f94a0848606eeb43ed843061b8c8d44894",
+        "faces": "873b55553e8c9847634396bc616dec0ade97b0cbf7bcfac14ac1a6594e9e027c",
+        "owner": "63090984f61e8ae4131563ab8b1c0b5db2d7e6e1e89aabaec51756e1d37844cd",
+        "neighbour": "1dd6e0dbec2c199aae3cc4cffe2aeecbe7a7b3f4a03f5e92783341611b2d8616",
+        "boundary": "339a427ee798145e8b40f16859fad5973f6eb200eb2b14500ec8402b3846fb55"
+      },
+      "readonly_mesh_hashes_unchanged": true,
+      "slice_limitations": "VTK may omit un-contourable non-manifold cells in rejected meshes; the slice is not an exhaustive bad-cell diagnostic"
+    },
+    {
+      "case": "finite_cylinder",
+      "role": "One-shot",
+      "attempt": 1,
+      "native_cells": 187705,
+      "cut_plane": "Y=0, XZ projection",
+      "layer_coverage": 0.79721981645488,
+      "rejected": true,
+      "native_mesh_sha256": {
+        "points": "1489fd329c265183dc2f7f90e885aa551cb206213ec8f09d69ee1d9935dbe0aa",
+        "faces": "5a906fe6b8e2b2bd404bb038b60fba4f8e0865268a2a489d6e4ce061472956cb",
+        "owner": "b104b3b040a691c430e5dc598ef427ccab46bde6c9f77ea56ba88ee4cb60924c",
+        "neighbour": "7ac57f26875649e92af55ffa8f1d9176054fd462a325748693a950d41c0c2415",
+        "boundary": "4c6e548f8cc053d349e61109e8c27f571c7f40a6a7b92c0a429b9eeed9c26c74"
+      },
+      "readonly_mesh_hashes_unchanged": true,
+      "slice_limitations": "VTK may omit un-contourable non-manifold cells in rejected meshes; the slice is not an exhaustive bad-cell diagnostic"
+    },
+    {
+      "case": "submerged_spheroid",
+      "role": "One-shot",
+      "attempt": 1,
+      "native_cells": 166129,
+      "cut_plane": "Y=0, XZ projection",
+      "layer_coverage": 0.00332530568820245,
+      "rejected": false,
+      "native_mesh_sha256": {
+        "points": "e2d5f723d92ce7b5d71a05e9eda726bc72e56b5ff67507726956b7232cd8b618",
+        "faces": "231f5cd4b4cdb3f446abbf9814e5cf0eb3a518949c35741a046cd8a9789229f3",
+        "owner": "a177203e4de3db66c38c06386e9d8867b52876fd493e338a18610910bf72a14f",
+        "neighbour": "bb1d087f6912c640eb5be99345d9f966e0ed8dc38df9cc100c8d4e3977e535ea",
+        "boundary": "088edf043bf1b760f2c704acad712a2f61660fb0d765c980d2dc101e5e3afaa9"
+      },
+      "readonly_mesh_hashes_unchanged": true,
+      "slice_limitations": "VTK may omit un-contourable non-manifold cells in rejected meshes; the slice is not an exhaustive bad-cell diagnostic"
+    },
+    {
+      "case": "submerged_spheroid",
+      "role": "Selected diagnostic candidate",
+      "attempt": 2,
+      "native_cells": 325211,
+      "cut_plane": "Y=0, XZ projection",
+      "layer_coverage": 0.8982550354386241,
+      "rejected": false,
+      "native_mesh_sha256": {
+        "points": "844e3b7a5d6059c1f7881b7e9928e3d095e44fb45cea8877f0f15cdc96e05933",
+        "faces": "a226b071b5f5e269c8258c596171dd892917f8249b61511bba5f6a8e7067b2b9",
+        "owner": "673fdea40157b958a654a65dcbac18f1f10d78d864d83cadb2a9eecafc9d96e0",
+        "neighbour": "2b4adcf14ad61b5fd81fcdb3df2bb41cd647c7b32e4212e4e57845cf09e9167f",
+        "boundary": "a84baae44bd78da426f036ee5d10782ae5407258ab25bbafd693844462dfa4b4"
+      },
+      "readonly_mesh_hashes_unchanged": true,
+      "slice_limitations": "VTK may omit un-contourable non-manifold cells in rejected meshes; the slice is not an exhaustive bad-cell diagnostic"
+    }
+  ]
+}

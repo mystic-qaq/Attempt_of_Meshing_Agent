@@ -1,0 +1,372 @@
+{
+  "purpose": "synthetic closed-notch stock OpenFOAM tool integration; NOT a model/industrial mesh quality comparison",
+  "new_drivaer_attempts": 0,
+  "paid_api_calls": 0,
+  "source_unchanged": true,
+  "code_sha256": "586f52ca523913d99bd9594eb9ffa96c3b2c4f390bece819d816e885911c5c5c",
+  "records": [
+    {
+      "arm": "baseline",
+      "quality": {
+        "verified": true,
+        "accepted": true,
+        "reasons": [],
+        "n_failed": 0,
+        "metrics": {
+          "cells": 71482.0,
+          "regions": 1.0,
+          "max_non_ortho": 30.458984942450154,
+          "max_skew": 0.36880770901304344,
+          "max_aspect": 1.6139504721613807,
+          "min_volume": 1.6966598505213668e-06
+        },
+        "patches": {
+          "minX": 528,
+          "maxX": 528,
+          "minY": 814,
+          "maxY": 814,
+          "minZ": 888,
+          "maxZ": 888,
+          "body": 9872
+        },
+        "native_failure_messages": [],
+        "returncode": 0,
+        "native_times": [
+          "constant"
+        ],
+        "boundary_disconnected_point_fans": false,
+        "body_shared_edge_defect": false
+      },
+      "native_error": null,
+      "gap_log": [
+        "Case   : <HOME>/cfd_meshing_agent/native_gap_smoke_fixed_20261012/baseline",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 10444 points."
+      ],
+      "spec": {
+        "cell_size_target": 0.0,
+        "surface": {
+          "name": "body",
+          "level_min": 3,
+          "level_max": 3,
+          "patch_type": "wall",
+          "patch_group": "bodyGroup"
+        },
+        "domain": {
+          "mode": "box",
+          "padding_up": 1,
+          "padding_down": 1,
+          "padding_side": 1,
+          "padding_upstream": 1,
+          "padding_downstream": 2,
+          "base_cells": 8,
+          "grading": 1.0,
+          "axis": 0
+        },
+        "distance_levels": [
+          {
+            "distance": 0.03125,
+            "level": 3
+          },
+          {
+            "distance": 0.09375,
+            "level": 2
+          }
+        ],
+        "regions": [],
+        "features": {
+          "enabled": true,
+          "level": 3,
+          "included_angle": 150.0,
+          "open_edges": true,
+          "non_manifold_edges": false
+        },
+        "snap": {
+          "n_smooth_patch": 3,
+          "tolerance": 2.0,
+          "n_solve_iter": 30,
+          "n_relax_iter": 5,
+          "n_feature_snap_iter": 10,
+          "implicit_feature_snap": false,
+          "explicit_feature_snap": true,
+          "n_face_split_interval": -1,
+          "avoid_diagonal": false,
+          "concave_angle": 45.0,
+          "min_area_ratio": 0.3
+        },
+        "layers": {
+          "enabled": false,
+          "n_surface_layers": 3,
+          "first_layer_thickness": 0.0,
+          "expansion_ratio": 1.2,
+          "final_layer_thickness": 0.4,
+          "min_thickness": 0.1,
+          "feature_angle": 60.0,
+          "n_grow": 0,
+          "max_face_thickness_ratio": 0.5,
+          "max_thickness_to_medial_ratio": 0.3,
+          "min_medial_axis_angle": 90.0,
+          "n_smooth_thickness": 10,
+          "n_smooth_surface_normals": 1,
+          "n_smooth_normals": 3,
+          "n_relax_iter": 3,
+          "n_layer_iter": 50,
+          "slip_feature_angle": 30.0,
+          "n_buffer_cells_no_extrude": 0,
+          "mesh_shrinker": "displacementMedialAxis",
+          "merge_patch_faces_angle": 45.0,
+          "n_outer_iter": 1,
+          "layer_termination_angle": null,
+          "detect_extrusion_island": false
+        },
+        "quality": {
+          "max_non_ortho": 65.0,
+          "max_boundary_skewness": 4.0,
+          "max_internal_skewness": 4.0,
+          "max_concave": 80.0,
+          "min_vol": 1e-13,
+          "min_tet_quality": 1e-15,
+          "min_area": -1.0,
+          "min_twist": 0.02,
+          "min_determinant": 0.001,
+          "min_face_weight": 0.02,
+          "min_vol_ratio": 0.01,
+          "min_triangle_twist": -1.0,
+          "n_smooth_scale": 4,
+          "error_reduction": 0.75,
+          "check_max_non_ortho": 70.0,
+          "check_max_skewness": 4.0,
+          "check_max_aspect_ratio": 1000.0,
+          "check_max_boundary_skewness": 20.0,
+          "check_min_face_weight": 0.02,
+          "check_min_vol_ratio": 0.01,
+          "check_max_concave": 80.0,
+          "check_max_cell_openness": 1.0
+        },
+        "max_global_cells": 1000000,
+        "max_local_cells": 2000000,
+        "min_refinement_cells": 10,
+        "n_cells_between_levels": 3,
+        "resolve_feature_angle": 30.0,
+        "allow_free_standing_zone_faces": false,
+        "merge_tolerance": 1e-06,
+        "location_in_mesh": null,
+        "write_format": "binary",
+        "rationale": ""
+      }
+    },
+    {
+      "arm": "gap",
+      "quality": {
+        "verified": true,
+        "accepted": true,
+        "reasons": [],
+        "n_failed": 0,
+        "metrics": {
+          "cells": 94255.0,
+          "regions": 1.0,
+          "max_non_ortho": 50.19606027777492,
+          "max_skew": 0.5133712597686806,
+          "max_aspect": 4.434059523496091,
+          "min_volume": 1.0144267569110029e-07
+        },
+        "patches": {
+          "minX": 528,
+          "maxX": 528,
+          "minY": 814,
+          "maxY": 814,
+          "minZ": 888,
+          "maxZ": 888,
+          "body": 14464
+        },
+        "native_failure_messages": [],
+        "returncode": 0,
+        "native_times": [
+          "constant"
+        ],
+        "boundary_disconnected_point_fans": false,
+        "body_shared_edge_defect": false
+      },
+      "native_error": null,
+      "gap_log": [
+        "Case   : <HOME>/cfd_meshing_agent/native_gap_smoke_fixed_20261012/gap",
+        "Refinement level 0 for all cells inside gap_0",
+        "Refinement level up to 4 for all cells in gaps for shell gap_0",
+        "Marked for refinement due to surface intersection (at gaps): 492 cells.",
+        "Marked for refinement due to surface intersection (at gaps): 768 cells.",
+        "Marked for refinement due to surface intersection (at gaps): 480 cells.",
+        "Marked for refinement due to surface intersection (at gaps): 0 cells.",
+        "For surface body.stl found 0 cells in small gaps",
+        "Marked for refinement due to surface intersection (at gaps): 0 cells.",
+        "Big gap refinement iteration 0",
+        "Selected 4032 cells inside gap shells out of 66694",
+        "Selected 7620 faces for spreading gap size out of 220551",
+        "After refinement big gap refinement iteration 0 : cells:76844  faces:246310  points:92755  unbalance:0.4693665087710166",
+        "After balancing big gap refinement iteration 0 : cells:76844  faces:246310  points:92755  unbalance:0.01004632762479829",
+        "Big gap refinement iteration 1",
+        "Selected 2890 cells inside gap shells out of 76844",
+        "Selected 0 faces for spreading gap size out of 250746",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points.",
+        "Overriding nearest with intersection of close gaps at 0 out of 15528 points."
+      ],
+      "spec": {
+        "cell_size_target": 0.0,
+        "surface": {
+          "name": "body",
+          "level_min": 3,
+          "level_max": 3,
+          "patch_type": "wall",
+          "patch_group": "bodyGroup"
+        },
+        "domain": {
+          "mode": "box",
+          "padding_up": 1,
+          "padding_down": 1,
+          "padding_side": 1,
+          "padding_upstream": 1,
+          "padding_downstream": 2,
+          "base_cells": 8,
+          "grading": 1.0,
+          "axis": 0
+        },
+        "distance_levels": [
+          {
+            "distance": 0.03125,
+            "level": 3
+          },
+          {
+            "distance": 0.09375,
+            "level": 2
+          }
+        ],
+        "regions": [
+          {
+            "name": "gap_0",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 0
+              }
+            ],
+            "min": [
+              -0.12,
+              -0.19,
+              -0.2
+            ],
+            "max": [
+              0.12,
+              0.32,
+              0.2
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "bounded native gap detection in anonymous notch",
+            "gap_level": [
+              6,
+              3,
+              4
+            ],
+            "gap_mode": "outside"
+          }
+        ],
+        "features": {
+          "enabled": true,
+          "level": 3,
+          "included_angle": 150.0,
+          "open_edges": true,
+          "non_manifold_edges": false
+        },
+        "snap": {
+          "n_smooth_patch": 3,
+          "tolerance": 2.0,
+          "n_solve_iter": 30,
+          "n_relax_iter": 5,
+          "n_feature_snap_iter": 10,
+          "implicit_feature_snap": false,
+          "explicit_feature_snap": true,
+          "n_face_split_interval": -1,
+          "avoid_diagonal": false,
+          "concave_angle": 45.0,
+          "min_area_ratio": 0.3
+        },
+        "layers": {
+          "enabled": false,
+          "n_surface_layers": 3,
+          "first_layer_thickness": 0.0,
+          "expansion_ratio": 1.2,
+          "final_layer_thickness": 0.4,
+          "min_thickness": 0.1,
+          "feature_angle": 60.0,
+          "n_grow": 0,
+          "max_face_thickness_ratio": 0.5,
+          "max_thickness_to_medial_ratio": 0.3,
+          "min_medial_axis_angle": 90.0,
+          "n_smooth_thickness": 10,
+          "n_smooth_surface_normals": 1,
+          "n_smooth_normals": 3,
+          "n_relax_iter": 3,
+          "n_layer_iter": 50,
+          "slip_feature_angle": 30.0,
+          "n_buffer_cells_no_extrude": 0,
+          "mesh_shrinker": "displacementMedialAxis",
+          "merge_patch_faces_angle": 45.0,
+          "n_outer_iter": 1,
+          "layer_termination_angle": null,
+          "detect_extrusion_island": false
+        },
+        "quality": {
+          "max_non_ortho": 65.0,
+          "max_boundary_skewness": 4.0,
+          "max_internal_skewness": 4.0,
+          "max_concave": 80.0,
+          "min_vol": 1e-13,
+          "min_tet_quality": 1e-15,
+          "min_area": -1.0,
+          "min_twist": 0.02,
+          "min_determinant": 0.001,
+          "min_face_weight": 0.02,
+          "min_vol_ratio": 0.01,
+          "min_triangle_twist": -1.0,
+          "n_smooth_scale": 4,
+          "error_reduction": 0.75,
+          "check_max_non_ortho": 70.0,
+          "check_max_skewness": 4.0,
+          "check_max_aspect_ratio": 1000.0,
+          "check_max_boundary_skewness": 20.0,
+          "check_min_face_weight": 0.02,
+          "check_min_vol_ratio": 0.01,
+          "check_max_concave": 80.0,
+          "check_max_cell_openness": 1.0
+        },
+        "max_global_cells": 1000000,
+        "max_local_cells": 2000000,
+        "min_refinement_cells": 10,
+        "n_cells_between_levels": 3,
+        "resolve_feature_angle": 30.0,
+        "allow_free_standing_zone_faces": false,
+        "merge_tolerance": 1e-06,
+        "location_in_mesh": null,
+        "write_format": "binary",
+        "rationale": ""
+      }
+    }
+  ]
+}

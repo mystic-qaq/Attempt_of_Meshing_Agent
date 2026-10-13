@@ -1,0 +1,1770 @@
+{
+  "collected_date": "2026-10-13",
+  "study_status": "closed_no_additional_optimization",
+  "collection": "existing JSON records only; no native recomputation or API calls",
+  "runs": [
+    {
+      "episode": "campaign",
+      "case": "drivaer_1",
+      "arm": "deterministic",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "proposal rejected without spending a native stage: proposed native stage already measured",
+      "source_mutated": false,
+      "code_sha256": "8db08e43906294b9ea2f3829d0212d2cd85599761f4e112c8f27b88e71bb39e9",
+      "protocol_sha256": "f0660cb830d0b3015b37d658de886ebbb6acc94a590dffa9c0ff7c1d2eed258e",
+      "agent_run_sha256": "bcb53be0d7b299cc716b4f5abf5c7efcd89a7aede70dfe2e7d05905b520a07cc",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 1990.7201571529731,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "program_initial_plan",
+          "cells": 1437462.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 19616 bbox [-1.5154580484359013, -0.6674466921778989, -0.47306435867291385] .. [-1.5036749110574206, -0.6539957393438407, -0.4562246629774215]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 19616 bbox [-1.5154580484359013, -0.6674466921778989, -0.47306435867291385] .. [-1.5036749110574206, -0.6539957393438407, -0.4562246629774215]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 457.10498461825773,
+          "measurement_seconds": 17.865976667031646
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 1436694.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 495.865380869247,
+          "measurement_seconds": 11.544627488125116
+        },
+        {
+          "round": 2,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 1436511.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 26514 bbox [-1.515472355340872, -0.6678272604058245, -0.473032951412754] .. [-1.5037433281768868, -0.6539947180816742, -0.45622812444481003]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 26514 bbox [-1.515472355340872, -0.6678272604058245, -0.473032951412754] .. [-1.5037433281768868, -0.6539947180816742, -0.45622812444481003]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 417.4468049351126,
+          "measurement_seconds": 14.697103546001017
+        },
+        {
+          "round": 3,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 3124304.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 51517 bbox [2.19188483607863, -0.4292874049178614, -0.4630106339954315] .. [2.205712768112424, -0.4256640755932282, -0.45975251457347943]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 51517 bbox [2.19188483607863, -0.4292874049178614, -0.4630106339954315] .. [2.205712768112424, -0.4256640755932282, -0.45975251457347943]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 526.6494777151383,
+          "measurement_seconds": 30.38277230085805
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign",
+      "case": "drivaer_1",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "proposal rejected without spending a native stage: layer-only repair cannot address snap failure",
+      "source_mutated": false,
+      "code_sha256": "8db08e43906294b9ea2f3829d0212d2cd85599761f4e112c8f27b88e71bb39e9",
+      "protocol_sha256": "f0660cb830d0b3015b37d658de886ebbb6acc94a590dffa9c0ff7c1d2eed258e",
+      "agent_run_sha256": "27a9e86f3a00d4c9081c6da91b21c9b11de097bbfaf2ddb7658636651a4b0311",
+      "own_usd_ceiling": 0.10920270000000001,
+      "reserved_calls": 9,
+      "settled_request_records": 9,
+      "seconds": 1217.9167024497874,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "program_initial_plan",
+          "cells": 1437498.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 5216 bbox [-1.2106939309158073, 0.3044247287178198, -0.36617825588198644] .. [-1.2081986157153124, 0.31756347462665085, -0.3468413911020063]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 5216 bbox [-1.2106939309158073, 0.3044247287178198, -0.36617825588198644] .. [-1.2081986157153124, 0.31756347462665085, -0.3468413911020063]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 458.57454540999606,
+          "measurement_seconds": 16.246951069217175
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 1436842.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 443.20989289786667,
+          "measurement_seconds": 11.660480365157127
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_cgal_original",
+      "case": "drivaer_318",
+      "arm": "deterministic",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "proposal rejected without spending a native stage: proposed native stage already measured",
+      "source_mutated": false,
+      "code_sha256": "0f4bfcef2664ea353fc2b6d74f0d959ac04108d20ea0bd9f245a1340bd22d0e6",
+      "protocol_sha256": "15266c56264e808c3080ca78418aaad951172a19685e1c8b1d12d6c7ae486388",
+      "agent_run_sha256": "c9ff7a95361d19241dc660b8e0ef2083eb206b412490c4e85303a9a162b226b6",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 1600.548955064267,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "program_initial_plan",
+          "cells": 763009.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 8817 bbox [-1.364300400595608, 0.8263796181056599, -0.47824754007866227] .. [-1.3565434910861722, 0.8472744930020022, -0.47325418430266747]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 8817 bbox [-1.364300400595608, 0.8263796181056599, -0.47824754007866227] .. [-1.3565434910861722, 0.8472744930020022, -0.47325418430266747]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 339.495271012187,
+          "measurement_seconds": 13.384900720790029
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 763069.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 365.879361866042,
+          "measurement_seconds": 8.96785126812756
+        },
+        {
+          "round": 2,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 762833.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 18955 bbox [1.6853219963471995, 0.9350314604444196, -0.12146236837603011] .. [1.695328827511727, 0.9481400100350128, -0.1094962839824188]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 18955 bbox [1.6853219963471995, 0.9350314604444196, -0.12146236837603011] .. [1.695328827511727, 0.9481400100350128, -0.1094962839824188]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 360.11151188984513,
+          "measurement_seconds": 11.239680921658874
+        },
+        {
+          "round": 3,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 2484017.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": true,
+          "quality_reasons": [],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary observation unavailable: boundary face 17543 bbox [-0.6690333921619034, 0.12993331193841207, -0.3594062701474543] .. [-0.6602627245201573, 0.13370906824969717, -0.3523086826051487]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 17543 bbox [-0.6690333921619034, 0.12993331193841207, -0.3594062701474543] .. [-0.6602627245201573, 0.13370906824969717, -0.3523086826051487]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 449.32375510782003,
+          "measurement_seconds": 24.4987451788038
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_cgal_original",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "model stopped: The snap-stage rejection is a native non-manifold body-boundary defect (a point/edge shared by disconnected face fans) produced when snappyHexMesh snaps a surface cell grid comparable to or coarser than the preserved input tessellation onto near-tangent/sliver native polygons on a featureless, gap-free panel. Since the source triangles are preserved and cannot be edited, and no documented snap configuration nor surface refinement finer than the native polygons removed it, this is an intrinsic-topology dead end rather than a recoverable parameter fault.",
+      "source_mutated": false,
+      "code_sha256": "0f4bfcef2664ea353fc2b6d74f0d959ac04108d20ea0bd9f245a1340bd22d0e6",
+      "protocol_sha256": "15266c56264e808c3080ca78418aaad951172a19685e1c8b1d12d6c7ae486388",
+      "agent_run_sha256": "41cac3d25c9c23f541517b110935e6300ce14faf7151dcb0ae7ccd33379e9ea8",
+      "own_usd_ceiling": 0.100589052,
+      "reserved_calls": 17,
+      "settled_request_records": 17,
+      "seconds": 2416.932733207941,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "program_initial_plan",
+          "cells": 762260.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 324.4730312526226,
+          "measurement_seconds": 12.925368005409837
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 782425.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 2099 bbox [1.3539156255566305, 0.795894626919583, -0.32593844385880527] .. [1.3601119945131734, 0.7965520659460684, -0.32031233336707005]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 2099 bbox [1.3539156255566305, 0.795894626919583, -0.32593844385880527] .. [1.3601119945131734, 0.7965520659460684, -0.32031233336707005]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 402.5024667568505,
+          "measurement_seconds": 9.357998987659812
+        },
+        {
+          "round": 2,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 1586316.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 204 bbox [1.3782322807418146, 0.7077340762946669, -0.6134081397884543] .. [1.3835642900134804, 0.711216793423581, -0.6093199846262259]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 204 bbox [1.3782322807418146, 0.7077340762946669, -0.6134081397884543] .. [1.3835642900134804, 0.711216793423581, -0.6093199846262259]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 426.56193027831614,
+          "measurement_seconds": 11.564075184985995
+        },
+        {
+          "round": 3,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 792128.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 8338 bbox [-0.7854618553947874, -0.16562356905655676, -0.29449643276272514] .. [-0.776752114376342, -0.1517070294711551, -0.2799056977679491]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 8338 bbox [-0.7854618553947874, -0.16562356905655676, -0.29449643276272514] .. [-0.776752114376342, -0.1517070294711551, -0.2799056977679491]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 326.4940431397408,
+          "measurement_seconds": 10.132512765005231
+        },
+        {
+          "round": 4,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 763075.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 393.81229453906417,
+          "measurement_seconds": 8.749128049239516
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_cgal_original",
+      "case": "drivaer_410",
+      "arm": "deterministic",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "proposal rejected without spending a native stage: proposed native stage already measured",
+      "source_mutated": false,
+      "code_sha256": "0f4bfcef2664ea353fc2b6d74f0d959ac04108d20ea0bd9f245a1340bd22d0e6",
+      "protocol_sha256": "15266c56264e808c3080ca78418aaad951172a19685e1c8b1d12d6c7ae486388",
+      "agent_run_sha256": "4cdf66678817cede2a44bf6b5a233d62ff35392fb9bf1ee1a52425f09444fd6a",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 1691.607646850869,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "program_initial_plan",
+          "cells": 944709.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 0 bbox [-1.5604272563992438, -0.490520928735859, -0.15853413588694615] .. [-1.5557179927912588, -0.49005171557188143, -0.15560202993917177]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 0 bbox [-1.5604272563992438, -0.490520928735859, -0.15853413588694615] .. [-1.5557179927912588, -0.49005171557188143, -0.15560202993917177]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 387.36048383452,
+          "measurement_seconds": 13.251155721023679
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 944709.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 419.3794798143208,
+          "measurement_seconds": 11.097364518791437
+        },
+        {
+          "round": 2,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 946087.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 6280 bbox [-0.8085313551323207, -0.1267394646628595, -0.4046377149477643] .. [-0.7987062783431196, -0.10972096626559638, -0.39172567641751255]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 6280 bbox [-0.8085313551323207, -0.1267394646628595, -0.4046377149477643] .. [-0.7987062783431196, -0.10972096626559638, -0.39172567641751255]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 386.3136007618159,
+          "measurement_seconds": 11.317818900570273
+        },
+        {
+          "round": 3,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 2529947.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": true,
+          "quality_reasons": [],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary observation unavailable: boundary face 3265 bbox [-1.5612397850553348, 0.6615214774661458, -0.483279729273692] .. [-1.5529117055722543, 0.6670972156230832, -0.4793831763490407]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 3265 bbox [-1.5612397850553348, 0.6615214774661458, -0.483279729273692] .. [-1.5529117055722543, 0.6670972156230832, -0.4793831763490407]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 414.3114706017077,
+          "measurement_seconds": 22.78620263375342
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_cgal_original",
+      "case": "drivaer_410",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "0f4bfcef2664ea353fc2b6d74f0d959ac04108d20ea0bd9f245a1340bd22d0e6",
+      "protocol_sha256": "15266c56264e808c3080ca78418aaad951172a19685e1c8b1d12d6c7ae486388",
+      "agent_run_sha256": "8fad00ee238bd56e6f38704058096d6f05413ec21a459d0690885a09d61fad9b",
+      "own_usd_ceiling": 0.16639136999999993,
+      "reserved_calls": 20,
+      "settled_request_records": 20,
+      "seconds": 3422.912844663486,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "program_initial_plan",
+          "cells": 945165.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 686 bbox [-0.3859220437489422, -0.07787100355636109, -0.45390055527051293] .. [-0.38290374670780536, -0.07471370852805517, -0.4507367616967376]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 686 bbox [-0.3859220437489422, -0.07787100355636109, -0.45390055527051293] .. [-0.38290374670780536, -0.07471370852805517, -0.4507367616967376]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 396.66776410117745,
+          "measurement_seconds": 12.96995704062283
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 1035069.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 434.738797115162,
+          "measurement_seconds": 11.270549776032567
+        },
+        {
+          "round": 2,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 945275.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 434.5756326187402,
+          "measurement_seconds": 11.07472768984735
+        },
+        {
+          "round": 3,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 945350.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 422.47506948933005,
+          "measurement_seconds": 10.553002456203103
+        },
+        {
+          "round": 4,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 1601150.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 494.3058507870883,
+          "measurement_seconds": 12.98909805342555
+        },
+        {
+          "round": 5,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 2530012.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": true,
+          "quality_reasons": [],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary observation unavailable: boundary face 13656 bbox [-0.367999062135177, 0.04705314676451417, -0.4110455117164626] .. [-0.36180899070260103, 0.0557142639618887, -0.4013117286370829]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 13656 bbox [-0.367999062135177, 0.04705314676451417, -0.4110455117164626] .. [-0.36180899070260103, 0.0557142639618887, -0.4013117286370829]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 441.38558386452496,
+          "measurement_seconds": 24.281149797141552
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash107_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "caca68375ee001284cd65b88f4a666018917734038cd0a6fdcf6466260baf033",
+      "protocol_sha256": "81195098e434ac466bcbec256fe5cce4807be9d2f69270a8ab1b1725122103e4",
+      "agent_run_sha256": "909a6b0d5b648c1788527e0236e896bc7bd0ebb90bea260ed3bc6db61ed49006",
+      "own_usd_ceiling": 0.009430283999999997,
+      "reserved_calls": 1,
+      "settled_request_records": 1,
+      "seconds": 116.02366772666574,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash108_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "4e0222c58cffaf6537d4a805f56f7da17385de615422c11d3ee6c581e7f1079d",
+      "protocol_sha256": "ebd21b4b0f5b39901073919c67822fda8ccf863815b8de5ae8250934d4929951",
+      "agent_run_sha256": "808f52dab977761a9e88b809d7e03bf34cecd55e6a32810500da5bb28652809b",
+      "own_usd_ceiling": 0.009658986000000001,
+      "reserved_calls": 1,
+      "settled_request_records": 1,
+      "seconds": 110.74976159445941,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash109_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: checkpoint contains an incomplete measurement",
+      "source_mutated": false,
+      "code_sha256": "a07cf74018e91ea49db6ad641e9f45858667c805a08313f7714a205ff500e059",
+      "protocol_sha256": "5aa84de7b7db63260e85e083b4e06f54756a1544f76f45270b1a5a415957f4ae",
+      "agent_run_sha256": "266e218194f83305885fd1fc93cc06887de13e30905d5efbba70af13f7b74bc8",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 28.792768615297973,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash110_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "2b93952d3e581d5444d2ce9b4a49a384fb4ccd6735224d077aba2b6ba7b7da2d",
+      "protocol_sha256": "6f37fc7f15bf68be41a260a973a771b05efedc7f90b53d9aa71873592a0fda2c",
+      "agent_run_sha256": "17f6c6c73c7d1275cb748b6bef4d72c1f49208de431af562c41bb14ee1dac11c",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 29.481006605550647,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash111_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "0e6761eb6c9dbdf6730605becf54e231208335a5ddde4e252e68fda38c736e15",
+      "protocol_sha256": "8bd0b3d0eaa104c145e84000f05e2783228e329fd3289ea86bee4aab6cc518f8",
+      "agent_run_sha256": "5cf06623a65fef8ed57ec35623e1aa7aeb5cbd9769d9a1d63374acb7baf54b0e",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 29.889615300111473,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash112_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "489da00e118dd9f6b40a78bd9cf4ffa7dc59b7791b91dfe27a1d02ad968d3a36",
+      "protocol_sha256": "f251f15cbdfbbb3a413b9694525e5171412561a63eea0bf8d1cfeab56aecdddf",
+      "agent_run_sha256": "0948db95748ef0029400b3c5b0cbaf14dc59d56c2fe1cf65c7710e7be324f9b3",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 30.362303933128715,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash113_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "d0bff0d8e5014671c8eec69b5ad9d96709a7b236a00fe251890e07b93be0b106",
+      "protocol_sha256": "a7a48561a770e227616237c6a5b4c0c410a950b2eab45616004dd33105961f55",
+      "agent_run_sha256": "b921a7efd1551037de1c19b09cc367ad8a37fa8977f70ff6b8b2f615c7699409",
+      "own_usd_ceiling": 0.006456402,
+      "reserved_calls": 1,
+      "settled_request_records": 1,
+      "seconds": 53.69097810611129,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash113_410",
+      "case": "drivaer_410",
+      "arm": "deterministic",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "d0bff0d8e5014671c8eec69b5ad9d96709a7b236a00fe251890e07b93be0b106",
+      "protocol_sha256": "7e276c14b5ff0e666ad8f009d6261fe296b8a7c7060df4f68b6327681ce17e78",
+      "agent_run_sha256": "46dc512426d7e742571a5186ce58443f9286d9c5b2b537c4bf64ca483cfebeb7",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 2166.979489505291,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 4195066.0,
+          "coverage_ge5": 0.4325219795862355,
+          "basic_failed": 6,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume",
+            "native boundary observation unavailable: boundary face 23975 bbox [-2.295610880885637, 0.2810354597407901, -0.06636999043526522] .. [-2.282064011752583, 0.29756656065416254, -0.055786023520975184]: native polygon too warped for faithful planar-kernel observation",
+            "less than 90% body area has at least 5 actual layers",
+            "estimated y+ distribution outside wall-function target 30..300",
+            "native polygon observation unavailable: boundary face 23975 bbox [-2.295610880885637, 0.2810354597407901, -0.06636999043526522] .. [-2.282064011752583, 0.29756656065416254, -0.055786023520975184]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 590.792457992211,
+          "measurement_seconds": 66.19897940568626
+        },
+        {
+          "round": 1,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 4028341.0,
+          "coverage_ge5": 0.3829253194135722,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "estimated y+ distribution outside wall-function target 30..300",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 599.8445679843426,
+          "measurement_seconds": 54.66491825133562
+        },
+        {
+          "round": 2,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 4219007.0,
+          "coverage_ge5": 0.43653143645050213,
+          "basic_failed": 0,
+          "quality_accepted": true,
+          "quality_reasons": [],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary observation unavailable: boundary face 153 bbox [-0.7108776394248364, 0.7916841777812695, 0.24726604985102257] .. [-0.7020327642951063, 0.7970610817172723, 0.2510682840775801]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 153 bbox [-0.7108776394248364, 0.7916841777812695, 0.24726604985102257] .. [-0.7020327642951063, 0.7970610817172723, 0.2510682840775801]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 685.5821840837598,
+          "measurement_seconds": 57.421427465975285
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash113_410",
+      "case": "drivaer_410",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "d0bff0d8e5014671c8eec69b5ad9d96709a7b236a00fe251890e07b93be0b106",
+      "protocol_sha256": "7e276c14b5ff0e666ad8f009d6261fe296b8a7c7060df4f68b6327681ce17e78",
+      "agent_run_sha256": "4178754f453d6fb8861aafd08afb17b1ebadde7f83a729f2d1e79d23d84b9df0",
+      "own_usd_ceiling": 0.07128504599999998,
+      "reserved_calls": 9,
+      "settled_request_records": 9,
+      "seconds": 2461.414315085858,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 1578685.0,
+          "coverage_ge5": 0.4838793161685751,
+          "basic_failed": 6,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "estimated y+ distribution outside wall-function target 30..300",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 599.2470435034484,
+          "measurement_seconds": 33.754335751757026
+        },
+        {
+          "round": 1,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 3933107.0,
+          "coverage_ge5": 0.3362509463538148,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 611.1146662645042,
+          "measurement_seconds": 54.37579124979675
+        },
+        {
+          "round": 2,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 1402884.0,
+          "coverage_ge5": 0.3001558665010772,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 378 bbox [0.4575767701261489, 0.09035636003542444, -0.42665787617501677] .. [0.46046709096059113, 0.09360635352708856, -0.42541641538755715]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 378 bbox [0.4575767701261489, 0.09035636003542444, -0.42665787617501677] .. [0.46046709096059113, 0.09360635352708856, -0.42541641538755715]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 627.9220779146999,
+          "measurement_seconds": 23.465426372364163
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_flash114_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: per-case call/cost cap prevents another request",
+      "source_mutated": false,
+      "code_sha256": "31bed5f60069e09863f12febe4ceb2e199318489fce0c1eb3270b432647445be",
+      "protocol_sha256": "33f46f2df297937e2ae7c696cfdb92f92a5f3bfe07336b41858f4e77065566d8",
+      "agent_run_sha256": "6dda6f5d76799687eda3b93bc59dac123cb34a9b915730efeda4e104e45efa52",
+      "own_usd_ceiling": 0.004113341999999999,
+      "reserved_calls": 1,
+      "settled_request_records": 1,
+      "seconds": 49.41486461088061,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_full106",
+      "case": "drivaer_318",
+      "arm": "deterministic",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "eaf59bba9e4800545a37be2288e6c6e61ffa1828c2c2a6f76e0c318bdfc6cf15",
+      "protocol_sha256": "ae30933da1569597c9cc80648d2516931df17b8fe99e43edb6af546fac12d656",
+      "agent_run_sha256": "c82fd4c2616e74b4a8aa970da343c0b683833dda4c94cf86c029e274fa8535e8",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 1924.4308884069324,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1157155.0,
+          "coverage_ge5": 0.33502212562788536,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 466.1413184981793,
+          "measurement_seconds": 22.732537811622024
+        },
+        {
+          "round": 1,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1188043.0,
+          "coverage_ge5": 0.33610004008411465,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 5553 bbox [-0.44240959869644086, -0.016454772102189243, -0.3205522761803382] .. [-0.43546513391120173, -0.008378160184585285, -0.3133756564387495]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 5553 bbox [-0.44240959869644086, -0.016454772102189243, -0.3205522761803382] .. [-0.43546513391120173, -0.008378160184585285, -0.3133756564387495]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 415.867502797395,
+          "measurement_seconds": 21.277245672419667
+        },
+        {
+          "round": 2,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1186579.0,
+          "coverage_ge5": 0.35296366495359116,
+          "basic_failed": 6,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native boundary has disconnected face fans at a shared point",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native boundary has disconnected face fans at a shared point",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume",
+            "native boundary observation unavailable: boundary face 5073 bbox [-1.533069133014132, -0.8614009720968469, -0.12095991595858707] .. [-1.523404241348298, -0.8434528664216113, -0.116819174600954]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 5073 bbox [-1.533069133014132, -0.8614009720968469, -0.12095991595858707] .. [-1.523404241348298, -0.8434528664216113, -0.116819174600954]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 468.441491978243,
+          "measurement_seconds": 22.05998357385397
+        },
+        {
+          "round": 3,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1185214.0,
+          "coverage_ge5": 0.34020756270687924,
+          "basic_failed": 6,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 418.3081812504679,
+          "measurement_seconds": 21.162235962226987
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_full106",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: None",
+      "source_mutated": false,
+      "code_sha256": "eaf59bba9e4800545a37be2288e6c6e61ffa1828c2c2a6f76e0c318bdfc6cf15",
+      "protocol_sha256": "ae30933da1569597c9cc80648d2516931df17b8fe99e43edb6af546fac12d656",
+      "agent_run_sha256": "91860f3c55f4f2956e38a8ea60877997aaf78cb6948a7cf0f58076dc23047f8c",
+      "own_usd_ceiling": 0.029225028,
+      "reserved_calls": 4,
+      "settled_request_records": 4,
+      "seconds": 143.13842242676765,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_full106",
+      "case": "drivaer_410",
+      "arm": "deterministic",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "eaf59bba9e4800545a37be2288e6c6e61ffa1828c2c2a6f76e0c318bdfc6cf15",
+      "protocol_sha256": "ae30933da1569597c9cc80648d2516931df17b8fe99e43edb6af546fac12d656",
+      "agent_run_sha256": "fc84794d70f1240a7b55cecb1b9c8b511e5c1756fdc9069c1bc9455f36ca194f",
+      "own_usd_ceiling": 0.0,
+      "reserved_calls": 0,
+      "settled_request_records": 0,
+      "seconds": 1974.1625764332712,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1321124.0,
+          "coverage_ge5": 0.2973338551493971,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 459.24049806781113,
+          "measurement_seconds": 25.224664079025388
+        },
+        {
+          "round": 1,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1388961.0,
+          "coverage_ge5": 0.3119893397338319,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 6815 bbox [-1.5604272468899167, -0.4905209559221463, -0.1585341196395937] .. [-1.5557179975307405, -0.4900517158312929, -0.15560202040704244]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 6815 bbox [-1.5604272468899167, -0.4905209559221463, -0.1585341196395937] .. [-1.5557179975307405, -0.4900517158312929, -0.15560202040704244]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 417.74799178913236,
+          "measurement_seconds": 24.757381957024336
+        },
+        {
+          "round": 2,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1369689.0,
+          "coverage_ge5": 0.3308080140400473,
+          "basic_failed": 1,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 1; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 1; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 473.7455414496362,
+          "measurement_seconds": 23.66352252662182
+        },
+        {
+          "round": 3,
+          "stage": "full",
+          "decision_source": "deterministic_feedback",
+          "cells": 1403117.0,
+          "coverage_ge5": 0.3246286785829844,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 15483 bbox [-1.4891387110722745, 0.6874899008953984, -0.38994326637703236] .. [-1.483679289230819, 0.6895234582066144, -0.38639486706423465]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 15483 bbox [-1.4891387110722745, 0.6874899008953984, -0.38994326637703236] .. [-1.483679289230819, 0.6895234582066144, -0.38639486706423465]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 451.8360365796834,
+          "measurement_seconds": 25.483474362641573
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_full106",
+      "case": "drivaer_410",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "eaf59bba9e4800545a37be2288e6c6e61ffa1828c2c2a6f76e0c318bdfc6cf15",
+      "protocol_sha256": "ae30933da1569597c9cc80648d2516931df17b8fe99e43edb6af546fac12d656",
+      "agent_run_sha256": "076a38c7aef5a2a33e3157349706076a446b00a47ce4b76486ff351fcb560750",
+      "own_usd_ceiling": 0.12899091599999998,
+      "reserved_calls": 15,
+      "settled_request_records": 15,
+      "seconds": 2703.278446301818,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 1329309.0,
+          "coverage_ge5": 0.29746909549692346,
+          "basic_failed": 6,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 503.37589226849377,
+          "measurement_seconds": 27.880864782258868
+        },
+        {
+          "round": 1,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 1505817.0,
+          "coverage_ge5": 0.3033286719495978,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 515.4898685012013,
+          "measurement_seconds": 23.279426530003548
+        },
+        {
+          "round": 2,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 1375248.0,
+          "coverage_ge5": 0.29052321524393887,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 10828 bbox [-0.6387461277367936, 0.8434467140450133, 0.33435630453979637] .. [-0.6357350723307995, 0.8494755280674906, 0.3499935939376743]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 10828 bbox [-0.6387461277367936, 0.8434467140450133, 0.33435630453979637] .. [-0.6357350723307995, 0.8494755280674906, 0.3499935939376743]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 527.615829674527,
+          "measurement_seconds": 23.72268301062286
+        },
+        {
+          "round": 3,
+          "stage": "full",
+          "decision_source": "model",
+          "cells": 1451450.0,
+          "coverage_ge5": 0.3085788734065528,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 2205 bbox [-0.6933610304965551, 0.8083385658114666, 0.2106848007165537] .. [-0.6754169893494627, 0.8241698961241277, 0.22692089445486327]: native polygon too warped for faithful planar-kernel observation",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 2205 bbox [-0.6933610304965551, 0.8083385658114666, 0.2106848007165537] .. [-0.6754169893494627, 0.8241698961241277, 0.22692089445486327]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 460.8593764323741,
+          "measurement_seconds": 23.54816736653447
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_pro107_318",
+      "case": "drivaer_318",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "user_interruption": {
+        "time_unix": 1791810479.351198,
+        "slurm_job_cancelled": "4085912",
+        "advisor_terminated": 3301871,
+        "ledger_reset": false,
+        "actor_excluded_from_flash_claim": true
+      },
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "user required deepseek-flash; Pro experiment cancelled; pending API reservation retained",
+      "source_mutated": false,
+      "code_sha256": "caca68375ee001284cd65b88f4a666018917734038cd0a6fdcf6466260baf033",
+      "protocol_sha256": "237348fc33ddfd70ea4136afb65ad761ff22edbd20c8cb5c3412a8b150f59fea",
+      "agent_run_sha256": "8dbc8fd98e59547f13d8efb0b023766d9e0d95a1049375be51fbc18d482d5464",
+      "own_usd_ceiling": 0.31128306,
+      "reserved_calls": 2,
+      "settled_request_records": 1,
+      "seconds": 0.09624565951526165,
+      "attempts": [],
+      "configured_profile_model": "deepseek-v4-pro"
+    },
+    {
+      "episode": "campaign_warm101",
+      "case": "drivaer_1",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: final proposal invalid",
+      "source_mutated": false,
+      "code_sha256": "ec6b06f80d79922d7fa4f113f1ddba844e412f1ebe59fbb0cb95f6867aa1f99d",
+      "protocol_sha256": "fbc1fb22f83834127ed124d2605c9740a23befe58ff77f1b2b96cd72a5e5da67",
+      "agent_run_sha256": "3fbb147513763fafb8f5089a42e14b0cc7d84530301ed6fb80bf6f36230b486a",
+      "own_usd_ceiling": 0.08120961599999998,
+      "reserved_calls": 8,
+      "settled_request_records": 8,
+      "seconds": 302.2598445583135,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_warm102",
+      "case": "drivaer_1",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": null,
+      "stop_reason": "ValueError: no committed warm-start repair: TimeoutError",
+      "source_mutated": false,
+      "code_sha256": "d8a094043b8f44d13841a4507143209dfba022f82be56dff361df908fdb8d483",
+      "protocol_sha256": "5d600fb369827b278f43fca83fa51900a25686e2b3bcfe410f3241b5e5eaad47",
+      "agent_run_sha256": "606108e2e1425454ddc9f5412033f9412b350d28012ec8a5a028863ff96298c5",
+      "own_usd_ceiling": 0.099586656,
+      "reserved_calls": 4,
+      "settled_request_records": 4,
+      "seconds": 489.0868985950947,
+      "attempts": [],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_warm103",
+      "case": "drivaer_1",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "stage budget exhausted",
+      "source_mutated": false,
+      "code_sha256": "137ab5a6d5d2aac9fb9e989a10dcb7db73328bc220e45fcbcd26a6dd9c3e39f9",
+      "protocol_sha256": "c5ab267091ca41e445e12a4b5401cbd502bf68f8fd3847374e37114f78d2c53e",
+      "agent_run_sha256": "391d1cc7df633b65884ca88f6606ae690007c5d081abcb8cb40f4b5a900d677c",
+      "own_usd_ceiling": 0.10888144799999995,
+      "reserved_calls": 19,
+      "settled_request_records": 19,
+      "seconds": 2338.7764090765268,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 1440187.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 2929 bbox [-1.6977067389241847, 0.7636436774662289, -0.14789070568827375] .. [-1.6908689501832808, 0.7715311162703321, -0.14270968359618283]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 2929 bbox [-1.6977067389241847, 0.7636436774662289, -0.14789070568827375] .. [-1.6908689501832808, 0.7715311162703321, -0.14270968359618283]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 420.63107017986476,
+          "measurement_seconds": 15.436187563464046
+        },
+        {
+          "round": 1,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 1437185.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native body boundary has multiply connected shared edges"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native body boundary has multiply connected shared edges",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 481.5488638151437,
+          "measurement_seconds": 11.687840921804309
+        },
+        {
+          "round": 2,
+          "stage": "snap",
+          "decision_source": "deterministic_feedback",
+          "cells": 1436979.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 13395 bbox [-1.6141201988870375, 0.5806359485997789, -0.4746169617315973] .. [-1.601494514290966, 0.5979829027016248, -0.46496217695448827]: native polygon too warped for faithful planar-kernel observation",
+            "native polygon observation unavailable: boundary face 13395 bbox [-1.6141201988870375, 0.5806359485997789, -0.4746169617315973] .. [-1.601494514290966, 0.5979829027016248, -0.46496217695448827]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 406.8099507410079,
+          "measurement_seconds": 13.037616699934006
+        },
+        {
+          "round": 3,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 1463982.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 2459 bbox [-0.5311625358886987, 0.021323168296540396, -0.4756666271719436] .. [-0.5264605978498221, 0.021763541515239345, -0.469343074784461]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 2459 bbox [-0.5311625358886987, 0.021323168296540396, -0.4756666271719436] .. [-0.5264605978498221, 0.021763541515239345, -0.469343074784461]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 440.9192164167762,
+          "measurement_seconds": 12.090658616274595
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    },
+    {
+      "episode": "campaign_warm104",
+      "case": "drivaer_1",
+      "arm": "llm",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "user_interruption": null,
+      "selected": null,
+      "production_accepted": false,
+      "stop_reason": "proposal rejected without spending a native stage: proposed native stage already measured",
+      "source_mutated": false,
+      "code_sha256": "0936e4925941c0b07b96688de13f003c1494d7f4c5a0728c5df914d114ac1365",
+      "protocol_sha256": "3b890ca2e110c326c04e3a0aa0c62ff9f29bd82a6489b5cc121695878bbd5678",
+      "agent_run_sha256": "d5a0bc036b86c80888051c9cf721a4fc00ec46712fda768438bd94cbe3463605",
+      "own_usd_ceiling": 0.042292241999999994,
+      "reserved_calls": 7,
+      "settled_request_records": 7,
+      "seconds": 812.9579920526594,
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "snap",
+          "decision_source": "model",
+          "cells": 3124404.0,
+          "coverage_ge5": null,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 49878 bbox [1.1981167868171105, 0.8006050355308766, -0.18825740200185556] .. [1.2027341611137878, 0.8079502011487761, -0.1859610976295151]: projected self-crossing native polygon",
+            "native polygon observation unavailable: boundary face 49878 bbox [1.1981167868171105, 0.8006050355308766, -0.18825740200185556] .. [1.2027341611137878, 0.8079502011487761, -0.1859610976295151]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 546.6065889671445,
+          "measurement_seconds": 38.804956884123385
+        }
+      ],
+      "configured_profile_model": "deepseek-flash"
+    }
+  ],
+  "pure_program_baselines": [
+    {
+      "name": "program_one_shot",
+      "status": "failed",
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "source_mutated": false,
+      "selected": null,
+      "agent_run_sha256": "25c2978517e999cb70d0575820cde640b5584242f24abbc42a31ef2132a1f495",
+      "attempts": [
+        {
+          "round": 0,
+          "stage": null,
+          "decision_source": "geometry_plan",
+          "cells": 1215049.0,
+          "coverage_ge5": 0.3370077068538583,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": null,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 17005 bbox [1.02627057804554, -0.8619056708184184, -0.3461928702677649] .. [1.0319089541184872, -0.8528093350783605, -0.3305061235592747]: projected self-crossing native polygon",
+            "less than 90% body area has at least 5 actual layers",
+            "estimated y+ distribution outside wall-function target 30..300",
+            "native polygon observation unavailable: boundary face 17005 bbox [1.02627057804554, -0.8619056708184184, -0.3461928702677649] .. [1.0319089541184872, -0.8528093350783605, -0.3305061235592747]: projected self-crossing native polygon"
+          ],
+          "native_seconds": 450.25228950800374,
+          "measurement_seconds": 27.514399820938706
+        }
+      ]
+    },
+    {
+      "name": "program_one_shot_318",
+      "status": "failed",
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "source_mutated": false,
+      "selected": null,
+      "agent_run_sha256": "6684b82c816b57b4b1b0c9b964205583b7c288776e949a28773302f4be5ebf1e",
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "program_initial_plan",
+          "cells": 1183076.0,
+          "coverage_ge5": 0.340354016894483,
+          "basic_failed": 0,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native boundary has disconnected face fans at a shared point"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native boundary has disconnected face fans at a shared point",
+            "native boundary observation unavailable: boundary face 813 bbox [-1.3925978658239673, 0.7131280845499245, -0.374339153735071] .. [-1.373220306577792, 0.7312415194790809, -0.3608642107359022]: native polygon too warped for faithful planar-kernel observation",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: boundary face 813 bbox [-1.3925978658239673, 0.7131280845499245, -0.374339153735071] .. [-1.373220306577792, 0.7312415194790809, -0.3608642107359022]: native polygon too warped for faithful planar-kernel observation"
+          ],
+          "native_seconds": 418.1199593935162,
+          "measurement_seconds": 23.702894186601043
+        }
+      ]
+    },
+    {
+      "name": "program_one_shot_410",
+      "status": "failed",
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "source_mutated": false,
+      "selected": null,
+      "agent_run_sha256": "dfea0c2fa75c402d2a9ef117a4f44cca9928c59b452009cc5a4d02612d5e2343",
+      "attempts": [
+        {
+          "round": 0,
+          "stage": "full",
+          "decision_source": "program_initial_plan",
+          "cells": 1361838.0,
+          "coverage_ge5": 0.31459399781142133,
+          "basic_failed": 6,
+          "quality_accepted": false,
+          "quality_reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume"
+          ],
+          "fidelity_accepted": false,
+          "research_eligible": false,
+          "reasons": [
+            "native checkMesh failed checks: 6; unknown failures are never ignored",
+            "native body boundary has multiply connected shared edges",
+            "max_non_ortho exceeds RANS quality limit 70",
+            "max_skew exceeds RANS quality limit 4",
+            "max_aspect exceeds RANS quality limit 1000",
+            "nonpositive cell volume",
+            "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+            "less than 90% body area has at least 5 actual layers",
+            "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+          ],
+          "native_seconds": 426.6369578158483,
+          "measurement_seconds": 27.85682335216552
+        }
+      ]
+    }
+  ],
+  "source_api_conservative_ceilings": [
+    {
+      "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+      "cases": [
+        "drivaer_1"
+      ],
+      "conservative_usd_ceiling": 0.44117266199999994,
+      "case_cap_usd": 0.5
+    },
+    {
+      "source_sha256": "3a85e62ebeedd6554b31c0cfafddb60c40a80d5dc77b84b4f40b7242a2dbc7ba",
+      "cases": [
+        "drivaer_318"
+      ],
+      "conservative_usd_ceiling": 0.47075615400000004,
+      "case_cap_usd": 0.5
+    },
+    {
+      "source_sha256": "f9abde2d43637f452c65eedc126bee2a281eb26f63323b3d154198a616aca139",
+      "cases": [
+        "drivaer_410"
+      ],
+      "conservative_usd_ceiling": 0.3666673319999999,
+      "case_cap_usd": 0.5
+    }
+  ],
+  "qualified_campaign_candidates": 0,
+  "eligible_native_campaign_attempts": 0,
+  "campaign_native_attempts": 48,
+  "latest_comparisons": [
+    {
+      "case": "drivaer_410",
+      "clear_gain_vs_program_feedback": false,
+      "valid_teacher_only": false,
+      "teacher_has_no_valid_candidate": true,
+      "gain_pp_vs_feedback": null,
+      "cells_ratio_vs_feedback": null
+    }
+  ],
+  "physical_accuracy": "unverified",
+  "cost_note": "Conservative source ceiling includes unresolved reservations, not provider invoices. All versions share source budgets. Interrupted Pro expenses retained and excluded from Flash performance.",
+  "stop_policy": "Study closed: no further model calls, native meshing, optimization, or OPD training will be launched.",
+  "model_metadata_note": "configured_profile_model is the stored profile label, not proof of the model actually called; program arms do not call a model. Interrupted Pro is excluded from Flash performance."
+}

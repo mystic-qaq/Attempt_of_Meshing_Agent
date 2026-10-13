@@ -1,0 +1,137 @@
+# argv: <PRIVATE_HOME>/.conda-envs/openfoam2412/bin/checkMesh -constant -time none -allTopology -meshQuality -writeSets vtk -writeChecks json
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2412 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : <PRIVATE_HOME>/.conda-envs/openfoam2412/bin/checkMesh -constant -time none -allTopology -meshQuality -writeSets vtk -writeChecks json
+Date   : Oct 11 2026
+Time   : 01:20:57
+Host   : a3n02c3
+PID    : 336461
+--> FOAM Warning : 
+    From Foam::fileName Foam::cwd_L()
+    in file POSIX.C at line 552
+    PWD is not the cwd() - reverting to physical description
+I/O    : uncollated
+--> FOAM Warning : 
+    From Foam::fileName Foam::cwd_L()
+    in file POSIX.C at line 552
+    PWD is not the cwd() - reverting to physical description
+Case   : <PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/finite_cylinder/round1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = constant
+
+Check mesh...
+    Enabling all (cell, face, edge, point) topology checks.
+    Enabling user-defined geometry checks.
+    Reconstructing and writing vtk representation of all faceSets and cellSets.
+
+Time = constant
+
+Mesh stats 
+    points:           283215
+    faces:            795375
+    internal faces:   773020
+    cells:            256254
+    faces per cell:   6.1204703146097232
+    boundary patches: 7
+    point zones:      1
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     238340
+    prisms:        2951
+    wedges:        0
+    pyramids:      0
+    tet wedges:    10
+    tetrahedra:    0
+    polyhedra:     14953
+    Breakdown of polyhedra by number of faces:
+        faces   number of cells
+            4   136
+            5   126
+            6   2921
+            7   2511
+            8   889
+            9   7067
+           12   1009
+           14   1
+           15   276
+           18   17
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Topological cell zip-up check OK.
+    Face-face connectivity OK.
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+                   Patch    Faces   Points  Surface topology
+                    minX     1221     1292  ok (non-closed singly connected)
+                    maxX     1221     1292  ok (non-closed singly connected)
+                    minY     1914     2006  ok (non-closed singly connected)
+                    maxY     1914     2006  ok (non-closed singly connected)
+                    minZ     2146     2242  ok (non-closed singly connected)
+                    maxZ     2146     2242  ok (non-closed singly connected)
+                    body    11793    11940      ok (closed singly connected)
+                    ".*"    22355    22504      ok (closed singly connected)
+
+
+Checking faceZone topology for multiply connected surfaces...
+    No faceZones found.
+
+Checking basic cellZone addressing...
+    No cellZones found.
+
+Checking basic pointZone addressing...
+               PointZone  PointsBoundingBox
+            frozenPoints       0(9.9999999999999998e+149 9.9999999999999998e+149 9.9999999999999998e+149) (-9.9999999999999998e+149 -9.9999999999999998e+149 -9.9999999999999998e+149)
+
+Checking geometry...
+    Overall domain bounding box (-2.9219641800000002 -3.2719641740000007 -2.9219641800000011) (7.2085711570000015 3.2719641740000007 2.9219641800000002)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (-2.712003322339248e-16 -6.4127946482426914e-16 1.1556651336186849e-16) OK.
+    Max cell openness = 9.5195321938982894e-16 OK.
+    Max aspect ratio = 20.710940565263972 OK.
+    Minimum face area = 4.561271507830957e-06. Maximum face area = 0.032870748082862777.  Face area magnitudes OK.
+    Min volume = 1.7858576298041988e-08. Max volume = 0.0056357322315750916.  Total volume = 386.87701531443696.  Cell volumes OK.
+    Mesh non-orthogonality Max: 57.389543215068414 average: 7.0248341881168503
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 2.845059686813439 OK.
+    Coupled point location match (average 0) OK.
+Checking faces in error :
+    non-orthogonality >  70 degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1.0000000000000001e-15      : 0
+    faces with concavity >  80 degrees                     : 0
+    faces with skewness >   4 (internal) or  20 (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.050000000000000003       : 0
+    faces with volume ratio of neighbour cells <  0.01     : 0
+    faces with face twist <  0.02                          : 0
+    faces on cells with determinant < 0.001                : 0
+
+Mesh OK.
+
+Writing mesh data to "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/finite_cylinder/round1/checkMesh.json"
+
+End
+

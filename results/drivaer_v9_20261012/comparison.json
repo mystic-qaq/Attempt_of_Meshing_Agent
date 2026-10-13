@@ -1,0 +1,1054 @@
+{
+  "status": "failed",
+  "stop_reason": "five-round or requested round budget exhausted",
+  "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+  "code_sha256": "6de092a2251a170670c0678df0cdcb485d5d1aebb6bef4f9f5531c007d574792",
+  "version_episode": "new <=5-attempt episode; prior benchmark unchanged",
+  "attempts": [
+    {
+      "round": 0,
+      "attempt": 1,
+      "arm": "new_agent",
+      "case": "<NEW_RUN>/round0",
+      "cells": 1860450.0,
+      "coverage_ge1": 0.7841035459731773,
+      "coverage_ge5": 0.3377287946220891,
+      "requested_layers": 8,
+      "coverage_requested": 0.19423748961976015,
+      "metrics": {
+        "cells": 1860450.0,
+        "regions": 1.0,
+        "max_non_ortho": 64.95248698637873,
+        "max_skew": 4.184816105697917,
+        "max_aspect": 27.17457314643681,
+        "min_volume": 2.416727643348707e-09
+      },
+      "basic_failed_checks": 1,
+      "point_fans": true,
+      "shared_edges": false,
+      "quality_pass": false,
+      "fidelity_pass": false,
+      "scenario_pass": true,
+      "joint_pass": false,
+      "admissible_diagnostic": false,
+      "native_error": "native polygon observation unavailable: boundary face 20933 bbox [1.0262581521896654, 0.8521457018661515, -0.34603419165409166] .. [1.032017224079356, 0.8618991260335096, -0.3302513877856873]: projected self-crossing native polygon",
+      "reasons": [
+        "native checkMesh failed checks: 1; unknown failures are never ignored",
+        "native boundary has disconnected face fans at a shared point",
+        "max_skew exceeds RANS quality limit 4",
+        "native boundary observation unavailable: boundary face 20933 bbox [1.0262581521896654, 0.8521457018661515, -0.34603419165409166] .. [1.032017224079356, 0.8618991260335096, -0.3302513877856873]: projected self-crossing native polygon",
+        "less than 90% body area has at least 5 actual layers",
+        "estimated y+ distribution outside wall-function target 30..300",
+        "native polygon observation unavailable: boundary face 20933 bbox [1.0262581521896654, 0.8521457018661515, -0.34603419165409166] .. [1.032017224079356, 0.8618991260335096, -0.3302513877856873]: projected self-crossing native polygon"
+      ],
+      "actions": null,
+      "decision_source": "explicit_initial_spec",
+      "hypothesis": null,
+      "advisor_error": null,
+      "tool_queries": null,
+      "scientific_review_completed": null,
+      "estimated_yplus": {
+        "p5": 25.15152355292508,
+        "p50": 49.99999999384403,
+        "p95": 110.69644910869391
+      },
+      "native_seconds": 576.660530872643,
+      "local_layers": {
+        "coverage_ge5": 0.3377287946220891,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 16186,
+            "area": 2.8682780594008497,
+            "ge1": 0.4897431639094655,
+            "ge5": 0.054352494729453145
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 9551,
+            "area": 2.445635378085976,
+            "ge1": 0.5175803795022845,
+            "ge5": 0.04449996474800506
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 38615,
+            "area": 6.204000159397805,
+            "ge1": 0.7290982103643163,
+            "ge5": 0.21319099877002945
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    },
+    {
+      "round": 1,
+      "attempt": 2,
+      "arm": "new_agent",
+      "case": "<NEW_RUN>/round1",
+      "cells": 1859476.0,
+      "coverage_ge1": 0.7817887796828346,
+      "coverage_ge5": 0.33474861569641196,
+      "requested_layers": 8,
+      "coverage_requested": 0.19272336105216867,
+      "metrics": {
+        "cells": 1859476.0,
+        "regions": 1.0,
+        "max_non_ortho": 64.98301536101857,
+        "max_skew": 3.891126301232148,
+        "max_aspect": 27.174573146748415,
+        "min_volume": 2.4166983981609786e-09
+      },
+      "basic_failed_checks": 0,
+      "point_fans": false,
+      "shared_edges": true,
+      "quality_pass": false,
+      "fidelity_pass": false,
+      "scenario_pass": true,
+      "joint_pass": false,
+      "admissible_diagnostic": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "reasons": [
+        "native body boundary has multiply connected shared edges",
+        "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+        "less than 90% body area has at least 5 actual layers",
+        "estimated y+ distribution outside wall-function target 30..300",
+        "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+      ],
+      "actions": [
+        {
+          "kind": "local_refine",
+          "min": [
+            -1.3015586269302368,
+            -0.7208923232955933,
+            -0.4544759300751686
+          ],
+          "max": [
+            -1.2280636894302368,
+            -0.6473973857955932,
+            -0.3809809925751686
+          ],
+          "level": 6,
+          "why": "local native FV quality failure; repair before layer optimisation",
+          "evidence": [
+            "postProcessing/constant/skewFaces/skewFaces.vtp:18"
+          ]
+        },
+        {
+          "kind": "snap_smooth",
+          "why": "improve snapped cells at native failed locations",
+          "evidence": [
+            "postProcessing/constant/skewFaces/skewFaces.vtp:18"
+          ]
+        }
+      ],
+      "decision_source": "deterministic_fallback",
+      "hypothesis": null,
+      "advisor_error": "final scientific review budget exhausted; provisional plan not committed",
+      "tool_queries": null,
+      "scientific_review_completed": null,
+      "estimated_yplus": {
+        "p5": 25.15152355292508,
+        "p50": 49.99999999384403,
+        "p95": 110.69611191512531
+      },
+      "native_seconds": 622.6685794014484,
+      "local_layers": {
+        "coverage_ge5": 0.33474861569641196,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 16392,
+            "area": 2.8682495203958274,
+            "ge1": 0.5042968423326178,
+            "ge5": 0.054242817851117425
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 9544,
+            "area": 2.445176615104865,
+            "ge1": 0.5101594690110461,
+            "ge5": 0.04696737078609529
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 38601,
+            "area": 6.200746455126047,
+            "ge1": 0.7208286602785684,
+            "ge5": 0.21363294380401887
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    },
+    {
+      "round": 2,
+      "attempt": 3,
+      "arm": "new_agent",
+      "case": "<NEW_RUN>/round2",
+      "cells": 1913305.0,
+      "coverage_ge1": 0.6730476225732972,
+      "coverage_ge5": 0.41377443615111015,
+      "requested_layers": 8,
+      "coverage_requested": 0.007537450758135238,
+      "metrics": {
+        "cells": 1913305.0,
+        "regions": 1.0,
+        "max_non_ortho": 164.16488555888776,
+        "max_skew": 17.96122189765792,
+        "max_aspect": 1.9739945099272314e+95,
+        "min_volume": -5.743441616852686e-09
+      },
+      "basic_failed_checks": 6,
+      "point_fans": false,
+      "shared_edges": true,
+      "quality_pass": false,
+      "fidelity_pass": false,
+      "scenario_pass": true,
+      "joint_pass": false,
+      "admissible_diagnostic": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "reasons": [
+        "native checkMesh failed checks: 6; unknown failures are never ignored",
+        "native body boundary has multiply connected shared edges",
+        "max_non_ortho exceeds RANS quality limit 70",
+        "max_skew exceeds RANS quality limit 4",
+        "max_aspect exceeds RANS quality limit 1000",
+        "nonpositive cell volume",
+        "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+        "less than 90% body area has at least 5 actual layers",
+        "estimated y+ distribution outside wall-function target 30..300",
+        "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+      ],
+      "actions": [
+        {
+          "kind": "layer_settings",
+          "why": "Partition the SAME unchanged 8-layer / 1.29484e-3 m / ratio-1.2 stack (total 0.0213636638777 m, invariant_first_height=true per the preview's mechanism_review) across three outer-to-inner slices rather than one, so the fine inner layers are built last in tight underbody/wheel-arch medial space instead of all eight competing in a single pass. n_grow stays 0 (v2412 nGrow propagates NON-EXTRUSION and would zero neighbours' displacement); n_buffer_cells_no_extrude=1 keeps one non-extruded buffer cell next to blocked regions for a safer transition; detect_extrusion_island=true makes partial-island truncation predictable. Increased smoothing (n_smooth_thickness 10->20, n_smooth_surface_normals 1->4, n_smooth_normals 3->6, n_relax_iter 3->6, n_layer_iter 50->70) reduces normal/thickness noise at the wheel-arch and skirt corners where layers currently fail. First height, expansion ratio, layer count, feature_angle, slip_feature_angle, medial ratio 0.3 and min_medial_axis_angle 90 are UNCHANGED, so the immutable stack and y+ target are not weakened. Note honestly: n_outer_iter is an iteration/partition control and does not itself resize any gap; this is a layer-order mechanism, and no numeric fluid air-gap is claimed.",
+          "evidence": [
+            "layers",
+            "layer_shortfall:0",
+            "layer_shortfall:1",
+            "layer_shortfall:2",
+            "layer_shortfall:3",
+            "layer_shortfall:4",
+            "layer_shortfall:5",
+            "layer_shortfall:6",
+            "layer_shortfall:7",
+            "postProcessing/constant/concaveCells/concaveCells.vtp:17",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:9",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:10",
+            "physics"
+          ],
+          "parameters": {
+            "n_surface_layers": 8,
+            "expansion_ratio": 1.2,
+            "n_outer_iter": 3,
+            "n_grow": 0,
+            "n_buffer_cells_no_extrude": 1,
+            "n_smooth_thickness": 20,
+            "n_smooth_surface_normals": 4,
+            "n_smooth_normals": 6,
+            "n_relax_iter": 6,
+            "n_layer_iter": 70,
+            "feature_angle": 60.0,
+            "slip_feature_angle": 30.0,
+            "max_thickness_to_medial_ratio": 0.3,
+            "min_medial_axis_angle": 90.0,
+            "detect_extrusion_island": true,
+            "mesh_shrinker": "displacementMedialAxis"
+          }
+        },
+        {
+          "kind": "snap_settings",
+          "why": "Attack the connectivity cause of the multiply connected shared edges / nonmanifold boundary polygons, which keep native boundary observation and the fidelity grade unavailable. n_face_split_interval=-1 currently disables feature-aligned face splitting, letting one coarse face span both sides of a sharp sub-grid wheel-arch/skirt edge and share that edge with several refined faces; enabling splitting at interval 10 with avoid_diagonal=true splits faces along the feature before snapping, and slightly more permissive concave_angle (45->35) and min_area_ratio (0.3->0.2) prevent small features from being skipped. This changes connectivity/topology of the transition region only — no geometry, patch type or physical condition is altered, and it supplies no new resolution level.",
+          "evidence": [
+            "geometry",
+            "quality",
+            "fidelity",
+            "postProcessing/constant/nonManifoldPoints.vtp:8",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:9",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:10"
+          ],
+          "parameters": {
+            "n_smooth_patch": 5,
+            "tolerance": 2.0,
+            "n_solve_iter": 70,
+            "n_relax_iter": 10,
+            "n_feature_snap_iter": 20,
+            "explicit_feature_snap": true,
+            "implicit_feature_snap": false,
+            "n_face_split_interval": 10,
+            "avoid_diagonal": true,
+            "concave_angle": 35.0,
+            "min_area_ratio": 0.2
+          }
+        },
+        {
+          "kind": "flow_refine",
+          "why": "Scope-preserving guard restatement of the far-wake corridor, NOT an increase: flow_requirement:far_wake already passes natively (p95 axis span 0.1523 m vs the 0.3787 m gate) and the box is exactly the contract envelope at level 2 (0.5879595/2^2 = 0.146990 m cell, ~2.6x finer than the gate). No new base-cell or global resolution setting is introduced and no measured wake shear thickness or vortex core radius is claimed; cell sizes here are geometric, not flow-measured.",
+          "evidence": [
+            "flow_requirement:far_wake",
+            "scenario"
+          ],
+          "name": "flow_far_wake",
+          "min": [
+            7.055514,
+            -1.81845,
+            -1.3632759
+          ],
+          "max": [
+            16.462866,
+            1.81845,
+            1.3632759
+          ],
+          "level": 2
+        },
+        {
+          "kind": "flow_refine",
+          "why": "Scope-preserving guard restatement of the near-wake corridor, NOT an increase: flow_requirement:near_wake already passes natively (p95 axis span 0.0457 m vs the 0.1893 m gate) and the box is exactly the contract envelope at level 4 (0.5879595/2^4 = 0.036747 m cell, ~5.2x finer than the gate), giving a 2-3-4 near-to-far ladder with graded interfaces. Note that the level-3 step of that ladder is implicit in the background grading; no third box is claimed. This is screening coverage of an unvalidated wake-location hypothesis, not validation of wake recovery or shedding.",
+          "evidence": [
+            "flow_requirement:near_wake",
+            "scenario"
+          ],
+          "name": "flow_near_wake",
+          "min": [
+            2.351838,
+            -1.41435,
+            -1.0603257
+          ],
+          "max": [
+            7.055514,
+            1.41435,
+            1.0603257
+          ],
+          "level": 4
+        }
+      ],
+      "decision_source": "deepseek-flash",
+      "hypothesis": "Same physical diagnosis, corrected bookkeeping. (a) 0.2182 of body area received 0 layers and 0.6653 fewer than 5, concentrated in underbody/wheel-arch clusters (postProcessing/constant/concaveCells/concaveCells.vtp:17; postProcessing/constant/concaveFaces/concaveFaces.vtp:9/:10) and the corner shortfalls layer_shortfall:0..7, where the requested 21.36 mm isotropic stack (8 layers, first height 1.29484e-3 m, ratio 1.2) exceeds the local external-fluid medial distance. With nOuterIter=1 all 8 layers compete in one pass; partitioning the SAME stack into 3 outer-to-inner slices lets the fine inner layers be attempted after the outer region is established, so fewer whole faces drop to 0 layers. n_grow stays 0 because nGrow propagates NON-EXTRUSION (not layer growth) and would zero displacement on neighbours. (b) The multiply connected shared edges / nonmanifold boundary polygons that block native boundary observation and fidelity grading arise at sharp sub-grid wheel-arch/skirt edges where one coarse face spans both sides of the feature; n_face_split_interval=-1 currently disables feature-aligned splitting, so that edge is shared with several finer faces. Splitting at interval 10 before snapping, with avoid_diagonal=true, attacks the connectivity cause. Scope corrected: this plan does NOT resolve the unresolved_feature_fraction=0.0984 (93 sampled sub-grid clusters, feature_0..5 at level 7 and preflight_6..69/repair_0 at level 6 in the preview) that the pre-existing deterministic preflight added; those boxes are retained, not re-derived, and no level-7 expansion is proposed by me. The wake action pair is a scope-preserving restatement of the two requirement envelopes — it introduces no new resolution level and no base-cell change.",
+      "advisor_error": null,
+      "tool_queries": 4,
+      "scientific_review_completed": true,
+      "estimated_yplus": {
+        "p5": 28.58587616615809,
+        "p50": 71.92083240425124,
+        "p95": 80.02883282740265
+      },
+      "native_seconds": 1091.7250243760645,
+      "local_layers": {
+        "coverage_ge5": 0.41377443615111015,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 16850,
+            "area": 2.8607440620946605,
+            "ge1": 0.1704194526982292,
+            "ge5": 0.05708702067364904
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 9907,
+            "area": 2.4506386953044377,
+            "ge1": 0.13366345542815622,
+            "ge5": 0.023503738808060684
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 38723,
+            "area": 6.197368592661541,
+            "ge1": 0.5693538093912524,
+            "ge5": 0.2501900567479878
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    },
+    {
+      "round": 3,
+      "attempt": 4,
+      "arm": "new_agent",
+      "case": "<NEW_RUN>/round3",
+      "cells": 1912444.0,
+      "coverage_ge1": 0.6739002635219722,
+      "coverage_ge5": 0.4120015555226961,
+      "requested_layers": 8,
+      "coverage_requested": 0.007500810850357372,
+      "metrics": {
+        "cells": 1912444.0,
+        "regions": 1.0,
+        "max_non_ortho": 164.16751076830778,
+        "max_skew": 19.820340690283725,
+        "max_aspect": 1.9739941487657566e+95,
+        "min_volume": -5.743911518488888e-09
+      },
+      "basic_failed_checks": 6,
+      "point_fans": false,
+      "shared_edges": true,
+      "quality_pass": false,
+      "fidelity_pass": false,
+      "scenario_pass": true,
+      "joint_pass": false,
+      "admissible_diagnostic": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "reasons": [
+        "native checkMesh failed checks: 6; unknown failures are never ignored",
+        "native body boundary has multiply connected shared edges",
+        "max_non_ortho exceeds RANS quality limit 70",
+        "max_skew exceeds RANS quality limit 4",
+        "max_aspect exceeds RANS quality limit 1000",
+        "nonpositive cell volume",
+        "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+        "less than 90% body area has at least 5 actual layers",
+        "estimated y+ distribution outside wall-function target 30..300",
+        "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+      ],
+      "actions": [
+        {
+          "kind": "local_refine",
+          "min": [
+            -0.8993146551055908,
+            0.1990722360806465,
+            -0.5223757979674339
+          ],
+          "max": [
+            -0.8177742975549698,
+            0.2798352708323002,
+            -0.44454197015333174
+          ],
+          "level": 6,
+          "why": "local native FV quality failure; repair before layer optimisation",
+          "evidence": [
+            "postProcessing/constant/nonOrthoFaces/nonOrthoFaces.vtp:12"
+          ]
+        },
+        {
+          "kind": "snap_smooth",
+          "why": "improve snapped cells at native failed locations",
+          "evidence": [
+            "postProcessing/constant/nonOrthoFaces/nonOrthoFaces.vtp:12"
+          ]
+        }
+      ],
+      "decision_source": "deterministic_fallback",
+      "hypothesis": null,
+      "advisor_error": "final proposal invalid",
+      "tool_queries": null,
+      "scientific_review_completed": null,
+      "estimated_yplus": {
+        "p5": 28.587278190995605,
+        "p50": 71.91976214516293,
+        "p95": 78.04204112991073
+      },
+      "native_seconds": 1272.3409638497978,
+      "local_layers": {
+        "coverage_ge5": 0.4120015555226961,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 16844,
+            "area": 2.854691733523574,
+            "ge1": 0.1805223682092107,
+            "ge5": 0.056578295052868946
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 9945,
+            "area": 2.445252771522731,
+            "ge1": 0.12052830413820954,
+            "ge5": 0.0229246214303931
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 38701,
+            "area": 6.197923874757957,
+            "ge1": 0.5683771865641964,
+            "ge5": 0.2481025592876501
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    },
+    {
+      "round": 4,
+      "attempt": 5,
+      "arm": "new_agent",
+      "case": "<NEW_RUN>/round4",
+      "cells": 1911171.0,
+      "coverage_ge1": 0.6706561291390531,
+      "coverage_ge5": 0.4130043853036553,
+      "requested_layers": 8,
+      "coverage_requested": 0.0073530057100293705,
+      "metrics": {
+        "cells": 1911171.0,
+        "regions": 1.0,
+        "max_non_ortho": 75.01084155484699,
+        "max_skew": 19.819871482575884,
+        "max_aspect": 100.61022188141376,
+        "min_volume": 2.426582427328641e-10
+      },
+      "basic_failed_checks": 2,
+      "point_fans": false,
+      "shared_edges": true,
+      "quality_pass": false,
+      "fidelity_pass": false,
+      "scenario_pass": true,
+      "joint_pass": false,
+      "admissible_diagnostic": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "reasons": [
+        "native checkMesh failed checks: 2; unknown failures are never ignored",
+        "native body boundary has multiply connected shared edges",
+        "max_non_ortho exceeds RANS quality limit 70",
+        "max_skew exceeds RANS quality limit 4",
+        "native boundary observation unavailable: native polygon boundary has open/nonmanifold edges",
+        "less than 90% body area has at least 5 actual layers",
+        "estimated y+ distribution outside wall-function target 30..300",
+        "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges"
+      ],
+      "actions": [
+        {
+          "kind": "local_refine",
+          "min": [
+            -0.899314670006752,
+            0.1990722323553562,
+            -0.5223757905168533
+          ],
+          "max": [
+            -0.8177742826538086,
+            0.2798352633817196,
+            -0.4445420744614601
+          ],
+          "level": 6,
+          "why": "local native FV quality failure; repair before layer optimisation",
+          "evidence": [
+            "postProcessing/constant/nonOrthoFaces/nonOrthoFaces.vtp:12"
+          ]
+        },
+        {
+          "kind": "snap_smooth",
+          "why": "improve snapped cells at native failed locations",
+          "evidence": [
+            "postProcessing/constant/nonOrthoFaces/nonOrthoFaces.vtp:12"
+          ]
+        }
+      ],
+      "decision_source": "deterministic_fallback",
+      "hypothesis": null,
+      "advisor_error": "per-case call/cost cap prevents another request",
+      "tool_queries": null,
+      "scientific_review_completed": null,
+      "estimated_yplus": {
+        "p5": 28.58344904752232,
+        "p50": 71.92279995893455,
+        "p95": 81.06656130896222
+      },
+      "native_seconds": 1379.4219426047057,
+      "local_layers": {
+        "coverage_ge5": 0.4130043853036553,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 16815,
+            "area": 2.85414265798624,
+            "ge1": 0.18491032276806918,
+            "ge5": 0.057434125068249256
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 9961,
+            "area": 2.442144439096219,
+            "ge1": 0.12183386572874363,
+            "ge5": 0.02382316907558021
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 38697,
+            "area": 6.199713454567952,
+            "ge1": 0.5625969211545162,
+            "ge5": 0.24713452413829723
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    }
+  ],
+  "best_admissible_round": null,
+  "highest_rejected_diagnostic_round": 2,
+  "old_reference": [
+    {
+      "arm": "agent",
+      "attempt": 1,
+      "cells": 1856448.0,
+      "coverage_ge1": 0.7803571126205089,
+      "coverage_ge5": 0.3333615779470673,
+      "coverage_requested": 0.19049866122589762,
+      "requested_layers": 8,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon too warped for faithful planar-kernel observation",
+      "body_topology": "Point 25843 uses faces which are not connected through an edge",
+      "basic_failed_checks": 1,
+      "max_skew": 5.748537671018645
+    },
+    {
+      "arm": "agent",
+      "attempt": 2,
+      "cells": 1860879.0,
+      "coverage_ge1": 0.7823354261520612,
+      "coverage_ge5": 0.3379266499012283,
+      "coverage_requested": 0.19435307258543222,
+      "requested_layers": 8,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon too warped for faithful planar-kernel observation",
+      "body_topology": "Point 1070856 uses faces which are not connected through an edge",
+      "basic_failed_checks": 1,
+      "max_skew": 4.680930592956235
+    },
+    {
+      "arm": "agent",
+      "attempt": 3,
+      "cells": 1740247.0,
+      "coverage_ge1": 0.7548586412733691,
+      "coverage_ge5": 0.17766352664108997,
+      "coverage_requested": 0.12779647296941207,
+      "requested_layers": 6,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon too warped for faithful planar-kernel observation",
+      "body_topology": "Point 131342 uses faces which are not connected through an edge",
+      "basic_failed_checks": 0,
+      "max_skew": 2.9536641945814743
+    },
+    {
+      "arm": "agent",
+      "attempt": 4,
+      "cells": 1817609.0,
+      "coverage_ge1": 0.6619745562348047,
+      "coverage_ge5": 0.17453572864549846,
+      "coverage_requested": 0.17453572864549846,
+      "requested_layers": 5,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon has no verified star-shaped triangulation",
+      "body_topology": "Point 1075930 uses faces which are not connected through an edge",
+      "basic_failed_checks": 1,
+      "max_skew": 2.4397763531918417
+    },
+    {
+      "arm": "agent",
+      "attempt": 5,
+      "cells": 2792621.0,
+      "coverage_ge1": 0.7151794651595382,
+      "coverage_ge5": 0.3545033790036045,
+      "coverage_requested": 0.3545033790036045,
+      "requested_layers": 5,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon too warped for faithful planar-kernel observation",
+      "body_topology": "Point 616316 uses faces which are not connected through an edge",
+      "basic_failed_checks": 1,
+      "max_skew": 2.98089792095556
+    },
+    {
+      "arm": "expert",
+      "attempt": 1,
+      "cells": 1364170.0,
+      "coverage_ge1": 0.7242711083429011,
+      "coverage_ge5": 0.34815818542990984,
+      "coverage_requested": 0.20019266949275324,
+      "requested_layers": 8,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon has no verified star-shaped triangulation",
+      "body_topology": "Point 32363 uses faces which are not connected through an edge",
+      "basic_failed_checks": 1,
+      "max_skew": 9.962974659707971
+    },
+    {
+      "arm": "expert",
+      "attempt": 2,
+      "cells": 5008311.0,
+      "coverage_ge1": 0.89238641690079,
+      "coverage_ge5": 0.5699936372692727,
+      "coverage_requested": 0.5139414354657663,
+      "requested_layers": 6,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon has no verified star-shaped triangulation",
+      "body_topology": "ok (closed singly connected)",
+      "basic_failed_checks": 1,
+      "max_skew": 3.9721710158994674
+    },
+    {
+      "arm": "expert",
+      "attempt": 3,
+      "cells": 5018984.0,
+      "coverage_ge1": 0.867051545833868,
+      "coverage_ge5": 0.5639611093504379,
+      "coverage_requested": 0.5100665241781308,
+      "requested_layers": 6,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "body_topology": "multiply connected (shared edge)",
+      "basic_failed_checks": 0,
+      "max_skew": 3.9993836062818344
+    },
+    {
+      "arm": "expert",
+      "attempt": 4,
+      "cells": 5050411.0,
+      "coverage_ge1": 0.8674638129628551,
+      "coverage_ge5": 0.5623683397606711,
+      "coverage_requested": 0.5082064856825276,
+      "requested_layers": 6,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "body_topology": "multiply connected (shared edge)",
+      "basic_failed_checks": 1,
+      "max_skew": 3.9999257133679307
+    },
+    {
+      "arm": "expert",
+      "attempt": 5,
+      "cells": 4765239.0,
+      "coverage_ge1": 0.7866181736500469,
+      "coverage_ge5": 0.541446963252574,
+      "coverage_requested": 0.541446963252574,
+      "requested_layers": 5,
+      "admissible_diagnostic": false,
+      "joint_meshing_gates_passed": false,
+      "native_error": "native polygon observation unavailable: native polygon boundary has open/nonmanifold edges",
+      "body_topology": "multiply connected (shared edge)",
+      "basic_failed_checks": 1,
+      "max_skew": 3.9999091779326235
+    }
+  ],
+  "local_anchor_comparison": [
+    {
+      "arm": "agent",
+      "attempt": 5,
+      "local_layers": {
+        "coverage_ge5": 0.3545033790036045,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 42300,
+            "area": 2.869572444262974,
+            "ge1": 0.43516551692553873,
+            "ge5": 0.08491747361364788
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 9466,
+            "area": 2.422881010988158,
+            "ge1": 0.30139408925555666,
+            "ge5": 0.030656803633487734
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 61681,
+            "area": 6.184766606825146,
+            "ge1": 0.622993876350658,
+            "ge5": 0.26102968575757207
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    },
+    {
+      "arm": "expert",
+      "attempt": 2,
+      "local_layers": {
+        "coverage_ge5": 0.5699936372692727,
+        "regions": {
+          "front_lateral_lower": {
+            "min": [
+              -1.9,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              -1.0,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 49130,
+            "area": 2.9561486297467012,
+            "ge1": 0.719498379915917,
+            "ge5": 0.15911470747789816
+          },
+          "rear_lateral_lower": {
+            "min": [
+              0.85,
+              -1.1,
+              -0.8
+            ],
+            "max": [
+              1.65,
+              1.1,
+              -0.2
+            ],
+            "abs_y_min": 0.6,
+            "faces": 28841,
+            "area": 2.526939330226921,
+            "ge1": 0.727359358835656,
+            "ge5": 0.15053301332384722
+          },
+          "central_lower": {
+            "min": [
+              -1.9,
+              -0.55,
+              -0.8
+            ],
+            "max": [
+              1.8,
+              0.55,
+              -0.35
+            ],
+            "abs_y_min": null,
+            "faces": 106928,
+            "area": 6.345623306506404,
+            "ge1": 0.8605622447754372,
+            "ge5": 0.4941098125437476
+          }
+        },
+        "definition": "native wall-face-centre selection and full polygon areas; not exact clipped areas or semantic parts"
+      }
+    }
+  ],
+  "native_render_manifest": [
+    {
+      "arm": "new_agent",
+      "round": 0,
+      "case": "<NEW_RUN>/round0",
+      "polyMesh_sha256": {
+        "points": "823f838d2bd9d889248e95ffcbbb4b1e4b5fb602cc375d6fabf77b31116a9e91",
+        "faces": "328bd2d9e30498d97e1dab98436ab64be5f3f56829fd87660ef76fccd72dccda",
+        "owner": "7942dd62ff5dc8af5b453642842966fe7b9f37f8ea307266c621d570e7b0963a",
+        "neighbour": "8fb1d4ae428ba9cf116475831a9989690791a40ce8323b7b93e9253ed7f05c8a",
+        "boundary": "a134981817fef72087a7bfc9335962c5faea82d92fc62ba66d451be660f6693f"
+      },
+      "native_cells": 1860450.0,
+      "area_coverage_ge5": 0.3377287946220891,
+      "contour_limitation": "VTK can omit malformed polyhedral cell contours, especially on rejected meshes; no topology certification from plots."
+    },
+    {
+      "arm": "new_agent",
+      "round": 2,
+      "case": "<NEW_RUN>/round2",
+      "polyMesh_sha256": {
+        "points": "28c157a432cec11a01b2a6391dbc0ac5315b04522b5aa613a2425fa663f670a4",
+        "faces": "ca4a607354ec031027519dcb3733a83561c55d4de38be4cf671d091dc5e7ea7e",
+        "owner": "0ac8a78209f8b01eb33937e9d85945839cb08a391c60f8274697a48b033a1220",
+        "neighbour": "68e6a51fdb61f2a619094a7fd987462712335757c6c9216e61698f0579465056",
+        "boundary": "cb8c4835343b7961911d215c5f7ad02a622cdb835815595a3ccb68b26babddb9"
+      },
+      "native_cells": 1913305.0,
+      "area_coverage_ge5": 0.41377443615111015,
+      "contour_limitation": "VTK can omit malformed polyhedral cell contours, especially on rejected meshes; no topology certification from plots."
+    }
+  ],
+  "raw_check_log_sha256": {
+    "attempt1_checkMesh.log": "5f47b4c8e0d03065ffad1956695c4a1243e55556b6c15f0762f1d56e9dbe217a",
+    "attempt1_checkMeshExtended.log": "3d30399bcbc2c3e8fe26267bbbb4dd08faaf11573633725370caeccc41b45976",
+    "attempt2_checkMesh.log": "7f9aa7adf92d94be705ff19f9f0b539f2636918096ac9019c27246de040ac5c1",
+    "attempt2_checkMeshExtended.log": "c1fb1236bca61db5ada0d9eb71797c0d9d9972409fbb6d6d219decce839226b0",
+    "attempt3_checkMesh.log": "6f16be17136252662f63cc3ff24c9b92c505752fe36fbccb4027d1e85f2d7c1e",
+    "attempt3_checkMeshExtended.log": "152aeaac883eab79d513e6909d9309fd6ad89ff538bca3a5437d540e2f543f0f",
+    "attempt4_checkMesh.log": "1bc16d97d311b3b6bcd019926f05e64870f2bc2a1b051e1001d15a587f087748",
+    "attempt4_checkMeshExtended.log": "a3e67ac108f40c1c3439b8884ab8d3f51230c0f37255968a7f4100c178ed1f75",
+    "attempt5_checkMesh.log": "26a8c0adb40381ebe82687c1a5cf86be56c7eb6700a6212122c4bed3968d7e6d",
+    "attempt5_checkMeshExtended.log": "44b4a47a4c7058a9c1d2c9e467da56c6e2a5acc931c062f0fe973d85c7bf3771"
+  },
+  "limitations": [
+    "not independent held-out geometry",
+    "different actual cell counts",
+    "regional boxes selected before new results",
+    "no actual CFD y+ or force validation",
+    "Fluent external report not comparable"
+  ]
+}

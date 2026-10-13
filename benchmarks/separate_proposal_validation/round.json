@@ -1,0 +1,290 @@
+{
+  "status": "completed",
+  "steps": [
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "constant/triSurface/body.stl"
+      ],
+      "returncode": 0,
+      "seconds": 0.5009714588522911,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/surfaceCheck.log",
+      "reason": null,
+      "ok": true,
+      "name": "surfaceCheck"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/blockMesh"
+      ],
+      "returncode": 0,
+      "seconds": 0.5010769553482533,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/blockMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "blockMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceFeatureExtract"
+      ],
+      "returncode": 0,
+      "seconds": 0.5011659953743219,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/surfaceFeatureExtract.log",
+      "reason": null,
+      "ok": true,
+      "name": "surfaceFeatureExtract"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/decomposePar",
+        "-force"
+      ],
+      "returncode": 0,
+      "seconds": 0.5015011690557003,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/decomposePar.log",
+      "reason": null,
+      "ok": true,
+      "name": "decomposePar"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/mpirun",
+        "-launcher",
+        "fork",
+        "-np",
+        "16",
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/snappyHexMesh",
+        "-overwrite",
+        "-parallel",
+        "-debug-switch",
+        "displacementMedialAxis=1"
+      ],
+      "returncode": 0,
+      "seconds": 197.78515301644802,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/snappyHexMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "snappyHexMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/reconstructParMesh",
+        "-constant",
+        "-time",
+        "none"
+      ],
+      "returncode": 0,
+      "seconds": 1.0022816490381956,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/reconstructParMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "reconstructParMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/reconstructPar",
+        "-withZero",
+        "-time",
+        "0",
+        "-fields",
+        "(nSurfaceLayers thickness thicknessFraction)"
+      ],
+      "returncode": 0,
+      "seconds": 0.5014090500771999,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/reconstructLayers.log",
+      "reason": null,
+      "ok": true,
+      "name": "reconstructLayers"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/checkMesh",
+        "-constant",
+        "-time",
+        "none",
+        "-allTopology",
+        "-meshQuality",
+        "-writeSets",
+        "vtk",
+        "-writeChecks",
+        "json"
+      ],
+      "returncode": 0,
+      "seconds": 3.002706117928028,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/checkMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "checkMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/checkMesh",
+        "-constant",
+        "-time",
+        "none",
+        "-allGeometry",
+        "-allTopology",
+        "-writeSets",
+        "vtk"
+      ],
+      "returncode": 0,
+      "seconds": 3.00216731056571,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/checkMeshExtended.log",
+      "reason": null,
+      "ok": true,
+      "name": "checkMeshExtended"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceMeshExtract",
+        "-constant",
+        "-time",
+        "none",
+        "-patches",
+        "(body)",
+        "body.obj"
+      ],
+      "returncode": 0,
+      "seconds": 0.5018127858638763,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/surfaceMeshExtract.log",
+      "reason": null,
+      "ok": true,
+      "name": "surfaceMeshExtract"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "body.observed.stl"
+      ],
+      "returncode": 0,
+      "seconds": 0.501906868070364,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/logs/nativeBoundaryCheck.log",
+      "reason": null,
+      "ok": true,
+      "name": "nativeBoundaryCheck"
+    }
+  ],
+  "quality": {
+    "verified": true,
+    "accepted": true,
+    "reasons": [],
+    "n_failed": 0,
+    "metrics": {
+      "cells": 299819.0,
+      "regions": 1.0,
+      "max_non_ortho": 64.82775333624019,
+      "max_skew": 0.9162244776200861,
+      "max_aspect": 28.059836829999625,
+      "min_volume": 1.5093171285159498e-09
+    },
+    "patches": {
+      "minX": 870,
+      "maxX": 870,
+      "minY": 1653,
+      "maxY": 1653,
+      "minZ": 1710,
+      "maxZ": 1710,
+      "body": 10819
+    },
+    "native_failure_messages": [],
+    "returncode": 0,
+    "native_times": [
+      "constant"
+    ]
+  },
+  "error": null,
+  "case": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0",
+  "layout": {
+    "domain_min": [
+      -1.84638977608093,
+      -1.94088977608093,
+      -1.74638977608093
+    ],
+    "domain_max": [
+      5.6010394028824795,
+      1.94088977608093,
+      2.08438977608093
+    ],
+    "base_cell_size": 0.1305,
+    "counts": [
+      57,
+      30,
+      29
+    ],
+    "background_cells": 49590,
+    "bbox_diagonal": 1.1642598507206199,
+    "location_in_mesh": [
+      -0.6821299253603099,
+      -0.77662992536031,
+      -0.5821299253603099
+    ],
+    "case_root": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0",
+    "finest_cell_size": 0.0163125
+  },
+  "stage": "surfaceMeshExtract",
+  "surface_eligibility": {
+    "accepted": true,
+    "reasons": [],
+    "closed": true,
+    "self_intersection_free": true,
+    "self_intersection_locations": null
+  },
+  "native_geometry_check": "closed surface and self-intersection check completed",
+  "native_declared_final_mesh_time": "constant",
+  "extended_geometry_diagnostics": {
+    "verified": true,
+    "accepted": false,
+    "reasons": [
+      "native checkMesh failed checks: 2; unknown failures are never ignored"
+    ],
+    "n_failed": 2,
+    "metrics": {
+      "cells": 299819.0,
+      "regions": 1.0,
+      "max_non_ortho": 64.82775333624019,
+      "max_skew": 0.9162244776200861,
+      "max_aspect": 28.059836829999625,
+      "min_volume": 1.5093171285159498e-09
+    },
+    "patches": {
+      "minX": 870,
+      "maxX": 870,
+      "minY": 1653,
+      "maxY": 1653,
+      "minZ": 1710,
+      "maxZ": 1710,
+      "body": 10819
+    },
+    "native_failure_messages": [
+      "***Cells with small determinant (< 0.001) found, number of cells: 60",
+      "***Concave cells (using face planes) found, number of cells: 12465",
+      "Failed 2 mesh checks."
+    ],
+    "returncode": 0,
+    "native_times": [
+      "constant"
+    ]
+  },
+  "boundary_observer": {
+    "available": true,
+    "native_polygon_closed": true,
+    "native_polygon_oriented": true,
+    "polygons": 10819,
+    "triangles": 43722,
+    "max_relative_face_warp": 0.036810565978452996,
+    "triangulation": "verified visibility-kernel centre; unique interior point per polygon; no welding or hole filling",
+    "limitation": "representation of native polygons; self-intersection requires separate native surfaceCheck; no polyMesh change",
+    "native_surface_report": {
+      "accepted": true,
+      "reasons": [],
+      "closed": true,
+      "self_intersection_free": true,
+      "self_intersection_locations": null
+    },
+    "native_self_intersection_verified": true
+  },
+  "seconds": 210.06583146937191
+}

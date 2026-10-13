@@ -1,0 +1,33 @@
+{
+  "purpose": "cached closed-notch native density integration; ROI is an explicit geometric box, not a flow or industrial accuracy validation",
+  "records": [
+    {
+      "arm": "baseline",
+      "roi": {
+        "id": "notch_fluid_roi",
+        "native_cells": 1026,
+        "spatial_bin_occupancy": 1.0,
+        "p95_cell_axis_span_metres": 0.01623109533738898,
+        "max_cell_axis_span_metres": 0.016286069665511604,
+        "resolved_native_roi_cell_volume_fraction": 1.0,
+        "quantile_weighting": "native cell volume; not cell count",
+        "accepted": true
+      },
+      "native_polyMesh_unchanged": true
+    },
+    {
+      "arm": "gap",
+      "roi": {
+        "id": "notch_fluid_roi",
+        "native_cells": 6099,
+        "spatial_bin_occupancy": 1.0,
+        "p95_cell_axis_span_metres": 0.007919423282146454,
+        "max_cell_axis_span_metres": 0.02195821702480316,
+        "resolved_native_roi_cell_volume_fraction": 0.998583740048898,
+        "quantile_weighting": "native cell volume; not cell count",
+        "accepted": true
+      },
+      "native_polyMesh_unchanged": true
+    }
+  ]
+}

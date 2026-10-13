@@ -1,0 +1,5 @@
+# Preserve exact evidence bytes and their published hashes across platforms.
+* -text
+*.sh text eol=lf
+*.py text eol=lf
+*.md text eol=lf

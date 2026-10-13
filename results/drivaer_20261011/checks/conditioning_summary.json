@@ -1,0 +1,70 @@
+[
+  {
+    "name": "bbox_centre",
+    "origin_in_source_metres": [
+      1.586642,
+      0.0,
+      0.4377344999999999
+    ],
+    "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+    "conditioned_sha256": "b365fa028f7b255814e3ee4eda3c5945d5c2f15f25a496ac76fcae615f5bd607",
+    "native": {
+      "accepted": true,
+      "reasons": [],
+      "closed": true,
+      "self_intersection_free": true,
+      "self_intersection_locations": null
+    },
+    "step": {
+      "argv": [
+        "<HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "body.stl"
+      ],
+      "returncode": 0,
+      "seconds": 5.003456032369286,
+      "log": "<PROJECT>/work_drivaer_20261011/conditioning/bbox_centre/nativeSurfaceCheck.log",
+      "reason": null,
+      "ok": true
+    },
+    "operation": "rigid translation only; axes, all triangles and every original component retained",
+    "reconstructed_coordinate_max_error": 4.440892098500626e-16,
+    "vertices": 376531,
+    "triangles": 753234,
+    "semantic_parts_used": false
+  },
+  {
+    "name": "bbox_min",
+    "origin_in_source_metres": [
+      -0.765196,
+      -1.01025,
+      -0.319641
+    ],
+    "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+    "conditioned_sha256": "b7ba63fd8ff95ccfa90c1526c2905b459ee1a5a9f5ad13983c4197d02b0698a2",
+    "native": {
+      "accepted": true,
+      "reasons": [],
+      "closed": true,
+      "self_intersection_free": true,
+      "self_intersection_locations": null
+    },
+    "step": {
+      "argv": [
+        "<HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "body.stl"
+      ],
+      "returncode": 0,
+      "seconds": 5.503164560068399,
+      "log": "<PROJECT>/work_drivaer_20261011/conditioning/bbox_min/nativeSurfaceCheck.log",
+      "reason": null,
+      "ok": true
+    },
+    "operation": "rigid translation only; axes, all triangles and every original component retained",
+    "reconstructed_coordinate_max_error": 4.440892098500626e-16,
+    "vertices": 376531,
+    "triangles": 753234,
+    "semantic_parts_used": false
+  }
+]

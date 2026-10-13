@@ -1,0 +1,40 @@
+{
+  "arm": "agent",
+  "round": 4,
+  "code_sha256": "64472ae3b6c17019a9666dd120a5103c4bdbe554cd2da091b643333cacb1b8ca",
+  "purpose": "posthoc stock native triangulation; no snappy attempt; legacy result unchanged",
+  "polyMesh_sha256_before": {
+    "points": "372fbd939153e3c67a9ad37aec03c085adbc83cc79a9f38ac623ff5a14b8e99b",
+    "faces": "0910d477038cfc4f9792b280b122e32928139e93855470efdebb3de2e4bab70e",
+    "owner": "d73729b3a64374a68bda134d22aa8e568f84969d9061d5258df93b11f18562a7",
+    "neighbour": "ca30f2b999ac316e274b379b227b7e917a767e49038243d27cd3af6b3d672eb9",
+    "boundary": "01be79735b22b4cc3adac64370f738ecd8e4985d7a6503244c1367803d2c94c7"
+  },
+  "native_surface_report": {
+    "accepted": false,
+    "reasons": [
+      "native surface closure not affirmative",
+      "native self-intersection check failed/unavailable"
+    ],
+    "closed": false,
+    "self_intersection_free": false,
+    "self_intersection_locations": 81
+  },
+  "observed_sha256": "39138cfd5401a23aa1d3dafeb2e776b5d96c29a7ef99d0494c2c59dc6012eb23",
+  "max_distance_to_original_vertex_metres": 0.0,
+  "fidelity": {
+    "available": false,
+    "accepted": false,
+    "reasons": [
+      "observed triangles fail closure/orientation/area"
+    ]
+  },
+  "joint_geometry_measurement_verified": false,
+  "polyMesh_sha256_after": {
+    "points": "372fbd939153e3c67a9ad37aec03c085adbc83cc79a9f38ac623ff5a14b8e99b",
+    "faces": "0910d477038cfc4f9792b280b122e32928139e93855470efdebb3de2e4bab70e",
+    "owner": "d73729b3a64374a68bda134d22aa8e568f84969d9061d5258df93b11f18562a7",
+    "neighbour": "ca30f2b999ac316e274b379b227b7e917a767e49038243d27cd3af6b3d672eb9",
+    "boundary": "01be79735b22b4cc3adac64370f738ecd8e4985d7a6503244c1367803d2c94c7"
+  }
+}

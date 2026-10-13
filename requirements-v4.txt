@@ -1,0 +1,9 @@
+# Native-tested Linux native-execution Python 3.11 environment; OpenFOAM/MPICH are separate.
+numpy==2.4.6
+scipy==1.17.1
+trimesh==4.12.2
+rtree==1.4.1
+vtk==9.6.2
+embreex==4.4.0
+matplotlib==3.11.2
+Pillow==12.3.0

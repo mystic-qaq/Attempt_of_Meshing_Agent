@@ -1,0 +1,90 @@
+# argv: <PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck -checkSelfIntersection body.observed.stl
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2412 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : <PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck -checkSelfIntersection body.observed.stl
+Date   : Oct 11 2026
+Time   : 01:21:04
+Host   : a3n02c3
+PID    : 336485
+--> FOAM Warning : 
+    From Foam::fileName Foam::cwd_L()
+    in file POSIX.C at line 552
+    PWD is not the cwd() - reverting to physical description
+I/O    : uncollated
+--> FOAM Warning : 
+    From Foam::fileName Foam::cwd_L()
+    in file POSIX.C at line 552
+    PWD is not the cwd() - reverting to physical description
+Case   : <PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/finite_cylinder/round1
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Reading surface from "body.observed.stl" ...
+
+Statistics:
+Triangles    : 47462 in 1 region(s)
+Vertices     : 23733
+Bounding Box : (-0.35 -0.700012 -0.349835) (0.350005 0.700006 0.349835)
+
+Index	Region	Size
+-----	------	----
+0	solid	47462
+
+
+Surface has no illegal triangles.
+
+Triangle quality (equilateral=1, collapsed=0):
+    0 .. 0.05  : 0.00126417
+    0.05 .. 0.1  : 0.000505668
+    0.1 .. 0.15  : 0.000927057
+    0.15 .. 0.2  : 0.000863849
+    0.2 .. 0.25  : 0.000969196
+    0.25 .. 0.3  : 0.000737432
+    0.3 .. 0.35  : 0.001517
+    0.35 .. 0.4  : 0.0024862
+    0.4 .. 0.45  : 0.00507775
+    0.45 .. 0.5  : 0.0865535
+    0.5 .. 0.55  : 0.0405798
+    0.55 .. 0.6  : 0.0503771
+    0.6 .. 0.65  : 0.0496397
+    0.65 .. 0.7  : 0.0382411
+    0.7 .. 0.75  : 0.0659475
+    0.75 .. 0.8  : 0.335805
+    0.8 .. 0.85  : 0.0565294
+    0.85 .. 0.9  : 0.0661371
+    0.9 .. 0.95  : 0.0728372
+    0.95 .. 1  : 0.123004
+
+    min 0.0150668 for triangle 11
+    max 0.999475 for triangle 24668
+
+Edges:
+    min 0.000775068 for edge 21369 points (-0.0178538 0.7 -0.349123)(-0.0182579 0.699965 -0.348462)
+    max 0.0314803 for edge 68901 points (-0.30174 -0.682396 -0.176556)(-0.316382 -0.682662 -0.148689)
+
+Checking for points less than 1e-6 of bounding box ((0.700005 1.40002 0.699671) metre) apart.
+Found 0 nearby points.
+
+Surface is closed. All edges connected to two faces.
+
+Number of unconnected parts : 1
+
+Number of zones (connected area with consistent normal) : 1
+
+Checking self-intersection.
+Surface is self-intersecting at 290 locations.
+Writing intersection points to "selfInterPoints.obj"
+
+
+End
+

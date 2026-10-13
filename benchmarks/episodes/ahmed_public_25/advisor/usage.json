@@ -1,0 +1,113 @@
+{
+  "calls": 3,
+  "estimated_usd": 0.0439251,
+  "requests": [
+    {
+      "round": -1,
+      "turn": 0,
+      "request_sha256": "ebd2e9ba6e4870ec58abac3c11bda1abb532862d12260e5a1f12c41fb2394e45",
+      "advisor_code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+      "request_bytes": 208933,
+      "image_input": {
+        "attached": true,
+        "source_sha256": "b485fc75a1339bb17d6f1847b7e88a21835a898d573b73fa84d6abb474d8e845",
+        "sent_png_sha256": "e861f30d8bdfc317bb1436b6b21063ffbe756015b16fb50ad46eeb39ecb85ddd",
+        "sent_png_bytes": 103680,
+        "detail": "low"
+      },
+      "reserved_input_token_ceiling": 72727,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.0365637,
+      "reservation_basis": "UTF8 text/schema bytes +1024/image +1024 protocol; official pricing checked 2026-10-10; cache-miss peak ceiling",
+      "usage": {
+        "prompt_tokens": 22565,
+        "completion_tokens": 8953,
+        "total_tokens": 31518,
+        "prompt_tokens_details": {
+          "cached_tokens": 1920
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 8730
+        },
+        "prompt_cache_hit_tokens": 1920,
+        "prompt_cache_miss_tokens": 20645
+      },
+      "usd_at_peak_price_ceiling": 0.0175131,
+      "seconds": 45.850000703998376,
+      "finish_reason": "tool_calls",
+      "reasoning_mode": "high",
+      "model": "deepseek-flash"
+    },
+    {
+      "round": -1,
+      "turn": 1,
+      "request_sha256": "707149d43a892f2b2543c86939287f12d43cb6636616c2fd161d671cbba9582c",
+      "advisor_code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+      "request_bytes": 261233,
+      "image_input": {
+        "attached": true,
+        "source_sha256": "b485fc75a1339bb17d6f1847b7e88a21835a898d573b73fa84d6abb474d8e845",
+        "sent_png_sha256": "e861f30d8bdfc317bb1436b6b21063ffbe756015b16fb50ad46eeb39ecb85ddd",
+        "sent_png_bytes": 103680,
+        "detail": "low"
+      },
+      "reserved_input_token_ceiling": 125027,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.0522537,
+      "reservation_basis": "UTF8 text/schema bytes +1024/image +1024 protocol; official pricing checked 2026-10-10; cache-miss peak ceiling",
+      "usage": {
+        "prompt_tokens": 37580,
+        "completion_tokens": 451,
+        "total_tokens": 38031,
+        "prompt_tokens_details": {
+          "cached_tokens": 31488
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 127
+        },
+        "prompt_cache_hit_tokens": 31488,
+        "prompt_cache_miss_tokens": 6092
+      },
+      "usd_at_peak_price_ceiling": 0.011815200000000001,
+      "seconds": 6.318539539002813,
+      "finish_reason": "tool_calls",
+      "reasoning_mode": "high",
+      "model": "deepseek-flash"
+    },
+    {
+      "round": -1,
+      "turn": 2,
+      "request_sha256": "9112d90491f83951408c8d4e07c92290a1db2a29987060d707962a1187ab454d",
+      "advisor_code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+      "request_bytes": 247113,
+      "image_input": {
+        "attached": true,
+        "source_sha256": "b485fc75a1339bb17d6f1847b7e88a21835a898d573b73fa84d6abb474d8e845",
+        "sent_png_sha256": "e861f30d8bdfc317bb1436b6b21063ffbe756015b16fb50ad46eeb39ecb85ddd",
+        "sent_png_bytes": 103680,
+        "detail": "low"
+      },
+      "reserved_input_token_ceiling": 110907,
+      "reserved_output_tokens": 12288,
+      "reserved_usd": 0.048017699999999996,
+      "reservation_basis": "UTF8 text/schema bytes +1024/image +1024 protocol; official pricing checked 2026-10-10; cache-miss peak ceiling",
+      "usage": {
+        "prompt_tokens": 34388,
+        "completion_tokens": 3567,
+        "total_tokens": 37955,
+        "prompt_tokens_details": {
+          "cached_tokens": 1408
+        },
+        "prompt_cache_hit_tokens": 1408,
+        "prompt_cache_miss_tokens": 32980
+      },
+      "usd_at_peak_price_ceiling": 0.0145968,
+      "seconds": 22.403281179023907,
+      "finish_reason": "tool_calls",
+      "reasoning_mode": "disabled-final-format",
+      "model": "deepseek-flash"
+    }
+  ],
+  "scope": "one independent case",
+  "model": "deepseek-flash"
+}

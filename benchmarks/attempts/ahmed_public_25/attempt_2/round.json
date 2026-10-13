@@ -1,0 +1,303 @@
+{
+  "status": "failed",
+  "steps": [
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "constant/triSurface/body.stl"
+      ],
+      "returncode": 0,
+      "seconds": 0.5014986586757004,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/surfaceCheck.log",
+      "reason": null,
+      "ok": true,
+      "name": "surfaceCheck"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/blockMesh"
+      ],
+      "returncode": 0,
+      "seconds": 0.5179160721600056,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/blockMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "blockMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceFeatureExtract"
+      ],
+      "returncode": 0,
+      "seconds": 0.5016955430619419,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/surfaceFeatureExtract.log",
+      "reason": null,
+      "ok": true,
+      "name": "surfaceFeatureExtract"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/decomposePar",
+        "-force"
+      ],
+      "returncode": 0,
+      "seconds": 0.501770026050508,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/decomposePar.log",
+      "reason": null,
+      "ok": true,
+      "name": "decomposePar"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/mpirun",
+        "-launcher",
+        "fork",
+        "-np",
+        "16",
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/snappyHexMesh",
+        "-overwrite",
+        "-parallel",
+        "-debug-switch",
+        "displacementMedialAxis=1"
+      ],
+      "returncode": 0,
+      "seconds": 187.81379247503355,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/snappyHexMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "snappyHexMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/reconstructParMesh",
+        "-constant",
+        "-time",
+        "none"
+      ],
+      "returncode": 0,
+      "seconds": 1.0214896947145462,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/reconstructParMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "reconstructParMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/reconstructPar",
+        "-withZero",
+        "-time",
+        "0",
+        "-fields",
+        "(nSurfaceLayers thickness thicknessFraction)"
+      ],
+      "returncode": 0,
+      "seconds": 0.5014490140601993,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/reconstructLayers.log",
+      "reason": null,
+      "ok": true,
+      "name": "reconstructLayers"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/checkMesh",
+        "-constant",
+        "-time",
+        "none",
+        "-allTopology",
+        "-meshQuality",
+        "-writeSets",
+        "vtk",
+        "-writeChecks",
+        "json"
+      ],
+      "returncode": 0,
+      "seconds": 5.0025851260870695,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/checkMesh.log",
+      "reason": null,
+      "ok": true,
+      "name": "checkMesh"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/checkMesh",
+        "-constant",
+        "-time",
+        "none",
+        "-allGeometry",
+        "-allTopology",
+        "-writeSets",
+        "vtk"
+      ],
+      "returncode": 0,
+      "seconds": 5.002749254927039,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/checkMeshExtended.log",
+      "reason": null,
+      "ok": true,
+      "name": "checkMeshExtended"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceMeshExtract",
+        "-constant",
+        "-time",
+        "none",
+        "-patches",
+        "(body)",
+        "body.obj"
+      ],
+      "returncode": 0,
+      "seconds": 0.5017695911228657,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/surfaceMeshExtract.log",
+      "reason": null,
+      "ok": true,
+      "name": "surfaceMeshExtract"
+    },
+    {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "body.observed.stl"
+      ],
+      "returncode": 0,
+      "seconds": 1.0017534540966153,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1/logs/nativeBoundaryCheck.log",
+      "reason": null,
+      "ok": true,
+      "name": "nativeBoundaryCheck"
+    }
+  ],
+  "quality": {
+    "verified": true,
+    "accepted": false,
+    "reasons": [
+      "native checkMesh failed checks: 3; unknown failures are never ignored",
+      "max_non_ortho exceeds RANS quality limit 70"
+    ],
+    "n_failed": 3,
+    "metrics": {
+      "cells": 517720.0,
+      "regions": 1.0,
+      "max_non_ortho": 147.4388215442464,
+      "max_skew": 1.3163463284395145,
+      "max_aspect": 11.738612294520172,
+      "min_volume": 3.921088681698099e-09
+    },
+    "patches": {
+      "minX": 870,
+      "maxX": 870,
+      "minY": 1653,
+      "maxY": 1653,
+      "minZ": 1710,
+      "maxZ": 1710,
+      "body": 26393
+    },
+    "native_failure_messages": [
+      "***Number of non-orthogonality errors: 3.",
+      "***Error in face pyramids: 6 faces are incorrectly oriented.",
+      "Failed 3 mesh checks."
+    ],
+    "returncode": 0,
+    "native_times": [
+      "constant"
+    ]
+  },
+  "error": "observed boundary native self-intersection evidence failed/unavailable",
+  "case": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1",
+  "layout": {
+    "domain_min": [
+      -1.84638977608093,
+      -1.94088977608093,
+      -1.74638977608093
+    ],
+    "domain_max": [
+      5.6010394028824795,
+      1.94088977608093,
+      2.08438977608093
+    ],
+    "base_cell_size": 0.1305,
+    "counts": [
+      57,
+      30,
+      29
+    ],
+    "background_cells": 49590,
+    "bbox_diagonal": 1.1642598507206199,
+    "location_in_mesh": [
+      -0.6821299253603099,
+      -0.77662992536031,
+      -0.5821299253603099
+    ],
+    "case_root": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round1",
+    "finest_cell_size": 0.0163125
+  },
+  "stage": "surfaceMeshExtract",
+  "surface_eligibility": {
+    "accepted": true,
+    "reasons": [],
+    "closed": true,
+    "self_intersection_free": true,
+    "self_intersection_locations": null
+  },
+  "native_geometry_check": "closed surface and self-intersection check completed",
+  "native_declared_final_mesh_time": "constant",
+  "extended_geometry_diagnostics": {
+    "verified": true,
+    "accepted": false,
+    "reasons": [
+      "native checkMesh failed checks: 4; unknown failures are never ignored",
+      "max_non_ortho exceeds RANS quality limit 70"
+    ],
+    "n_failed": 4,
+    "metrics": {
+      "cells": 517720.0,
+      "regions": 1.0,
+      "max_non_ortho": 147.4388215442464,
+      "max_skew": 1.3163463284395145,
+      "max_aspect": 11.738612294520172,
+      "min_volume": 3.921088681698099e-09
+    },
+    "patches": {
+      "minX": 870,
+      "maxX": 870,
+      "minY": 1653,
+      "maxY": 1653,
+      "minZ": 1710,
+      "maxZ": 1710,
+      "body": 26393
+    },
+    "native_failure_messages": [
+      "***Number of non-orthogonality errors: 3.",
+      "***Error in face pyramids: 6 faces are incorrectly oriented.",
+      "***Error in face tets: 30 faces with low quality or negative volume decomposition tets.",
+      "<<Writing 10 faces with low quality or negative volume decomposition tets to set lowQualityTetFaces",
+      "***Concave cells (using face planes) found, number of cells: 25100",
+      "Failed 4 mesh checks."
+    ],
+    "returncode": 0,
+    "native_times": [
+      "constant"
+    ]
+  },
+  "boundary_observer": {
+    "available": true,
+    "native_polygon_closed": true,
+    "native_polygon_oriented": true,
+    "polygons": 26393,
+    "triangles": 105906,
+    "max_relative_face_warp": 0.041162370196985626,
+    "triangulation": "verified visibility-kernel centre; unique interior point per polygon; no welding or hole filling",
+    "limitation": "representation of native polygons; self-intersection requires separate native surfaceCheck; no polyMesh change",
+    "native_surface_report": {
+      "accepted": false,
+      "reasons": [
+        "native self-intersection check failed/unavailable"
+      ],
+      "closed": true,
+      "self_intersection_free": false,
+      "self_intersection_locations": 4
+    },
+    "native_self_intersection_verified": false
+  },
+  "seconds": 206.63765433523804
+}

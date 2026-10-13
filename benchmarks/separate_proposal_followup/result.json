@@ -1,0 +1,1233 @@
+{
+  "status": "blocked",
+  "accepted": false,
+  "rounds": [],
+  "best_round": null,
+  "geometry": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/geometry/ahmed_public_25.stl",
+  "source_sha256": "c89ec3e3f4d1e51485e1313e456385a8595cf39f0dbd395cd952887fe8b034b7",
+  "code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+  "config": {
+    "budget": 2000000,
+    "max_rounds": 2,
+    "n_procs": 16,
+    "advisor": "deepseek-flash",
+    "scale_to_metres": 1.0,
+    "round_seconds": 600,
+    "total_seconds": 2000,
+    "require_layers": true,
+    "flow": {
+      "speed": 30.0,
+      "nu": 1.5e-05,
+      "yplus": 50.0,
+      "layers": 8
+    },
+    "base_cells": 8,
+    "flow_probe": true,
+    "model_plan": true,
+    "probe_startup": 0,
+    "resume_from": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25",
+    "scenario_context": {
+      "family": "vehicle",
+      "objective": "external-flow drag and rear separated wake",
+      "boundary_environment": "unbounded_single_phase",
+      "flow_direction": [
+        1,
+        0,
+        0
+      ],
+      "up_direction": [
+        0,
+        0,
+        1
+      ],
+      "notes": "Unbounded single-phase geometry stress test; stationary/moving-ground benchmark conditions are not reproduced."
+    }
+  },
+  "evidence_counts": {
+    "stl": 1,
+    "mesh": 0,
+    "cfd_force": 0,
+    "field": 0
+  },
+  "prior_mesh_attempts": 1,
+  "resume_parent_sha256": "6bb1cc8efe38a5b13cd0a198f4a7f780470d647e639be8ccaee2bfb7e271dfc6",
+  "surface_eligibility": {
+    "accepted": true,
+    "reasons": [],
+    "closed": true,
+    "self_intersection_free": true,
+    "self_intersection_locations": null,
+    "step": {
+      "argv": [
+        "<PRIVATE_HOME>/.conda-envs/openfoam2412/bin/surfaceCheck",
+        "-checkSelfIntersection",
+        "body.stl"
+      ],
+      "returncode": 0,
+      "seconds": 0.5015203952789307,
+      "log": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_followup_ahmed_public_25/input/nativeSurfaceCheck.log",
+      "reason": null,
+      "ok": true
+    }
+  },
+  "scenario": {
+    "context": {
+      "family": "vehicle",
+      "objective": "external-flow drag and rear separated wake",
+      "boundary_environment": "unbounded_single_phase",
+      "flow_direction": [
+        1,
+        0,
+        0
+      ],
+      "up_direction": [
+        0,
+        0,
+        1
+      ],
+      "notes": "Unbounded single-phase geometry stress test; stationary/moving-ground benchmark conditions are not reproduced."
+    },
+    "body_bounds_metres": [
+      [
+        -0.1,
+        -0.1945,
+        0.0
+      ],
+      [
+        0.944,
+        0.1945,
+        0.338
+      ]
+    ],
+    "reynolds": 2088000.0,
+    "requirements": [
+      {
+        "id": "flow_requirement:near_wake",
+        "name": "near_wake",
+        "min": [
+          0.944,
+          -0.2723,
+          -0.06760000000000001
+        ],
+        "max": [
+          1.988,
+          0.2723,
+          0.4056
+        ],
+        "max_cell_axis_span_metres": 0.04225,
+        "mechanism": "rear separation, shear layers and recirculating vehicle wake",
+        "evidence_status": "unvalidated_physical_hypothesis",
+        "native_p95_tolerance": 1.5,
+        "source": "bounded dimensionless planning prior; requires subsequent flow sensitivity validation"
+      },
+      {
+        "id": "flow_requirement:far_wake",
+        "name": "far_wake",
+        "min": [
+          1.988,
+          -0.3501,
+          -0.13520000000000001
+        ],
+        "max": [
+          4.0760000000000005,
+          0.3501,
+          0.47320000000000007
+        ],
+        "max_cell_axis_span_metres": 0.0845,
+        "mechanism": "downstream transport of velocity deficit and shear; coarser far wake bounds cost",
+        "evidence_status": "unvalidated_physical_hypothesis",
+        "native_p95_tolerance": 1.5,
+        "source": "bounded dimensionless planning prior; requires subsequent flow sensitivity validation"
+      }
+    ],
+    "contract_sha256": "1bd7364f70291555852d9cc2406baa69fb0287b561624ed40ca82cc9c75aacab",
+    "scientific_assumptions": [
+      "incompressible constant-property single-phase flow",
+      "geometry orientation supplied by user; bounding box does not infer freestream direction",
+      "streamwise body extent is characteristic length; wing span is not chord",
+      "off-body corridors are broad prior envelopes; vortex trajectory and separation require flow evidence",
+      "steady RANS mesh allocation does not validate unsteady shedding or wake recovery"
+    ],
+    "limitations": "Off-body resolution screening only. Wake location is a scenario hypothesis; flow convergence, mesh sensitivity, forces and engineering accuracy are unverified."
+  },
+  "geometry_audit": {
+    "source": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/geometry/ahmed_public_25.stl",
+    "source_sha256": "c89ec3e3f4d1e51485e1313e456385a8595cf39f0dbd395cd952887fe8b034b7",
+    "canonical_sha256": "e735fa6bb75255907fc25dc62e261ffe578596a0011bb6047101795d934bfe9f",
+    "scale_to_metres": 1.0,
+    "coordinate_frame": "source axes, physical metres; flow +X, vertical +Z",
+    "semantic_parts_used": false,
+    "triangles": 28626,
+    "vertices": 14315,
+    "coherent_single_shell_orientation_reversed": false,
+    "single_shell_winding_normalised": false,
+    "canonical_precision": "ASCII float64",
+    "binary_roundtrip_max_coordinate_error_metres": 2.980042013156492e-08,
+    "watertight": true,
+    "winding_consistent": true,
+    "area": 1.5453197909990875,
+    "volume": 0.11089681388886063,
+    "bbox": [
+      [
+        -0.1,
+        -0.1945,
+        0.0
+      ],
+      [
+        0.944,
+        0.1945,
+        0.338
+      ]
+    ],
+    "extents": [
+      1.044,
+      0.389,
+      0.338
+    ],
+    "diagonal": 1.1642598507206199,
+    "feature_half_size": {
+      "p1": 0.014990666571806604,
+      "p5": 0.11932257937705984,
+      "p10": 0.14383650356992633,
+      "p25": 0.14400000000000002,
+      "p50": 0.14663582781170895,
+      "p90": 0.22310658084092289
+    },
+    "measurement": "bidirectional triangle-BVH normal rays",
+    "sample_seed": 0,
+    "samples": 4096,
+    "inward_ray_coverage": 1.0,
+    "finite_fluid_gap_fraction": 0.000732421875,
+    "self_intersection": "unavailable_until_native_surfaceCheck",
+    "source_mutated": false,
+    "seconds": 0.44920904003083706
+  },
+  "flow": {
+    "speed": 30.0,
+    "nu": 1.5e-05,
+    "reynolds": 2088000.0,
+    "target_yplus": 50.0,
+    "estimated_utau": 1.3466324245869237,
+    "first_layer_height": 0.0011138897093318702,
+    "layers": 8,
+    "expansion_ratio": 1.2,
+    "stack_height": 0.018378160772113874,
+    "estimated_boundary_layer": 0.021035659088606745,
+    "method": "smooth turbulent flat-plate average-Cf estimate",
+    "limitation": "a planning surrogate; actual y+ needs a flow field"
+  },
+  "seconds": 83.19331150315702,
+  "source_mutated": false,
+  "candidate_history": [
+    {
+      "round": 0,
+      "spec": {
+        "cell_size_target": 0.0,
+        "surface": {
+          "name": "body",
+          "level_min": 3,
+          "level_max": 3,
+          "patch_type": "wall",
+          "patch_group": "bodyGroup"
+        },
+        "domain": {
+          "mode": "box",
+          "padding_up": 1.5,
+          "padding_down": 1.5,
+          "padding_side": 1.5,
+          "padding_upstream": 1.5,
+          "padding_downstream": 4.0,
+          "base_cells": 8,
+          "grading": 1.0,
+          "axis": 0
+        },
+        "distance_levels": [
+          {
+            "distance": 0.032625,
+            "level": 3
+          },
+          {
+            "distance": 0.097875,
+            "level": 2
+          }
+        ],
+        "regions": [
+          {
+            "name": "feature_0",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 5
+              }
+            ],
+            "min": [
+              0.05457041637968721,
+              -0.20943188414435054,
+              -0.03235519380408832
+            ],
+            "max": [
+              0.14960395202371152,
+              -0.11637442779874034,
+              0.07850685325558884
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "sampled sub-grid feature cluster; no semantic part labels"
+          },
+          {
+            "name": "feature_1",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 5
+              }
+            ],
+            "min": [
+              0.525062990329543,
+              0.11588843055323762,
+              -0.028070621321519017
+            ],
+            "max": [
+              0.6194153032967243,
+              0.20902750989071028,
+              0.07576026476520464
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "sampled sub-grid feature cluster; no semantic part labels"
+          },
+          {
+            "name": "feature_2",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 5
+              }
+            ],
+            "min": [
+              0.05518944573903228,
+              0.11686594316725028,
+              -0.031943783317245414
+            ],
+            "max": [
+              0.14900224564209613,
+              0.21075430267159873,
+              0.06433198343050936
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "sampled sub-grid feature cluster; no semantic part labels"
+          },
+          {
+            "name": "feature_3",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 5
+              }
+            ],
+            "min": [
+              0.5244082488587014,
+              -0.21002679406219604,
+              -0.03022375598341795
+            ],
+            "max": [
+              0.6106081651662665,
+              -0.11616174503220324,
+              0.07461177832554189
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "sampled sub-grid feature cluster; no semantic part labels"
+          },
+          {
+            "name": "flow_near_wake",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 3
+              }
+            ],
+            "min": [
+              0.944,
+              -0.2723,
+              -0.0676
+            ],
+            "max": [
+              1.988,
+              0.2723,
+              0.4056
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "This is the exact flow_requirement:near_wake volume and it currently has configured_volume_coverage 0.0, which is the sole reason scenario_screen is rejected. Level 3 gives h = 0.1305/2^3 = 0.0163 m = 0.39x the required max_cell_axis_span 0.04225 m (= H/8), so the recirculating bubble, base shear layers and C-pillar vortices get ~2.6x more cells across the shear layer than level 2 would allow and the box retains margin against the native 1.5x p95 tolerance. Level 3 equals the global surface level, so no hanging-node cliff is created where the wake box meets the body surface, and the box is inside the domain (domain extends to x ~ 5.12, y +/-1.14, z from about -0.51 upward)."
+          },
+          {
+            "name": "flow_far_wake",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 2
+              }
+            ],
+            "min": [
+              1.988,
+              -0.3501,
+              -0.1352
+            ],
+            "max": [
+              4.076,
+              0.3501,
+              0.4732
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "Exact flow_requirement:far_wake volume, also at configured_volume_coverage 0.0. The region contains 0 geometry samples and finite_fluid_gap_fraction 0.0, so it is pure off-body fluid that only transports the velocity deficit and residual shear. Level 2 gives h = 0.0326 m = 0.39x the required 0.0845 m (= H/4); level 1 (0.0653 m) would pass the nominal limit but with only 1.29x margin and coarser box-boundary cells, while the extra cost of level 2 is small (~26k cells) relative to the 2,000,000 budget, so level 2 is the better cost/robustness trade for a downstream transport zone."
+          },
+          {
+            "name": "flow_base_shear",
+            "shape": "box",
+            "mode": "inside",
+            "levels": [
+              {
+                "distance": 1,
+                "level": 3
+              }
+            ],
+            "min": [
+              0.62,
+              -0.2723,
+              -0.0676
+            ],
+            "max": [
+              0.944,
+              0.2723,
+              0.4056
+            ],
+            "centre": null,
+            "radius": null,
+            "why": "Targets the shear-layer/C-pillar-vortex generation region at the slant and base periphery, which is the source term of flow_requirement:near_wake ('rear separation, shear layers and recirculating vehicle wake'). The existing physical_refinement_bands stop at 0.0979 m from the wall (level 2 = 0.0326 m) while the wake box is 0.0163 m; starting refinement only at x = 0.944 would place a cell-size step of 2x across the separation origin, degrading shear-layer thickness and vortex-core resolution exactly where they are set. The box uses the same transverse/vertical bounds as the near-wake box so the two refined volumes are contiguous over x = 0.62-1.988 with no internal step; solid cells inside the body footprint are discarded by snappy, so the real added volume is only the ~0.05-0.08 m3 of fluid above, beside and below the base (about 19k cells). Level 3 is within +2 of the global surface level 3."
+          }
+        ],
+        "features": {
+          "enabled": true,
+          "level": 3,
+          "included_angle": 150,
+          "open_edges": true,
+          "non_manifold_edges": false
+        },
+        "snap": {
+          "n_smooth_patch": 3,
+          "tolerance": 2.0,
+          "n_solve_iter": 40,
+          "n_relax_iter": 5,
+          "n_feature_snap_iter": 10,
+          "implicit_feature_snap": false,
+          "explicit_feature_snap": true
+        },
+        "layers": {
+          "enabled": true,
+          "n_surface_layers": 8,
+          "first_layer_thickness": 0.0011138897093318702,
+          "expansion_ratio": 1.15,
+          "final_layer_thickness": 0.4,
+          "min_thickness": 0.00011138897093318702,
+          "feature_angle": 60,
+          "n_grow": 0,
+          "max_face_thickness_ratio": 0.5,
+          "max_thickness_to_medial_ratio": 0.25,
+          "min_medial_axis_angle": 80,
+          "n_smooth_thickness": 12,
+          "n_smooth_surface_normals": 2,
+          "n_smooth_normals": 4,
+          "n_relax_iter": 8,
+          "n_layer_iter": 80,
+          "slip_feature_angle": 30,
+          "n_buffer_cells_no_extrude": 0,
+          "mesh_shrinker": "displacementMedialAxis",
+          "merge_patch_faces_angle": 45,
+          "n_outer_iter": 2
+        },
+        "quality": {
+          "max_non_ortho": 65.0,
+          "max_boundary_skewness": 20.0,
+          "max_internal_skewness": 4.0,
+          "max_concave": 80.0,
+          "min_vol": 1e-13,
+          "min_tet_quality": 1e-15,
+          "min_area": -1.0,
+          "min_twist": 0.02,
+          "min_determinant": 0.001,
+          "min_face_weight": 0.05,
+          "min_vol_ratio": 0.01,
+          "min_triangle_twist": -1.0,
+          "n_smooth_scale": 4,
+          "error_reduction": 0.75,
+          "check_max_non_ortho": 70.0,
+          "check_max_skewness": 4.0,
+          "check_max_aspect_ratio": 1000.0,
+          "check_max_boundary_skewness": 20.0,
+          "check_min_face_weight": 0.02,
+          "check_min_vol_ratio": 0.01,
+          "check_max_concave": 80.0,
+          "check_max_cell_openness": 1.0
+        },
+        "max_global_cells": 2000000,
+        "max_local_cells": 2000000,
+        "min_refinement_cells": 10,
+        "n_cells_between_levels": 3,
+        "resolve_feature_angle": 30.0,
+        "allow_free_standing_zone_faces": false,
+        "merge_tolerance": 1e-06,
+        "location_in_mesh": [
+          -0.6821299253603099,
+          -0.77662992536031,
+          -0.5821299253603099
+        ],
+        "write_format": "binary",
+        "rationale": ""
+      },
+      "native": {
+        "error": null,
+        "case": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0"
+      },
+      "evidence": {
+        "quality": {
+          "verified": true,
+          "accepted": true,
+          "reasons": [],
+          "n_failed": 0,
+          "metrics": {
+            "cells": 299819.0,
+            "regions": 1.0,
+            "max_non_ortho": 64.82775333624019,
+            "max_skew": 0.9162244776200861,
+            "max_aspect": 28.059836829999625,
+            "min_volume": 1.5093171285159498e-09
+          },
+          "patches": {
+            "minX": 870,
+            "maxX": 870,
+            "minY": 1653,
+            "maxY": 1653,
+            "minZ": 1710,
+            "maxZ": 1710,
+            "body": 10819
+          },
+          "native_failure_messages": [],
+          "returncode": 0,
+          "native_times": [
+            "constant"
+          ]
+        },
+        "fidelity": {
+          "available": true,
+          "accepted": true,
+          "reasons": [],
+          "bidirectional_distance_p99": 0.000651052311118455,
+          "distance_tolerance": 0.005220000000000001,
+          "volume_relative_error": 0.0005133516879831932,
+          "area_relative_error": 0.00041828919453525164,
+          "local_feature_bad_fraction": 0.0,
+          "samples_per_surface": 8192,
+          "limitations": "sampled geometric fidelity; not a Hausdorff guarantee or flow accuracy",
+          "wall_triangles": 43722,
+          "boundary_observer": {
+            "available": true,
+            "native_polygon_closed": true,
+            "native_polygon_oriented": true,
+            "polygons": 10819,
+            "triangles": 43722,
+            "max_relative_face_warp": 0.036810565978452996,
+            "triangulation": "verified visibility-kernel centre; unique interior point per polygon; no welding or hole filling",
+            "limitation": "representation of native polygons; self-intersection requires separate native surfaceCheck; no polyMesh change"
+          }
+        },
+        "layers": {
+          "available": true,
+          "accepted": false,
+          "reasons": [
+            "less than 90% body area has at least 5 actual layers",
+            "estimated y+ distribution outside wall-function target 30..300"
+          ],
+          "coverage": 0.7489591380590298,
+          "minimum_layers": 5,
+          "required_area_fraction": 0.9,
+          "area_fraction_by_layers": {
+            "0": 0.02294400150323068,
+            "1": 0.005682179812199329,
+            "2": 0.10955372714175372,
+            "3": 0.00797068989289234,
+            "4": 0.10489026359089428,
+            "5": 0.009031109986312617,
+            "6": 0.10465898539894233,
+            "7": 0.009231836315446749,
+            "8": 0.6260372063583282
+          },
+          "first_height": {
+            "p5": 0.0005640060414002315,
+            "p50": 0.0011072835330832068,
+            "p95": 0.0014550989648591302
+          },
+          "estimated_yplus": {
+            "p5": 25.316960767082218,
+            "p50": 49.70346362870046,
+            "p95": 65.31611490207246
+          },
+          "area_weighted_inferred_first_height": {
+            "p5": 0.0010474716231629667,
+            "p50": 0.0011137911494541132,
+            "p95": 0.0015099772723225259
+          },
+          "area_weighted_estimated_yplus": {
+            "p5": 47.018641719531544,
+            "p50": 49.995575869094964,
+            "p95": 67.77947850996108
+          },
+          "thickness_inference": "first height inferred from final total thickness/count assuming one geometric progression; not direct cell-wall distance and may be inaccurate for sliced outer passes",
+          "actual_yplus": "unavailable_without_flow",
+          "field": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0/0/nSurfaceLayers",
+          "limitations": "near-wall planning gate using flat-plate u_tau; not a physical validation"
+        },
+        "reasons": [
+          "less than 90% body area has at least 5 actual layers",
+          "estimated y+ distribution outside wall-function target 30..300"
+        ]
+      }
+    }
+  ],
+  "best_provisional_candidate": {
+    "plan_id": "plan:1799e9155f693b81",
+    "round": 0,
+    "eligible_for_restore": true,
+    "case": "<PRIVATE_PROJECT_ROOT>/work_portfolio_20261011/runs/proposal_validation_ahmed_public_25/round0",
+    "spec": {
+      "cell_size_target": 0.0,
+      "surface": {
+        "name": "body",
+        "level_min": 3,
+        "level_max": 3,
+        "patch_type": "wall",
+        "patch_group": "bodyGroup"
+      },
+      "domain": {
+        "mode": "box",
+        "padding_up": 1.5,
+        "padding_down": 1.5,
+        "padding_side": 1.5,
+        "padding_upstream": 1.5,
+        "padding_downstream": 4.0,
+        "base_cells": 8,
+        "grading": 1.0,
+        "axis": 0
+      },
+      "distance_levels": [
+        {
+          "distance": 0.032625,
+          "level": 3
+        },
+        {
+          "distance": 0.097875,
+          "level": 2
+        }
+      ],
+      "regions": [
+        {
+          "name": "feature_0",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 5
+            }
+          ],
+          "min": [
+            0.05457041637968721,
+            -0.20943188414435054,
+            -0.03235519380408832
+          ],
+          "max": [
+            0.14960395202371152,
+            -0.11637442779874034,
+            0.07850685325558884
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "sampled sub-grid feature cluster; no semantic part labels"
+        },
+        {
+          "name": "feature_1",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 5
+            }
+          ],
+          "min": [
+            0.525062990329543,
+            0.11588843055323762,
+            -0.028070621321519017
+          ],
+          "max": [
+            0.6194153032967243,
+            0.20902750989071028,
+            0.07576026476520464
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "sampled sub-grid feature cluster; no semantic part labels"
+        },
+        {
+          "name": "feature_2",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 5
+            }
+          ],
+          "min": [
+            0.05518944573903228,
+            0.11686594316725028,
+            -0.031943783317245414
+          ],
+          "max": [
+            0.14900224564209613,
+            0.21075430267159873,
+            0.06433198343050936
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "sampled sub-grid feature cluster; no semantic part labels"
+        },
+        {
+          "name": "feature_3",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 5
+            }
+          ],
+          "min": [
+            0.5244082488587014,
+            -0.21002679406219604,
+            -0.03022375598341795
+          ],
+          "max": [
+            0.6106081651662665,
+            -0.11616174503220324,
+            0.07461177832554189
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "sampled sub-grid feature cluster; no semantic part labels"
+        },
+        {
+          "name": "flow_near_wake",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 3
+            }
+          ],
+          "min": [
+            0.944,
+            -0.2723,
+            -0.0676
+          ],
+          "max": [
+            1.988,
+            0.2723,
+            0.4056
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "This is the exact flow_requirement:near_wake volume and it currently has configured_volume_coverage 0.0, which is the sole reason scenario_screen is rejected. Level 3 gives h = 0.1305/2^3 = 0.0163 m = 0.39x the required max_cell_axis_span 0.04225 m (= H/8), so the recirculating bubble, base shear layers and C-pillar vortices get ~2.6x more cells across the shear layer than level 2 would allow and the box retains margin against the native 1.5x p95 tolerance. Level 3 equals the global surface level, so no hanging-node cliff is created where the wake box meets the body surface, and the box is inside the domain (domain extends to x ~ 5.12, y +/-1.14, z from about -0.51 upward)."
+        },
+        {
+          "name": "flow_far_wake",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 2
+            }
+          ],
+          "min": [
+            1.988,
+            -0.3501,
+            -0.1352
+          ],
+          "max": [
+            4.076,
+            0.3501,
+            0.4732
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "Exact flow_requirement:far_wake volume, also at configured_volume_coverage 0.0. The region contains 0 geometry samples and finite_fluid_gap_fraction 0.0, so it is pure off-body fluid that only transports the velocity deficit and residual shear. Level 2 gives h = 0.0326 m = 0.39x the required 0.0845 m (= H/4); level 1 (0.0653 m) would pass the nominal limit but with only 1.29x margin and coarser box-boundary cells, while the extra cost of level 2 is small (~26k cells) relative to the 2,000,000 budget, so level 2 is the better cost/robustness trade for a downstream transport zone."
+        },
+        {
+          "name": "flow_base_shear",
+          "shape": "box",
+          "mode": "inside",
+          "levels": [
+            {
+              "distance": 1,
+              "level": 3
+            }
+          ],
+          "min": [
+            0.62,
+            -0.2723,
+            -0.0676
+          ],
+          "max": [
+            0.944,
+            0.2723,
+            0.4056
+          ],
+          "centre": null,
+          "radius": null,
+          "why": "Targets the shear-layer/C-pillar-vortex generation region at the slant and base periphery, which is the source term of flow_requirement:near_wake ('rear separation, shear layers and recirculating vehicle wake'). The existing physical_refinement_bands stop at 0.0979 m from the wall (level 2 = 0.0326 m) while the wake box is 0.0163 m; starting refinement only at x = 0.944 would place a cell-size step of 2x across the separation origin, degrading shear-layer thickness and vortex-core resolution exactly where they are set. The box uses the same transverse/vertical bounds as the near-wake box so the two refined volumes are contiguous over x = 0.62-1.988 with no internal step; solid cells inside the body footprint are discarded by snappy, so the real added volume is only the ~0.05-0.08 m3 of fluid above, beside and below the base (about 19k cells). Level 3 is within +2 of the global surface level 3."
+        }
+      ],
+      "features": {
+        "enabled": true,
+        "level": 3,
+        "included_angle": 150,
+        "open_edges": true,
+        "non_manifold_edges": false
+      },
+      "snap": {
+        "n_smooth_patch": 3,
+        "tolerance": 2.0,
+        "n_solve_iter": 40,
+        "n_relax_iter": 5,
+        "n_feature_snap_iter": 10,
+        "implicit_feature_snap": false,
+        "explicit_feature_snap": true
+      },
+      "layers": {
+        "enabled": true,
+        "n_surface_layers": 8,
+        "first_layer_thickness": 0.0011138897093318702,
+        "expansion_ratio": 1.15,
+        "final_layer_thickness": 0.4,
+        "min_thickness": 0.00011138897093318702,
+        "feature_angle": 60,
+        "n_grow": 0,
+        "max_face_thickness_ratio": 0.5,
+        "max_thickness_to_medial_ratio": 0.25,
+        "min_medial_axis_angle": 80,
+        "n_smooth_thickness": 12,
+        "n_smooth_surface_normals": 2,
+        "n_smooth_normals": 4,
+        "n_relax_iter": 8,
+        "n_layer_iter": 80,
+        "slip_feature_angle": 30,
+        "n_buffer_cells_no_extrude": 0,
+        "mesh_shrinker": "displacementMedialAxis",
+        "merge_patch_faces_angle": 45,
+        "n_outer_iter": 2
+      },
+      "quality": {
+        "max_non_ortho": 65.0,
+        "max_boundary_skewness": 20.0,
+        "max_internal_skewness": 4.0,
+        "max_concave": 80.0,
+        "min_vol": 1e-13,
+        "min_tet_quality": 1e-15,
+        "min_area": -1.0,
+        "min_twist": 0.02,
+        "min_determinant": 0.001,
+        "min_face_weight": 0.05,
+        "min_vol_ratio": 0.01,
+        "min_triangle_twist": -1.0,
+        "n_smooth_scale": 4,
+        "error_reduction": 0.75,
+        "check_max_non_ortho": 70.0,
+        "check_max_skewness": 4.0,
+        "check_max_aspect_ratio": 1000.0,
+        "check_max_boundary_skewness": 20.0,
+        "check_min_face_weight": 0.02,
+        "check_min_vol_ratio": 0.01,
+        "check_max_concave": 80.0,
+        "check_max_cell_openness": 1.0
+      },
+      "max_global_cells": 2000000,
+      "max_local_cells": 2000000,
+      "min_refinement_cells": 10,
+      "n_cells_between_levels": 3,
+      "resolve_feature_angle": 30.0,
+      "allow_free_standing_zone_faces": false,
+      "merge_tolerance": 1e-06,
+      "location_in_mesh": [
+        -0.6821299253603099,
+        -0.77662992536031,
+        -0.5821299253603099
+      ],
+      "write_format": "binary",
+      "rationale": ""
+    },
+    "quality": {
+      "verified": true,
+      "accepted": true,
+      "reasons": [],
+      "n_failed": 0,
+      "metrics": {
+        "cells": 299819.0,
+        "regions": 1.0,
+        "max_non_ortho": 64.82775333624019,
+        "max_skew": 0.9162244776200861,
+        "max_aspect": 28.059836829999625,
+        "min_volume": 1.5093171285159498e-09
+      },
+      "patches": {
+        "minX": 870,
+        "maxX": 870,
+        "minY": 1653,
+        "maxY": 1653,
+        "minZ": 1710,
+        "maxZ": 1710,
+        "body": 10819
+      },
+      "native_failure_messages": [],
+      "returncode": 0,
+      "native_times": [
+        "constant"
+      ]
+    },
+    "layer_coverage": 0.7489591380590298,
+    "fidelity_accepted": true,
+    "reasons": [
+      "less than 90% body area has at least 5 actual layers",
+      "estimated y+ distribution outside wall-function target 30..300"
+    ],
+    "grade": "provisional: still requires complete layers and sane flow; no industrial accuracy certificate"
+  },
+  "prior_plan_signatures": [
+    "{\"allow_free_standing_zone_faces\":false,\"cell_size_target\":0.0,\"distance_levels\":[{\"distance\":0.032625,\"level\":3},{\"distance\":0.097875,\"level\":2}],\"domain\":{\"axis\":0,\"base_cells\":8,\"grading\":1.0,\"mode\":\"box\",\"padding_down\":1.5,\"padding_downstream\":4.0,\"padding_side\":1.5,\"padding_up\":1.5,\"padding_upstream\":1.5},\"features\":{\"enabled\":true,\"included_angle\":150,\"level\":3,\"non_manifold_edges\":false,\"open_edges\":true},\"layers\":{\"enabled\":true,\"expansion_ratio\":1.15,\"feature_angle\":60,\"final_layer_thickness\":0.4,\"first_layer_thickness\":0.0011138897093318702,\"max_face_thickness_ratio\":0.5,\"max_thickness_to_medial_ratio\":0.25,\"merge_patch_faces_angle\":45,\"mesh_shrinker\":\"displacementMedialAxis\",\"min_medial_axis_angle\":80,\"min_thickness\":0.00011138897093318702,\"n_buffer_cells_no_extrude\":0,\"n_grow\":0,\"n_layer_iter\":80,\"n_outer_iter\":2,\"n_relax_iter\":8,\"n_smooth_normals\":4,\"n_smooth_surface_normals\":2,\"n_smooth_thickness\":12,\"n_surface_layers\":8,\"slip_feature_angle\":30},\"location_in_mesh\":[-0.6821299253603099,-0.77662992536031,-0.5821299253603099],\"max_global_cells\":2000000,\"max_local_cells\":2000000,\"merge_tolerance\":1e-06,\"min_refinement_cells\":10,\"n_cells_between_levels\":3,\"quality\":{\"check_max_aspect_ratio\":1000.0,\"check_max_boundary_skewness\":20.0,\"check_max_cell_openness\":1.0,\"check_max_concave\":80.0,\"check_max_non_ortho\":70.0,\"check_max_skewness\":4.0,\"check_min_face_weight\":0.02,\"check_min_vol_ratio\":0.01,\"error_reduction\":0.75,\"max_boundary_skewness\":20.0,\"max_concave\":80.0,\"max_internal_skewness\":4.0,\"max_non_ortho\":65.0,\"min_area\":-1.0,\"min_determinant\":0.001,\"min_face_weight\":0.05,\"min_tet_quality\":1e-15,\"min_triangle_twist\":-1.0,\"min_twist\":0.02,\"min_vol\":1e-13,\"min_vol_ratio\":0.01,\"n_smooth_scale\":4},\"rationale\":\"\",\"regions\":[{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":5}],\"max\":[0.14960395202371152,-0.11637442779874034,0.07850685325558884],\"min\":[0.05457041637968721,-0.20943188414435054,-0.03235519380408832],\"mode\":\"inside\",\"name\":\"feature_0\",\"radius\":null,\"shape\":\"box\"},{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":5}],\"max\":[0.6194153032967243,0.20902750989071028,0.07576026476520464],\"min\":[0.525062990329543,0.11588843055323762,-0.028070621321519017],\"mode\":\"inside\",\"name\":\"feature_1\",\"radius\":null,\"shape\":\"box\"},{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":5}],\"max\":[0.14900224564209613,0.21075430267159873,0.06433198343050936],\"min\":[0.05518944573903228,0.11686594316725028,-0.031943783317245414],\"mode\":\"inside\",\"name\":\"feature_2\",\"radius\":null,\"shape\":\"box\"},{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":5}],\"max\":[0.6106081651662665,-0.11616174503220324,0.07461177832554189],\"min\":[0.5244082488587014,-0.21002679406219604,-0.03022375598341795],\"mode\":\"inside\",\"name\":\"feature_3\",\"radius\":null,\"shape\":\"box\"},{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":3}],\"max\":[1.988,0.2723,0.4056],\"min\":[0.944,-0.2723,-0.0676],\"mode\":\"inside\",\"name\":\"flow_near_wake\",\"radius\":null,\"shape\":\"box\"},{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":2}],\"max\":[4.076,0.3501,0.4732],\"min\":[1.988,-0.3501,-0.1352],\"mode\":\"inside\",\"name\":\"flow_far_wake\",\"radius\":null,\"shape\":\"box\"},{\"centre\":null,\"levels\":[{\"distance\":1,\"level\":3}],\"max\":[0.944,0.2723,0.4056],\"min\":[0.62,-0.2723,-0.0676],\"mode\":\"inside\",\"name\":\"flow_base_shear\",\"radius\":null,\"shape\":\"box\"}],\"resolve_feature_angle\":30.0,\"snap\":{\"explicit_feature_snap\":true,\"implicit_feature_snap\":false,\"n_feature_snap_iter\":10,\"n_relax_iter\":5,\"n_smooth_patch\":3,\"n_solve_iter\":40,\"tolerance\":2.0},\"surface\":{\"level_max\":3,\"level_min\":3,\"name\":\"body\",\"patch_group\":\"bodyGroup\",\"patch_type\":\"wall\"},\"write_format\":\"binary\"}"
+  ],
+  "initial_decision": {
+    "source": "geometry_plan",
+    "advisor": {
+      "hypothesis": "The wake-coverage failure (configured coverage 0.0 -> now 1.0) is already fixed by the three flow_* boxes: native near_wake p95 span 0.0205 m < 0.04225 m and far_wake p95 0.0330 m < 0.0845 m, so the off-body boxes must be KEPT, not restructured. The single remaining failure is NOT off-body resolution but the wall/near-wall stage: only 74.9% of body area carries >=5 actual layers (need 0.90), with the deficit concentrated in the thin-tail bands (layer_shortfall:0 count 1585 median wall distance 7e-10 m; layer_shortfall:1 count 463) whose measured local full feature is 0.288 m ~ the 0.1631 m cell width at level 3, i.e. these shortfalls sit on same-order-as-cell fine geometry where the prism front cannot be inserted. The area histogram is bimodal — 0.626 at 8 layers and 0.105 at 4, 0.110 at 2 — a classic terminal-slice/corner collapse signature of one geometric-progression pass being terminated rather than true zero-space. Mechanism: the extrusion front is being killed by the warped-face/medial-axis checks and by single-pass propagation, not by lack of physical room. Repair mechanism: split the extrusion across nOuterIter=3 outer-to-inner slices so the inner slices restart with a fresh normals/thickness field after the outer pass has relaxed the mesh, reduce nGrow to 0 to avoid spreading non-extrusion into already-covered regions, and relax the two absolute-thickness clamps that were disabling extrusion, while cutting surface_level 3->2 to free budget (level 3 surface is 4x the cells of level 2; the 0.288 m-measured shortfall geometry is far larger than either 0.0163 or 0.0326 m, so level 2 still resolves it) — the recovered cells pay for the layer slices. The y+ rejection is a direct consequence: median estimated y+ 49.7 already sits inside 30..300, but p5 = 25.3 falls below 30 because the 25%-uncovered area is not receiving a real first cell at the planned 0.001114 m height. Restoring coverage should move p5 into band without touching the surrogate first height.",
+      "expected_change": "Measured, reversible deltas expected on the native checks: total cells from 299819 to ~330000-430000 (surface_level 3->2 removes ~4x cells inside the 0.0326 m band; the extra outer-iter and restored layers add them back), near_wake/far_wake native p95 spans unchanged at 0.0205/0.0330 m (boxes untouched) i.e. >=20%/60% margin to 0.04225/0.0845 m preserved, layer coverage (area_fraction_by_layers >= 5) from 0.749 to target >= 0.90, estimated y+ p5 from 25.3 to aim inside 30..300 (p50 stays ~50), quality gates (max_non_ortho 64.8 < 65 / check 70, skew 0.92 < 4) held. Uncertainty: layer restart across slices can overshoot into non-orthogonality on the same concave tails, and the level-2 surface may raise unresolved-feature fraction toward the feature gate; if the first pass still shows <90% coverage, the next intervention is to restore plan:1799e9155f693b81 and instead coarsen only the flat underbody/upper-deck via a lower-level region rather than further layer churn. No flow convergence, forces or shedding accuracy is claimed.",
+      "counterevidence": [
+        "Current spec already passes quality (n_failed 0, max_non_ortho 64.83, skew 0.92) and fidelity (p99 0.000651 m vs 0.00522, volume rel err 5.1e-4) with the anchor layer parameters n_surface_layers=8, expansion 1.15 — so 'more layers' is not obviously the missing ingredient and a bad layer change risks inverting a mesh that is currently geometrically certified",
+        "layer_shortfall clusters have measured_local_full_feature 0.288 m and median wall distance ~7e-10 m: it is plausible these are genuinely thin-tail/corner zones where no prism can be inserted at any nSurfaceLayers, in which case the >90% coverage gate may be unreachable by layer tuning alone and the correct move is to remove the sharpest geometry response by coarser surface cells rather than to add slices",
+        "surface_level 3->2 broadens wall cells 2x, which can itself worsen y+ (larger first cell on the same first height would push toward function limits at the low end) and can raise the unresolved_feature_fraction from the current 0.0",
+        "The y+ signal is a flat-plate surrogate over an unmeasured field (method: smooth turbulent flat-plate, target_yplus 50, actual_yplus unavailable_without_flow); p5=25.3 is 17% below 30 and area-weighted p5=47.0 is inside band, so the 'y+ failure' may partly be an artifact of measuring the unextruded 25% rather than a real first-height error, which weakens the need for a large first-height change"
+      ],
+      "alternatives": [
+        "Do nothing to layers and only coarsen surface_level 3->2, accepting 74.9% coverage and testing whether the band moves anyway by budget-induced cell-size change",
+        "Increase n_surface_layers from 8 to 10 while KEEPING n_outer_iter=2 and n_grow=0 (tests whether the shortfall is a total-count deficit rather than a restart/propagation deficit)",
+        "Restore anchor plan:1799e9155f693b81 unchanged and submit disposition=stop on the justification that the remaining 25% of body area is genuinely thin-tail geometry with <5 prism layers of room"
+      ],
+      "actions": [
+        {
+          "kind": "layer_settings",
+          "why": "Repair the measured <90%-with->=5-layers failure with a distinct mechanism rather than more of the same: the current single-pass, 8-layer, n_outer_iter=2 extrusion delivers a bimodal histogram (62.6% at 8 layers but 10.5% at 4 and 11.0% at 2), which is the signature of a terminated extrusion front on the shortfall clusters whose measured local full feature is 0.288 m at ~7e-10 m wall distance. Splitting the prisms into three outer-to-inner slices (n_outer_iter 2->3) lets the inner slices re-derive normals and thickness on the already-relaxed outer mesh, so failed outer turns do not consume the whole stack, and raising n_buffer_cells_no_extrude to 1 plus n_grow=0 prevents non-extrusion from being propagated into neighbouring covered faces. Simultaneously relaxing the two absolute-thickness guards (max_face_thickness_ratio 0.5->0.8 active, max_thickness_to_medial_ratio 0.25->0.40) and lowering min_medial_axis_angle 80->65 removes front terminations on the concave tails where layer_shortfall:1 sits, while the 0.4 final-layer cap and 1.15 expansion keep total prism height near the measured 0.0153 m so no sliver is created. The first height is deliberately NOT changed: median estimated y+ 49.7 (area-weighted 50.0) is already centred in the 30..300 wall-function band, so the y+ failure is treated as a coverage failure, not a first-height error.",
+          "evidence": [
+            "layers",
+            "quality",
+            "layer_shortfall:0",
+            "layer_shortfall:1",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:6",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:8"
+          ],
+          "parameters": {
+            "n_surface_layers": 8,
+            "expansion_ratio": 1.15,
+            "n_grow": 0,
+            "n_outer_iter": 3,
+            "n_layer_iter": 90,
+            "n_relax_iter": 10,
+            "n_smooth_thickness": 16,
+            "max_face_thickness_ratio": 0.8,
+            "max_thickness_to_medial_ratio": 0.4,
+            "min_medial_axis_angle": 65,
+            "n_buffer_cells_no_extrude": 1,
+            "mesh_shrinker": "displacementMedialAxis",
+            "feature_angle": 60,
+            "slip_feature_angle": 30,
+            "merge_patch_faces_angle": 45,
+            "n_smooth_surface_normals": 3,
+            "n_smooth_normals": 6,
+            "final_layer_thickness": 0.4,
+            "min_thickness": 0.00011138897093318702
+          }
+        },
+        {
+          "kind": "resolution_settings",
+          "why": "Free the cell budget that the extra layer slice needs while keeping every off-body spatial gate: global surface level 3->2 doubles surface cell width 0.01631->0.03263 m. The measured shortfall/concave clusters carry measured_local_full_feature 0.288 m and the transition cluster (concaveFaces.vtp:6) 0.2366 m, both an order of magnitude above 0.0326 m, so the feature-resolution proxy is not the binding constraint at level 2, and near_wake/far_wake acceptance is set by the untouched flow_* boxes (native p95 0.0205 and 0.0330 m), not by the surface level. This level reduction is the mechanism that pays for the layer restart and also removes the finest snap cells on the concave tails (concaveFaces.vtp:2-5, concaveCells.vtp:10-12) that are the most likely to cause the partial-coverage termination. base_cells is held at 8 to keep the domain/padding and the boundary patch structure exactly as measured.",
+          "evidence": [
+            "geometry",
+            "fidelity",
+            "postProcessing/constant/concaveFaces/concaveFaces.vtp:6",
+            "postProcessing/constant/concaveCells/concaveCells.vtp:10"
+          ],
+          "parameters": {
+            "surface_level": 2,
+            "base_cells": 8
+          }
+        },
+        {
+          "kind": "flow_refine",
+          "why": "Keep, do not restructure, the near-wake corridor that produced the accepted native measurement, but re-declare it explicitly so it survives the level change: the anchor already achieved flow_requirement:near_wake at full spatial-bin occupancy with p95 span 0.0205 m (2.06x margin under the 0.04225 m = H/8 limit) and 57554 native cells. Level 3 stays equal to nothing coarser than needed and inside the domain; it is deliberately 1 level FINER than the new global surface level 2 (within the +2 rule) so the shear-layer/recirculation box remains the refined corridor over x = 0.944-1.988 without a hanging-node step at the base plane.",
+          "evidence": [
+            "flow_requirement:near_wake",
+            "scenario",
+            "physics"
+          ],
+          "name": "flow_near_wake",
+          "min": [
+            0.944,
+            -0.2723,
+            -0.0676
+          ],
+          "max": [
+            1.988,
+            0.2723,
+            0.4056
+          ],
+          "level": 3
+        },
+        {
+          "kind": "flow_refine",
+          "why": "Keep the far-wake transport corridor that measured out at p95 span 0.0330 m (2.56x margin under 0.0845 m = H/4) with 23040 native cells and zero geometry samples, i.e. pure velocity-deficit/shear transport. Level 2 is retained exactly because it both passes with margin and matches the NEW global surface level 2, avoiding any internal cell-size step, and the cost is small relative to the 2,000,000 budget.",
+          "evidence": [
+            "flow_requirement:far_wake",
+            "scenario",
+            "physics"
+          ],
+          "name": "flow_far_wake",
+          "min": [
+            1.988,
+            -0.3501,
+            -0.1352
+          ],
+          "max": [
+            4.076,
+            0.3501,
+            0.4732
+          ],
+          "level": 2
+        }
+      ]
+    },
+    "receipt": {
+      "decision": {
+        "hypothesis": "The wake-coverage failure (configured coverage 0.0 -> now 1.0) is already fixed by the three flow_* boxes: native near_wake p95 span 0.0205 m < 0.04225 m and far_wake p95 0.0330 m < 0.0845 m, so the off-body boxes must be KEPT, not restructured. The single remaining failure is NOT off-body resolution but the wall/near-wall stage: only 74.9% of body area carries >=5 actual layers (need 0.90), with the deficit concentrated in the thin-tail bands (layer_shortfall:0 count 1585 median wall distance 7e-10 m; layer_shortfall:1 count 463) whose measured local full feature is 0.288 m ~ the 0.1631 m cell width at level 3, i.e. these shortfalls sit on same-order-as-cell fine geometry where the prism front cannot be inserted. The area histogram is bimodal — 0.626 at 8 layers and 0.105 at 4, 0.110 at 2 — a classic terminal-slice/corner collapse signature of one geometric-progression pass being terminated rather than true zero-space. Mechanism: the extrusion front is being killed by the warped-face/medial-axis checks and by single-pass propagation, not by lack of physical room. Repair mechanism: split the extrusion across nOuterIter=3 outer-to-inner slices so the inner slices restart with a fresh normals/thickness field after the outer pass has relaxed the mesh, reduce nGrow to 0 to avoid spreading non-extrusion into already-covered regions, and relax the two absolute-thickness clamps that were disabling extrusion, while cutting surface_level 3->2 to free budget (level 3 surface is 4x the cells of level 2; the 0.288 m-measured shortfall geometry is far larger than either 0.0163 or 0.0326 m, so level 2 still resolves it) — the recovered cells pay for the layer slices. The y+ rejection is a direct consequence: median estimated y+ 49.7 already sits inside 30..300, but p5 = 25.3 falls below 30 because the 25%-uncovered area is not receiving a real first cell at the planned 0.001114 m height. Restoring coverage should move p5 into band without touching the surrogate first height.",
+        "expected_change": "Measured, reversible deltas expected on the native checks: total cells from 299819 to ~330000-430000 (surface_level 3->2 removes ~4x cells inside the 0.0326 m band; the extra outer-iter and restored layers add them back), near_wake/far_wake native p95 spans unchanged at 0.0205/0.0330 m (boxes untouched) i.e. >=20%/60% margin to 0.04225/0.0845 m preserved, layer coverage (area_fraction_by_layers >= 5) from 0.749 to target >= 0.90, estimated y+ p5 from 25.3 to aim inside 30..300 (p50 stays ~50), quality gates (max_non_ortho 64.8 < 65 / check 70, skew 0.92 < 4) held. Uncertainty: layer restart across slices can overshoot into non-orthogonality on the same concave tails, and the level-2 surface may raise unresolved-feature fraction toward the feature gate; if the first pass still shows <90% coverage, the next intervention is to restore plan:1799e9155f693b81 and instead coarsen only the flat underbody/upper-deck via a lower-level region rather than further layer churn. No flow convergence, forces or shedding accuracy is claimed.",
+        "counterevidence": [
+          "Current spec already passes quality (n_failed 0, max_non_ortho 64.83, skew 0.92) and fidelity (p99 0.000651 m vs 0.00522, volume rel err 5.1e-4) with the anchor layer parameters n_surface_layers=8, expansion 1.15 — so 'more layers' is not obviously the missing ingredient and a bad layer change risks inverting a mesh that is currently geometrically certified",
+          "layer_shortfall clusters have measured_local_full_feature 0.288 m and median wall distance ~7e-10 m: it is plausible these are genuinely thin-tail/corner zones where no prism can be inserted at any nSurfaceLayers, in which case the >90% coverage gate may be unreachable by layer tuning alone and the correct move is to remove the sharpest geometry response by coarser surface cells rather than to add slices",
+          "surface_level 3->2 broadens wall cells 2x, which can itself worsen y+ (larger first cell on the same first height would push toward function limits at the low end) and can raise the unresolved_feature_fraction from the current 0.0",
+          "The y+ signal is a flat-plate surrogate over an unmeasured field (method: smooth turbulent flat-plate, target_yplus 50, actual_yplus unavailable_without_flow); p5=25.3 is 17% below 30 and area-weighted p5=47.0 is inside band, so the 'y+ failure' may partly be an artifact of measuring the unextruded 25% rather than a real first-height error, which weakens the need for a large first-height change"
+        ],
+        "alternatives": [
+          "Do nothing to layers and only coarsen surface_level 3->2, accepting 74.9% coverage and testing whether the band moves anyway by budget-induced cell-size change",
+          "Increase n_surface_layers from 8 to 10 while KEEPING n_outer_iter=2 and n_grow=0 (tests whether the shortfall is a total-count deficit rather than a restart/propagation deficit)",
+          "Restore anchor plan:1799e9155f693b81 unchanged and submit disposition=stop on the justification that the remaining 25% of body area is genuinely thin-tail geometry with <5 prism layers of room"
+        ],
+        "actions": [
+          {
+            "kind": "layer_settings",
+            "why": "Repair the measured <90%-with->=5-layers failure with a distinct mechanism rather than more of the same: the current single-pass, 8-layer, n_outer_iter=2 extrusion delivers a bimodal histogram (62.6% at 8 layers but 10.5% at 4 and 11.0% at 2), which is the signature of a terminated extrusion front on the shortfall clusters whose measured local full feature is 0.288 m at ~7e-10 m wall distance. Splitting the prisms into three outer-to-inner slices (n_outer_iter 2->3) lets the inner slices re-derive normals and thickness on the already-relaxed outer mesh, so failed outer turns do not consume the whole stack, and raising n_buffer_cells_no_extrude to 1 plus n_grow=0 prevents non-extrusion from being propagated into neighbouring covered faces. Simultaneously relaxing the two absolute-thickness guards (max_face_thickness_ratio 0.5->0.8 active, max_thickness_to_medial_ratio 0.25->0.40) and lowering min_medial_axis_angle 80->65 removes front terminations on the concave tails where layer_shortfall:1 sits, while the 0.4 final-layer cap and 1.15 expansion keep total prism height near the measured 0.0153 m so no sliver is created. The first height is deliberately NOT changed: median estimated y+ 49.7 (area-weighted 50.0) is already centred in the 30..300 wall-function band, so the y+ failure is treated as a coverage failure, not a first-height error.",
+            "evidence": [
+              "layers",
+              "quality",
+              "layer_shortfall:0",
+              "layer_shortfall:1",
+              "postProcessing/constant/concaveFaces/concaveFaces.vtp:6",
+              "postProcessing/constant/concaveFaces/concaveFaces.vtp:8"
+            ],
+            "parameters": {
+              "n_surface_layers": 8,
+              "expansion_ratio": 1.15,
+              "n_grow": 0,
+              "n_outer_iter": 3,
+              "n_layer_iter": 90,
+              "n_relax_iter": 10,
+              "n_smooth_thickness": 16,
+              "max_face_thickness_ratio": 0.8,
+              "max_thickness_to_medial_ratio": 0.4,
+              "min_medial_axis_angle": 65,
+              "n_buffer_cells_no_extrude": 1,
+              "mesh_shrinker": "displacementMedialAxis",
+              "feature_angle": 60,
+              "slip_feature_angle": 30,
+              "merge_patch_faces_angle": 45,
+              "n_smooth_surface_normals": 3,
+              "n_smooth_normals": 6,
+              "final_layer_thickness": 0.4,
+              "min_thickness": 0.00011138897093318702
+            }
+          },
+          {
+            "kind": "resolution_settings",
+            "why": "Free the cell budget that the extra layer slice needs while keeping every off-body spatial gate: global surface level 3->2 doubles surface cell width 0.01631->0.03263 m. The measured shortfall/concave clusters carry measured_local_full_feature 0.288 m and the transition cluster (concaveFaces.vtp:6) 0.2366 m, both an order of magnitude above 0.0326 m, so the feature-resolution proxy is not the binding constraint at level 2, and near_wake/far_wake acceptance is set by the untouched flow_* boxes (native p95 0.0205 and 0.0330 m), not by the surface level. This level reduction is the mechanism that pays for the layer restart and also removes the finest snap cells on the concave tails (concaveFaces.vtp:2-5, concaveCells.vtp:10-12) that are the most likely to cause the partial-coverage termination. base_cells is held at 8 to keep the domain/padding and the boundary patch structure exactly as measured.",
+            "evidence": [
+              "geometry",
+              "fidelity",
+              "postProcessing/constant/concaveFaces/concaveFaces.vtp:6",
+              "postProcessing/constant/concaveCells/concaveCells.vtp:10"
+            ],
+            "parameters": {
+              "surface_level": 2,
+              "base_cells": 8
+            }
+          },
+          {
+            "kind": "flow_refine",
+            "why": "Keep, do not restructure, the near-wake corridor that produced the accepted native measurement, but re-declare it explicitly so it survives the level change: the anchor already achieved flow_requirement:near_wake at full spatial-bin occupancy with p95 span 0.0205 m (2.06x margin under the 0.04225 m = H/8 limit) and 57554 native cells. Level 3 stays equal to nothing coarser than needed and inside the domain; it is deliberately 1 level FINER than the new global surface level 2 (within the +2 rule) so the shear-layer/recirculation box remains the refined corridor over x = 0.944-1.988 without a hanging-node step at the base plane.",
+            "evidence": [
+              "flow_requirement:near_wake",
+              "scenario",
+              "physics"
+            ],
+            "name": "flow_near_wake",
+            "min": [
+              0.944,
+              -0.2723,
+              -0.0676
+            ],
+            "max": [
+              1.988,
+              0.2723,
+              0.4056
+            ],
+            "level": 3
+          },
+          {
+            "kind": "flow_refine",
+            "why": "Keep the far-wake transport corridor that measured out at p95 span 0.0330 m (2.56x margin under 0.0845 m = H/4) with 23040 native cells and zero geometry samples, i.e. pure velocity-deficit/shear transport. Level 2 is retained exactly because it both passes with margin and matches the NEW global surface level 2, avoiding any internal cell-size step, and the cost is small relative to the 2,000,000 budget.",
+            "evidence": [
+              "flow_requirement:far_wake",
+              "scenario",
+              "physics"
+            ],
+            "name": "flow_far_wake",
+            "min": [
+              1.988,
+              -0.3501,
+              -0.1352
+            ],
+            "max": [
+              4.076,
+              0.3501,
+              0.4732
+            ],
+            "level": 2
+          }
+        ]
+      },
+      "receipts": [
+        {
+          "round": -1,
+          "turn": 0,
+          "request_sha256": "4171fe4088e4e596d4e692e8f508dd8b5b26fbc964663e2412f0d8ad13a31112",
+          "advisor_code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+          "request_bytes": 194355,
+          "image_input": {
+            "attached": true,
+            "source_sha256": "745fa48ab5b9d5a962e0b3daec7782be0f334022f2416d5b5ac710b71cc83214",
+            "sent_png_sha256": "9ad4bf32113f1bfb97fc5a927a841c8ae4ae88c03986dc0329ff8415c20f3906",
+            "sent_png_bytes": 99829,
+            "detail": "low"
+          },
+          "reserved_input_token_ceiling": 63281,
+          "reserved_output_tokens": 12288,
+          "reserved_usd": 0.03372989999999999,
+          "reservation_basis": "UTF8 text/schema bytes +1024/image +1024 protocol; official pricing checked 2026-10-10; cache-miss peak ceiling",
+          "usage": {
+            "prompt_tokens": 19346,
+            "completion_tokens": 12288,
+            "total_tokens": 31634,
+            "prompt_tokens_details": {
+              "cached_tokens": 2048
+            },
+            "completion_tokens_details": {
+              "reasoning_tokens": 12288
+            },
+            "prompt_cache_hit_tokens": 2048,
+            "prompt_cache_miss_tokens": 17298
+          },
+          "usd_at_peak_price_ceiling": 0.0205494,
+          "seconds": 64.4975409360195,
+          "finish_reason": "length",
+          "reasoning_mode": "high",
+          "model": "deepseek-flash"
+        },
+        {
+          "round": -1,
+          "turn": 1,
+          "request_sha256": "2ce334c9252282dcd2c05953751d9d7517e508badd8f0de8d8e551e3fcd86371",
+          "advisor_code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+          "request_bytes": 192682,
+          "image_input": {
+            "attached": true,
+            "source_sha256": "745fa48ab5b9d5a962e0b3daec7782be0f334022f2416d5b5ac710b71cc83214",
+            "sent_png_sha256": "9ad4bf32113f1bfb97fc5a927a841c8ae4ae88c03986dc0329ff8415c20f3906",
+            "sent_png_bytes": 99829,
+            "detail": "low"
+          },
+          "reserved_input_token_ceiling": 61608,
+          "reserved_output_tokens": 12288,
+          "reserved_usd": 0.033228,
+          "reservation_basis": "UTF8 text/schema bytes +1024/image +1024 protocol; official pricing checked 2026-10-10; cache-miss peak ceiling",
+          "usage": {
+            "prompt_tokens": 18908,
+            "completion_tokens": 2813,
+            "total_tokens": 21721,
+            "prompt_tokens_details": {
+              "cached_tokens": 1536
+            },
+            "prompt_cache_hit_tokens": 1536,
+            "prompt_cache_miss_tokens": 17372
+          },
+          "usd_at_peak_price_ceiling": 0.009048,
+          "seconds": 16.776072697975906,
+          "finish_reason": "tool_calls",
+          "reasoning_mode": "disabled-final-format",
+          "model": "deepseek-flash"
+        }
+      ],
+      "tool_queries": 0,
+      "thinking": "enabled-high",
+      "final_interface": "typed_function",
+      "case_budget": {
+        "source_sha256": "c89ec3e3f4d1e51485e1313e456385a8595cf39f0dbd395cd952887fe8b034b7",
+        "total_before": 0.16470510000000002,
+        "run_allocation": 0.33529489999999995,
+        "geometry_cap": 0.5
+      }
+    },
+    "interface_normalisation": [],
+    "rejected_advisor": "unknown or empty parameter patch"
+  },
+  "stop_reason": "repeated plan blocked without spending another meshing round"
+}

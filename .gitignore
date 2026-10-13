@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+evidence/
+*.bundle
+*.zip
+runs/
+*.key
+.env
+*.tar.gz
+geometry/
+*.stp
+*.step
+build/
+dist/
+*.egg-info/
+.venv/
+artifacts/

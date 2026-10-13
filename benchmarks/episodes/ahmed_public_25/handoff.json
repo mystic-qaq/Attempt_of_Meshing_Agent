@@ -1,0 +1,10 @@
+{
+  "status": "diagnostic_mesh_only",
+  "ready_for_rans_screened_handoff": false,
+  "best_provisional_plan_id": "plan:4d3de347a962a86f",
+  "diagnostic_case": "<PRIVATE_PROJECT_ROOT>/work_v6_20261010/runs/model_ahmed_public_25/round0",
+  "source_sha256": "c89ec3e3f4d1e51485e1313e456385a8595cf39f0dbd395cd952887fe8b034b7",
+  "code_sha256": "e782357b574a992549d5d4b68fbb69bef9af3bd73b0abdc35d6d01d47af107b1",
+  "stop_reason": "repeated plan blocked without spending another meshing round",
+  "limitations": "quality/geometry candidate does not meet the joint layer and flow contract"
+}

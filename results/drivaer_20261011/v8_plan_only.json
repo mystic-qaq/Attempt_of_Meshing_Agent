@@ -1,0 +1,26 @@
+[
+  {
+    "name": "v8_preview",
+    "native_attempts": 0,
+    "preview_only": true,
+    "cached_native_unchanged": true,
+    "error": "final proposal schema invalid",
+    "validation_error": "$.actions[3].parameters.min_face_weight: number outside bounds",
+    "error_detail": null,
+    "decision": null,
+    "final_certified_preview": null,
+    "estimated_usd": 0.0866181
+  },
+  {
+    "name": "v8_preview_v3",
+    "native_attempts": 0,
+    "preview_only": true,
+    "cached_native_unchanged": true,
+    "error": "URLError",
+    "validation_error": null,
+    "error_detail": "<urlopen error [Errno -2] Name or service not known>",
+    "decision": null,
+    "final_certified_preview": null,
+    "estimated_usd": 0.0520977
+  }
+]

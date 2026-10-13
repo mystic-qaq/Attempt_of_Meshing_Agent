@@ -1,0 +1,34 @@
+{
+  "source_sha256": "411e6651284a26fc94924106b833fd79febc6deba63922c929dd8acfc99720d2",
+  "bytes": 142385186,
+  "semantic_parts_used": false,
+  "triangles": 753234,
+  "vertices": 376531,
+  "bbox": [
+    [
+      -0.765196,
+      -1.01025,
+      -0.319641
+    ],
+    [
+      3.93848,
+      1.01025,
+      1.19511
+    ]
+  ],
+  "extents": [
+    4.703676,
+    2.0205,
+    1.514751
+  ],
+  "area": 36.09737765195054,
+  "volume": 6.849660048041319,
+  "watertight": true,
+  "winding_consistent": true,
+  "connected_surface_count": 1,
+  "degenerate_triangles": 0,
+  "boundary_edges": 0,
+  "nonmanifold_edges": 0,
+  "bad_edge_coordinate_examples": [],
+  "seconds": 4.362338360864669
+}

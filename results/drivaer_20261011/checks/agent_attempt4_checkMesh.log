@@ -1,0 +1,190 @@
+# argv: <HOME>/.conda-envs/openfoam2412/bin/checkMesh -constant -time none -allTopology -meshQuality -writeSets vtk -writeChecks json
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  2412                                  |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : v2412 OPENFOAM=2412 version=v2412
+Arch   : "LSB;label=32;scalar=64"
+Exec   : <HOME>/.conda-envs/openfoam2412/bin/checkMesh -constant -time none -allTopology -meshQuality -writeSets vtk -writeChecks json
+Date   : Oct 11 2026
+Time   : 15:12:20
+Host   : a3n06c3
+PID    : 2621656
+--> FOAM Warning : 
+    From Foam::fileName Foam::cwd_L()
+    in file POSIX.C at line 552
+    PWD is not the cwd() - reverting to physical description
+I/O    : uncollated
+--> FOAM Warning : 
+    From Foam::fileName Foam::cwd_L()
+    in file POSIX.C at line 552
+    PWD is not the cwd() - reverting to physical description
+Case   : <PROJECT>/work_drivaer_20261011/runs/agent/round3
+nProcs : 1
+trapFpe: Floating point exception trapping enabled (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 5, maxFileModificationPolls 20)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = constant
+
+Check mesh...
+    Enabling all (cell, face, edge, point) topology checks.
+    Enabling user-defined geometry checks.
+    Reconstructing and writing vtk representation of all faceSets and cellSets.
+
+Time = constant
+
+Mesh stats 
+    points:           2041402
+    faces:            5662429
+    internal faces:   5499231
+    cells:            1817609
+    faces per cell:   6.1408476740597129
+    boundary patches: 7
+    point zones:      1
+    face zones:       0
+    cell zones:       0
+
+Overall number of cells of each type:
+    hexahedra:     1615831
+    prisms:        29318
+    wedges:        1651
+    pyramids:      0
+    tet wedges:    1985
+    tetrahedra:    9
+    polyhedra:     168815
+    Breakdown of polyhedra by number of faces:
+        faces   number of cells
+            4   11242
+            5   11108
+            6   22652
+            7   46617
+            8   11599
+            9   51123
+           10   1032
+           11   387
+           12   8370
+           13   63
+           14   56
+           15   4087
+           16   2
+           17   6
+           18   462
+           21   9
+
+Checking topology...
+    Boundary definition OK.
+    Cell to face addressing OK.
+    Point usage OK.
+    Upper triangular ordering OK.
+    Face vertices OK.
+    Topological cell zip-up check OK.
+  <<Number of faces with non-consecutive shared points: 9. This might indicate a problem.
+  <<Writing 18 faces with non-standard edge connectivity to set edgeFaces
+    Number of regions: 1 (OK).
+
+Checking patch topology for multiply connected surfaces...
+                   Patch    Faces   Points  Surface topology
+                    minX      930      992  ok (non-closed singly connected)
+                    maxX      930      992  ok (non-closed singly connected)
+                    minY     1740     1829  ok (non-closed singly connected)
+                    maxY     1740     1829  ok (non-closed singly connected)
+                    minZ     1798     1888  ok (non-closed singly connected)
+                    maxZ     1798     1888  ok (non-closed singly connected)
+                    body   154262   169711Point 1075930 uses faces which are not connected through an edge
+This means that the surface formed by this patched is multiply connected at this point
+Connected (patch) faces:
+    42595
+    44311
+    44312
+
+Unconnected (patch) faces:
+    43288
+    43528
+    44263
+Point 1768605 uses faces which are not connected through an edge
+This means that the surface formed by this patched is multiply connected at this point
+Connected (patch) faces:
+    118353
+    120087
+    120088
+
+Unconnected (patch) faces:
+    118780
+    118781
+    118782
+ multiply connected (shared point)
+                    ".*"   163198   178649Point 1075930 uses faces which are not connected through an edge
+This means that the surface formed by this patched is multiply connected at this point
+Connected (patch) faces:
+    51531
+    53247
+    53248
+
+Unconnected (patch) faces:
+    52224
+    52464
+    53199
+Point 1768605 uses faces which are not connected through an edge
+This means that the surface formed by this patched is multiply connected at this point
+Connected (patch) faces:
+    127289
+    129023
+    129024
+
+Unconnected (patch) faces:
+    127716
+    127717
+    127718
+ multiply connected (shared point)
+
+
+Checking faceZone topology for multiply connected surfaces...
+    No faceZones found.
+  <<Writing 2 conflicting points to set nonManifoldPoints
+
+Checking basic cellZone addressing...
+    No cellZones found.
+
+Checking basic pointZone addressing...
+               PointZone  PointsBoundingBox
+            frozenPoints       0(9.9999999999999998e+149 9.9999999999999998e+149 9.9999999999999998e+149) (-9.9999999999999998e+149 -9.9999999999999998e+149 -9.9999999999999998e+149)
+
+Checking geometry...
+    Overall domain bounding box (-10.359851620000002 -9.0182636240000011 -8.7653891240000039) (23.706541000000005 9.0182636240000011 8.7653891240000039)
+    Mesh has 3 geometric (non-empty/wedge) directions (1 1 1)
+    Mesh has 3 solution (non-empty) directions (1 1 1)
+    Boundary openness (-3.0767975009157304e-16 -3.4637694107079578e-16 1.4258668987501053e-16) OK.
+    Max cell openness = 1.0757624322345589e-15 OK.
+    Max aspect ratio = 40.627824215839937 OK.
+    Minimum face area = 6.8004518528443775e-07. Maximum face area = 0.34580122036754357.  Face area magnitudes OK.
+    Min volume = 1.9930464518048146e-09. Max volume = 0.20081634259374362.  Total volume = 10764.748990073813.  Cell volumes OK.
+    Mesh non-orthogonality Max: 64.998113393873922 average: 8.3194799531493597
+    Non-orthogonality check OK.
+    Face pyramids OK.
+    Max skewness = 2.4397763531918417 OK.
+    Coupled point location match (average 0) OK.
+Checking faces in error :
+    non-orthogonality >  70 degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with face-decomposition tet quality < 1.0000000000000001e-15      : 0
+    faces with concavity >  80 degrees                     : 0
+    faces with skewness >   4 (internal) or  20 (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.050000000000000003       : 14
+    faces with volume ratio of neighbour cells <  0.01     : 0
+    faces with face twist <  0.02                          : 0
+    faces on cells with determinant < 0.001                : 0
+  <<Writing 14 faces in error to set meshQualityFaces
+
+Failed 1 mesh checks.
+
+Writing mesh data to "<PROJECT>/work_drivaer_20261011/runs/agent/round3/checkMesh.json"
+
+End
+
