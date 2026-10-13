@@ -302,8 +302,8 @@
     },
     {
       "path": "docs/CODE_PROVENANCE.json",
-      "sha256": "8d485b5a188ebb2f722fc3a3df0f95ca8b38d9f15084438fd9bc0f9951166ec6",
-      "bytes": 1305
+      "sha256": "ec0adb73f2e5891d3f2ce5553ee3e13cf9997bb44d7a333e39b36b0c178f8865",
+      "bytes": 1277
     },
     {
       "path": "docs/COST_ACCOUNTING.zh-CN.md",
@@ -377,8 +377,8 @@
     },
     {
       "path": "docs/VERIFICATION.md",
-      "sha256": "f4d3a0b47c4a35909d304b54501b3bec0b43ce37bce2e132a7a75263c39ba60f",
-      "bytes": 901
+      "sha256": "7b821d5e361dd0066ffa078134746631b078f6475e7999bb3650042a5ab58f2c",
+      "bytes": 888
     },
     {
       "path": "assets/feedback_trajectory.png",
@@ -2127,8 +2127,8 @@
     },
     {
       "path": "results/drivaer_v9_20261012/usage_reconciled.json",
-      "sha256": "0d709a10039b23d03b3a7f352590764d27388c1685b0313b297aae2d49010a62",
-      "bytes": 20832
+      "sha256": "f129614c7325a97192c6837d524c8e8ed764e6df644ce853b3446a03c5451ce0",
+      "bytes": 20333
     },
     {
       "path": "results/drivaer_v9_20261012/checks/attempt1_checkMesh.log",
